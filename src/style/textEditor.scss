@@ -1,0 +1,22 @@
+.text-editor {
+  position: fixed;
+  width: calc(100% - 40px);
+  left: 40px;
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 2;
+
+  &__content {
+    padding: 0 10px;
+    margin: 0 auto;
+
+    &:focus {
+      outline: 0;
+    }
+
+    div {
+      margin: 1rem 0;
+    }
+  }
+}
