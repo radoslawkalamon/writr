@@ -1,22 +1,23 @@
 export default {
-  count: 0,
   settings: {
-    appearance: {
-      theme: 'dark',
+    editor: {
+      theme: 'dark', // ['light', 'dark'],
       text: {
-        fontFamily: 'Consolas',
-        size: 12,
-        lineHeight: 1.5,
-        textIndent: 20,
+        paragraphIndent: 40, // Number,
+        fontColor: '#fff', // String,
+        fontFamily: 'Courier New, Courier, monospace', // [...],
+        fontSize: 12, // Number,
+        fontLineHeight: 1.5, // Float,
       },
       window: {
-        widthMax: 900,
-        marginTop: 50,
-        marginBottom: 50,
+        widthValue: 900, // Number,
+        marginTop: 40, // Number,
+        marginBottom: 40, // Number,
       },
     },
-    functions: {
-      spellchecker: true,
+    misc: {
+      spellChecker: false, // Boolean,
     },
   },
+  textEditorElement: false,
 };

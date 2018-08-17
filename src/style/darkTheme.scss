@@ -1,9 +1,8 @@
-.writr-theme--dark {
-  color: #fff;
-  background-color: #000;
-
-  .sidebar {
-    background-color: #212121;
-    border-color: #000;
-  }
-}
+$color-stack: (
+  base: black,
+  secondary: #263238,
+  third: #37474f,
+  fourth: #455a64,
+  contra: #fff,
+  contra-lighter: #cfd8dc,
+);

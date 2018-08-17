@@ -1,14 +1,14 @@
 .text-editor {
   position: fixed;
-  width: calc(100% - 40px);
-  left: 40px;
+  width: calc(100% - #{$sidebarWidth});
+  left: $sidebarWidth;
   margin: 0 auto;
   overflow-y: auto;
   height: 100%;
   z-index: 2;
 
   &__content {
-    padding: 0 10px;
+    padding: 0 $contentPadding;
     margin: 0 auto;
 
     &:focus {
@@ -16,7 +16,11 @@
     }
 
     div {
-      margin: 1rem 0;
+      margin: $contentPadding 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }

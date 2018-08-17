@@ -1,0 +1,56 @@
+.flyout {
+  padding: $contentPadding;
+  background-color: color('third');
+  border-right: 1px solid color('fourth');
+  width: calc(320px - #{$sidebarWidth});
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  position: fixed;
+  left: $sidebarWidth;
+  overflow-y: auto;
+
+  &__label {
+    font-size: 0.75em;
+    display: block;
+    flex: 1;
+
+    &:first-child {
+      margin-right: auto;
+      flex: 5;
+      text-transform: uppercase;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+
+    &-number {
+      flex: 1;
+      height: 32px;
+      width: 32px;
+      text-align: center;
+      margin: 0 $contentPadding;
+      border: 1px solid color('contra-lighter');
+      background-color: color('fourth');
+      color: color('contra');
+    }
+  }
+}
+
+.flyout-enter-active {
+  animation: flyout $animationTime;
+}
+.flyout-leave-active {
+  animation: flyout $animationTime reverse;
+}
+
+@keyframes flyout {
+  0% {
+    left: -320px;
+  }
+  100% {
+    left: $sidebarWidth;
+  }
+}

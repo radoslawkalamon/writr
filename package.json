@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.4",
-    "state.js": "^5.11.1",
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.0",
     "vuex": "^3.0.1"

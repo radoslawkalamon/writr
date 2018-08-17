@@ -1,0 +1,9 @@
+$sidebarWidth: 48px;
+$contentPadding: 10px;
+
+$animationTime: 0.33s;
+$animationEase: ease;
+
+@function color($name) {
+  @return map-get($color-stack, $name);
+}
