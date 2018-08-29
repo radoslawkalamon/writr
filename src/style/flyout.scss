@@ -13,28 +13,37 @@
   &__label {
     font-size: 0.75em;
     display: block;
-    flex: 1;
+    width: 50%;
+  }
 
-    &:first-child {
-      margin-right: auto;
-      flex: 5;
-      text-transform: uppercase;
-    }
+  &__unit {
+    font-size: 0.75em;
+    width: 10%;
+    margin: 0 0 0 $contentPadding;
   }
 
   &__input {
     display: flex;
     align-items: center;
+    position: relative;
+    padding-left: $contentPadding;
+    padding: 0.25 * $contentPadding 0 0.25 * $contentPadding $contentPadding;
+    border: 1px solid transparent;
+    transition: background-color $animationTime $animationEase, border $animationTime $animationEase;
+    margin: 0.25 * $contentPadding 0;
 
     &-number {
-      flex: 1;
       height: 32px;
-      width: 32px;
+      width: 40%;
       text-align: center;
-      margin: 0 $contentPadding;
       border: 1px solid color('contra-lighter');
       background-color: color('fourth');
       color: color('contra');
+    }
+
+    &--error {
+      border: 1px solid color('error-light');
+      background-color: color('error');
     }
   }
 }

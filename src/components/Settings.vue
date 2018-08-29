@@ -7,14 +7,14 @@
       <option>Light theme</option>
     </select>
     <h2>Text</h2>
-    <flyout-input v-bind="{item: 'editor/text/fontColor', label: 'Font color', additionalText: 'hex'}" />
-    <flyout-input v-bind="{item: 'editor/text/fontSize', label: 'Font size', additionalText: 'px'}" />
-    <flyout-input v-bind="{item: 'editor/text/paragraphIndent', label: 'Paragraph Indent', additionalText: 'px'}" />
-    <flyout-input v-bind="{item: 'editor/text/fontLineHeight', label: 'Line height', additionalText: 'em'}" />
+    <flyout-input v-bind="{item: 'editor/text/fontColor', label: 'Font color', unit: 'hex'}" />
+    <flyout-input v-bind="{item: 'editor/text/fontSize', label: 'Font size', unit: 'px'}" />
+    <flyout-input v-bind="{item: 'editor/text/paragraphIndent', label: 'Paragraph Indent', unit: 'px'}" />
+    <flyout-input v-bind="{item: 'editor/text/fontLineHeight', label: 'Line height', unit: 'em'}" />
     <h2>Window</h2>
-    <flyout-input v-bind="{item: 'editor/window/widthValue', label: 'Text max-width', additionalText: 'px'}" />
-    <flyout-input v-bind="{item: 'editor/window/marginTop', label: 'Margin top', additionalText: 'px'}" />
-    <flyout-input v-bind="{item: 'editor/window/marginBottom', label: 'Margin bottom', additionalText: 'px'}" />
+    <flyout-input v-bind="{item: 'editor/window/widthValue', label: 'Text max-width', unit: 'px'}" />
+    <flyout-input v-bind="{item: 'editor/window/marginTop', label: 'Margin top', unit: 'px'}" />
+    <flyout-input v-bind="{item: 'editor/window/marginBottom', label: 'Margin bottom', unit: 'px'}" />
   </div>
 </template>
 

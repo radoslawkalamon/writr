@@ -35,9 +35,9 @@ export default {
   },
   methods: {
     onPaste(_e) {
-      // _e.preventDefault();
       const clipboardText = _e.clipboardData.getData('text/plain');
-      document.execCommand('insertHTML', false, formatPlainText(clipboardText));
+      const clipboardTextFormatted = formatPlainText(clipboardText);
+      document.execCommand('insertHTML', false, clipboardTextFormatted);
       return true;
     },
   },

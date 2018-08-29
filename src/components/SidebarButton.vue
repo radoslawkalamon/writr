@@ -9,7 +9,8 @@ export default {
   props: ['icon', 'alt', 'action', 'togglable'],
   computed: {
     buttonClass() {
-      return `sidebar__button ${this.toggle ? 'sidebar__button--active' : ''}`;
+      const toggleClassName = this.toggle ? 'sidebar__button--active' : '';
+      return `sidebar__button ${toggleClassName}`;
     },
   },
   methods: {

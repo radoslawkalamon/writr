@@ -12,10 +12,13 @@
 </template>
 
 <script>
+// Components
 import Sidebar from './Sidebar.vue';
 import SidebarButton from './SidebarButton.vue';
 import TextEditor from './TextEditor.vue';
 import Settings from './Settings.vue';
+// Functions
+import downloadFile from 'downloadjs';
 
 export default {
   name: 'writr-vue2',
@@ -34,14 +37,7 @@ export default {
   methods: {
     saveDocument() {
       const text = this.$store.state.textEditorElement.innerText;
-      const tempElement = document.createElement('a');
-      tempElement.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-      tempElement.setAttribute('download', 'writr-text.txt');
-      tempElement.style.display = 'none';
-
-      document.body.appendChild(tempElement);
-      tempElement.click();
-      document.body.removeChild(tempElement);
+      downloadFile(text, 'writr-text.txt', 'text/plain');
     },
     openSettings() {
       this.settingsVisible = !this.settingsVisible;

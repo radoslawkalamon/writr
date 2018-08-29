@@ -5,8 +5,6 @@ export default {
   changeSettings(_state, _payload) {
     const propertyPath = _payload.item.split('/');
 
-    // Validator???
-
     propertyPath.reduce((_prevValue, _curValue, _index, _array) => {
       if (_index + 1 === _array.length) {
         _prevValue[_curValue] = _payload.value;
