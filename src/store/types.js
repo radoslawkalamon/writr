@@ -3,7 +3,7 @@ export default {
     editor: {
       theme: "isEqualTo|'Light'|'Dark'",
       text: {
-        paragraphIndent: 'Number|>0',
+        paragraphIndent: 'Number|>-1',
         fontColor: 'String',
         fontFamily: "String|='Courier New, Courier, monospace'", // [...],
         fontSize: 'Number|>3',

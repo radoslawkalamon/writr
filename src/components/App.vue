@@ -1,8 +1,8 @@
 <template>
   <div id="app" :class='this.applicationTheme'>
     <sidebar>
-      <sidebar-button :action='saveDocument' icon='https://via.placeholder.com/32x32?text=save' slot='top' alt='Save document' />
-      <sidebar-button :action='openSettings' icon='https://via.placeholder.com/32x32?text=sets' slot='bottom' alt='Settings' togglable='1' />
+      <sidebar-button :action='saveDocument' icon='download' slot='top' alt='Save document' />
+      <sidebar-button :action='openSettings' icon='settings' slot='bottom' alt='Settings' togglable='1' />
     </sidebar>
     <transition name='flyout'>
       <settings v-if='this.settingsVisible' />
