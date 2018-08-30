@@ -1,0 +1,93 @@
+.panel-input {
+  display: flex;
+  align-items: center;
+  margin: 0.5 * $fontSize 0;
+
+  &__label {
+    font-size: 0.8 * $fontSize;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 0.25 * $unitSize;
+    padding-left: 0.25 * $unitSize;
+  }
+
+  &__value-box {
+    padding-left: 0.25 * $unitSize;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: calc(100% - 0.25 * #{$unitSize});
+      height: $unitSize;
+      background-color: color('fourth');
+      content: attr(data-error-hint);
+      top: 100%;
+      right: 0;
+      z-index: 9;
+      box-sizing: border-box;
+      border: 1px solid color('fourth');
+      border-top: 0;
+      font-size: 0.6 * $fontSize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+      opacity: 0;
+      transition: z-index $animationTime $animationEase, opacity $animationTime $animationEase, background-color $animationTime $animationEase, border $animationTime $animationEase;
+    }
+
+    &--error {
+      &::before {
+        z-index: 9;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__value {
+    width: calc(100% - #{$unitSize});
+    box-sizing: border-box;
+    height: $unitSize;
+    appearance: none;
+    border: 1px solid color('fourth');
+    color: color('contra');
+    background-color: color('secondary');
+    font-family: $fontFamily;
+    text-align: center;
+    transition: color $animationTime $animationEase, background-color $animationTime $animationEase, border $animationTime $animationEase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: color('base');
+      outline: 0;
+    }
+
+    &--error {
+      background-color: color('error');
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: color('error-light');
+      }
+    }
+  }
+
+  &__unit {
+    height: $unitSize;
+    width: $unitSize;
+    box-sizing: border-box;
+    font-size: 0.75 * $fontSize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color('fourth');
+    border-left: 0;
+    transition: background-color $animationTime $animationEase, border $animationTime $animationEase;
+  }
+}

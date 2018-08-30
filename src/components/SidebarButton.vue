@@ -8,7 +8,12 @@
 import iconList from '../images/index';
 
 export default {
-  props: ['icon', 'alt', 'action', 'togglable'],
+  props: {
+    icon: String,
+    alt: String,
+    action: Function,
+    togglable: String,
+  },
   computed: {
     buttonClass() {
       const toggleClassName = this.toggle ? 'sidebar__button--active' : '';
@@ -22,7 +27,7 @@ export default {
     },
     onClick() {
       const togglable = parseInt(this.togglable);
-      if (togglable) {
+      if (togglable === 1) {
         this.toggle = !this.toggle;
       }
 

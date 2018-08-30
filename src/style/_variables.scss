@@ -1,8 +1,12 @@
 $sidebarWidth: 48px;
 $contentPadding: 10px;
+$unitSize: 32px;
 
-$animationTime: 0.33s;
+$animationTime: 0.5s;
 $animationEase: ease;
+
+$fontSize: 16px;
+$fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 @function color($name) {
   @return map-get($color-stack, $name);

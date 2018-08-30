@@ -1,11 +1,9 @@
 export default {
   settings: {
     editor: {
-      theme: "isEqualTo|'Light'|'Dark'",
+      theme: "isEqualTo|'light'|'dark'",
       text: {
         paragraphIndent: 'Number|>-1',
-        fontColor: 'String',
-        fontFamily: "String|='Courier New, Courier, monospace'", // [...],
         fontSize: 'Number|>3',
         fontLineHeight: 'Number|>-1',
       },

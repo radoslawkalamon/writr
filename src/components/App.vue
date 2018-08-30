@@ -4,7 +4,7 @@
       <sidebar-button :action='saveDocument' icon='download' slot='top' alt='Save document' />
       <sidebar-button :action='openSettings' icon='settings' slot='bottom' alt='Settings' togglable='1' />
     </sidebar>
-    <transition name='flyout'>
+    <transition name='panel'>
       <settings v-if='this.settingsVisible' />
     </transition>
     <text-editor />
@@ -52,5 +52,34 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/style.scss';
+@import '../style/_variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: 1.25em;
+}
+
+.writr {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  transition: background-color $animationTime $animationEase, color $animationTime $animationEase;
+
+  &-theme--dark {
+    @import '../style/darkTheme.scss';
+    @import '../style/style.scss';
+    color: color(contra);
+    background-color: color(base);
+  }
+
+  &-theme--light {
+    @import '../style/lightTheme.scss';
+    @import '../style/style.scss';
+    color: color(contra);
+    background-color: color(base);
+  }
+}
 </style>

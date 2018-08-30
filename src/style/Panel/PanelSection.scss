@@ -1,0 +1,8 @@
+.panel-section {
+  &__header {
+    font-size: $fontSize;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    margin: $fontSize 0;
+  }
+}

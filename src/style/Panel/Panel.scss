@@ -1,0 +1,39 @@
+.panel {
+  padding: $contentPadding;
+  background-color: color('third');
+  border-right: 1px solid color('fourth');
+  width: calc(320px - #{$sidebarWidth});
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  position: fixed;
+  left: $sidebarWidth;
+  overflow-y: auto;
+  transition: background-color $animationTime $animationEase, border $animationTime $animationEase;
+
+  &__header {
+    margin: 0.5 * $fontSize 0 $fontSize;
+    font-size: 2 * $fontSize;
+    line-height: 1em;
+  }
+}
+
+.panel-enter-active {
+  animation: panel $animationTime;
+}
+.panel-leave-active {
+  animation: panel $animationTime reverse;
+}
+
+@keyframes panel {
+  0% {
+    left: -320px;
+  }
+  100% {
+    left: $sidebarWidth;
+  }
+}
+
+@import './PanelInput.scss';
+@import './PanelSection.scss';
+@import './PanelToggle.scss';

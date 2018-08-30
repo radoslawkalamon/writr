@@ -6,6 +6,9 @@
   overflow-y: auto;
   height: 100%;
   z-index: 2;
+  color: color('contra');
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color $animationTime $animationEase, color $animationTime $animationEase;
 
   &__content {
     padding: 0 $contentPadding;

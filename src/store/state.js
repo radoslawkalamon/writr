@@ -6,8 +6,6 @@ export default {
       theme: 'dark', // ['light', 'dark'],
       text: {
         paragraphIndent: 40, // Number,
-        fontColor: '#fff', // String,
-        fontFamily: 'Courier New, Courier, monospace', // [...],
         fontSize: 12, // Number,
         fontLineHeight: 1.5, // Float,
       },

@@ -15,9 +15,7 @@ export default {
       const _store = this.$store.state.settings.editor;
 
       return `
-      font-family: ${_store.text.fontFamily};
       font-size: ${_store.text.fontSize}px;
-      color: ${_store.text.fontColor};
       line-height: ${_store.text.fontLineHeight}em;
       text-indent: ${_store.text.paragraphIndent}px;
       max-width: ${_store.window.widthValue}px;
