@@ -3,22 +3,22 @@ import types from './types';
 export default {
   settings: {
     editor: {
-      theme: 'dark', // ['light', 'dark'],
+      theme: 'dark',
       text: {
-        paragraphIndent: 40, // Number,
-        fontSize: 12, // Number,
-        fontLineHeight: 1.5, // Float,
+        paragraphIndent: 40,
+        fontSize: 12,
+        fontLineHeight: 1.5,
       },
       window: {
-        widthValue: 900, // Number,
-        marginTop: 40, // Number,
-        marginBottom: 40, // Number,
+        widthValue: 900,
+        marginTop: 40,
+        marginBottom: 40,
       },
     },
     misc: {
-      spellChecker: false, // Boolean,
+      spellChecker: false,
     },
   },
-  textEditorElement: false,
+  textEditorElement: null,
   types: types,
 };

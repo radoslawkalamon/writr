@@ -7,6 +7,7 @@
 
 <script>
 import validate from 'handy-validator';
+const className = 'panel-toggle';
 
 export default {
   props: {
@@ -19,16 +20,16 @@ export default {
   },
   computed: {
     classNameBox() {
-      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `panel-toggle--${this.name}` : '';
-      return `panel-toggle ${panelExtraClass}`;
+      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `${className}--${this.name}` : '';
+      return `${className} ${panelExtraClass}`;
     },
     classNameLeft() {
-      const isButtonActive = this.leftValue === this.value ? 'panel-toggle__button--active' : '';
-      return `panel-toggle__button panel-toggle__button--left ${isButtonActive}`;
+      const isButtonActive = this.leftValue === this.value ? `${className}__button--active` : '';
+      return `${className}__button ${className}__button--left ${isButtonActive}`;
     },
     classNameRight() {
-      const isButtonActive = this.rightValue === this.value ? 'panel-toggle__button--active' : '';
-      return `panel-toggle__button panel-toggle__button--right ${isButtonActive}`;
+      const isButtonActive = this.rightValue === this.value ? `${className}__button--active` : '';
+      return `${className}__button ${className}__button--right ${isButtonActive}`;
     },
   },
   methods: {

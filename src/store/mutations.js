@@ -1,6 +1,8 @@
 export default {
   getTextEditorElement(_state, _payload) {
+    // if (_payload instanceof HTMLElement) {
     _state.textEditorElement = _payload;
+    // }
   },
   changeSettings(_state, _payload) {
     const propertyPath = _payload.item.split('/');

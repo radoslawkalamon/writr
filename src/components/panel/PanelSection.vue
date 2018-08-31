@@ -6,6 +6,8 @@
 </template>
 
 <script>
+const className = 'panel-section';
+
 export default {
   props: {
     header: String,
@@ -13,8 +15,8 @@ export default {
   },
   computed: {
     className() {
-      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `panel-section--${this.name}` : '';
-      return `panel-section ${panelExtraClass}`;
+      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `${className}--${this.name}` : '';
+      return `${className} ${panelExtraClass}`;
     },
   },
 };

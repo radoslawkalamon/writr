@@ -6,18 +6,18 @@
 
 <script>
 import iconList from '../images/index';
+const className = 'sidebar';
 
 export default {
   props: {
     icon: String,
     alt: String,
-    action: Function,
     togglable: String,
   },
   computed: {
     buttonClass() {
-      const toggleClassName = this.toggle ? 'sidebar__button--active' : '';
-      return `sidebar__button ${toggleClassName}`;
+      const toggleClassName = this.toggle ? `${className}__button--active` : '';
+      return `${className}__button ${toggleClassName}`;
     },
   },
   methods: {
@@ -30,8 +30,7 @@ export default {
       if (togglable === 1) {
         this.toggle = !this.toggle;
       }
-
-      this.action();
+      this.$emit('action');
     },
   },
   data() {

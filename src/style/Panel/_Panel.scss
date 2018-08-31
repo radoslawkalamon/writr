@@ -1,7 +1,8 @@
 .panel {
+  @include transition(background-color border-color);
+
   padding: $contentPadding;
-  background-color: color('third');
-  border-right: 1px solid color('fourth');
+  border-right: 1px solid transparent;
   width: calc(320px - #{$sidebarWidth});
   height: 100%;
   box-sizing: border-box;
@@ -9,7 +10,6 @@
   position: fixed;
   left: $sidebarWidth;
   overflow-y: auto;
-  transition: background-color $animationTime $animationEase, border $animationTime $animationEase;
 
   &__header {
     margin: 0.5 * $fontSize 0 $fontSize;
@@ -34,6 +34,24 @@
   }
 }
 
-@import './PanelInput.scss';
-@import './PanelSection.scss';
-@import './PanelToggle.scss';
+.writr-theme--#{$darkThemeClass} {
+  @import '../darkTheme';
+
+  .panel {
+    background-color: color(third);
+    border-right-color: color(fourth);
+  }
+}
+
+.writr-theme--#{$lightThemeClass} {
+  @import '../lightTheme';
+
+  .panel {
+    background-color: color(third);
+    border-right-color: color(fourth);
+  }
+}
+
+@import './PanelInput';
+@import './PanelSection';
+@import './PanelToggle';

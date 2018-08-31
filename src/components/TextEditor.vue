@@ -1,8 +1,14 @@
 <template>
   <div class='text-editor'>
-    <div class='text-editor__content' :spellcheck='spellcheckValue' contenteditable='true' @paste.prevent="onPaste" :style='textEditorStyle'>
-      <div>What is on your mind...</div>
-    </div>
+    <div 
+      class='text-editor__content'
+      :style='textEditorStyle'
+      :data-text-empty='textEmpty'
+      :spellcheck='spellcheckValue'
+      contenteditable='true'
+      @paste.prevent='onPaste'
+      @input='onChange'
+    ></div>
   </div>
 </template>
 
@@ -38,6 +44,18 @@ export default {
       document.execCommand('insertHTML', false, clipboardTextFormatted);
       return true;
     },
+    onChange(_e) {
+      const textEditor = _e.target;
+      if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
+        textEditor.innerHTML = formatPlainText(textEditor.innerText);
+        window.getSelection().collapse(textEditor.firstChild, 1);
+      }
+    },
+  },
+  data() {
+    return {
+      textEmpty: 'What is on your mind?',
+    };
   },
 };
 </script>

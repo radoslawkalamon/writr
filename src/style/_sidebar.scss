@@ -1,0 +1,91 @@
+.sidebar {
+  @include transition(background-color border-color);
+
+  position: fixed;
+  z-index: 5;
+  width: $sidebarWidth;
+  border-right: 1px solid transparent;
+  height: 100%;
+
+  &__box {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+
+    &--top {
+      top: 0;
+      width: 100%;
+    }
+
+    &--bottom {
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    @include transition(background-color border-color);
+
+    border: 1px solid transparent;
+    border-right: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $sidebarWidth;
+    height: $sidebarWidth;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.writr-theme--#{$darkThemeClass} {
+  @import 'darkTheme';
+
+  .sidebar {
+    background-color: color(secondary);
+    border-color: color(third);
+
+    &__button {
+      &:hover {
+        border-color: color(third);
+      }
+
+      &:active {
+        background-color: color(fourth);
+      }
+
+      &--active {
+        background-color: color(third);
+      }
+    }
+  }
+}
+
+.writr-theme--#{$lightThemeClass} {
+  @import 'lightTheme';
+
+  .sidebar {
+    background-color: color(secondary);
+    border-color: color(third);
+
+    &__button {
+      &:hover {
+        border-color: color(third);
+      }
+
+      &:active {
+        background-color: color(fourth);
+      }
+
+      &--active {
+        background-color: color(third);
+      }
+    }
+  }
+}

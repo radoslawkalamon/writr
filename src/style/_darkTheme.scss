@@ -8,3 +8,7 @@ $color-stack: (
   error-light: #c0392b,
   error: #c0392b,
 );
+
+@function color($name) {
+  @return map-get($color-stack, $name);
+}

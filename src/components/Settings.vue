@@ -32,9 +32,5 @@ export default {
     PanelInput,
     PanelToggle,
   },
-  methods: {},
-  data() {
-    return {};
-  },
 };
 </script>

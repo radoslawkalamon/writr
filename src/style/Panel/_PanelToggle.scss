@@ -1,0 +1,92 @@
+.panel-toggle {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    @include transition(color background-color border-color);
+
+    appearance: none;
+    width: 50%;
+    box-sizing: border-box;
+    height: $unitSize;
+    border: 1px solid transparent;
+    font-family: $fontFamily;
+    cursor: pointer;
+    font-size: 0.8 * $fontSize;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: color(base);
+      outline: 0;
+    }
+
+    &--left {
+      margin-right: 0.125 * $unitSize;
+    }
+
+    &--right {
+      margin-left: 0.125 * $unitSize;
+    }
+  }
+}
+
+.writr-theme--#{$darkThemeClass} {
+  @import '../darkTheme';
+
+  .panel-toggle {
+    &__button {
+      background-color: color(secondary);
+      color: color(contra);
+      border-color: color(fourth);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: color(base);
+      }
+
+      &--active {
+        color: color(secondary);
+        background-color: color(contra-lighter);
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: color(secondary);
+          background-color: color(contra-lighter);
+        }
+      }
+    }
+  }
+}
+
+.writr-theme--#{$lightThemeClass} {
+  @import '../lightTheme';
+
+  .panel-toggle {
+    &__button {
+      background-color: color(secondary);
+      color: color(contra);
+      border-color: color(fourth);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: color(base);
+      }
+
+      &--active {
+        color: color(secondary);
+        background-color: color(contra-lighter);
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: color(secondary);
+          background-color: color(contra-lighter);
+        }
+      }
+    }
+  }
+}

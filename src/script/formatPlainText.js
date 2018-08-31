@@ -15,6 +15,7 @@ function replaceTag(tag) {
  */
 export default (_text) => {
   const escapedText = _text.replace(/[&<>]/g, replaceTag);
-  // if No \n return without <div></div>
-  return `<div>${escapedText.replace(/\n/g, '</div><div>')}</div>`;
+  const escapedTextReplaced = escapedText.replace(/\n/g, '<br /></div><div>');
+
+  return `<div>${escapedTextReplaced}</div>`;
 };

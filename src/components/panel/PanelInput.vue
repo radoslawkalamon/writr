@@ -10,6 +10,7 @@
 
 <script>
 import validate from 'handy-validator';
+const className = 'panel-input';
 
 export default {
   props: {
@@ -21,16 +22,16 @@ export default {
   },
   computed: {
     classNameBox() {
-      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `panel-input--${this.name}` : '';
-      return `panel-input ${panelExtraClass}`;
+      const panelExtraClass = typeof this.name !== 'undefined' && this.name !== '' ? `${className}--${this.name}` : '';
+      return `${className} ${panelExtraClass}`;
     },
     classNameValueBox() {
-      const valueBoxErrorClass = this.error ? 'panel-input__value-box--error' : '';
-      return `panel-input__value-box ${valueBoxErrorClass}`;
+      const valueBoxErrorClass = this.error ? `${className}__value-box--error` : '';
+      return `${className}__value-box ${valueBoxErrorClass}`;
     },
     classNameValue() {
-      const valueErrorClass = this.error ? 'panel-input__value--error' : '';
-      return `panel-input__value ${valueErrorClass}`;
+      const valueErrorClass = this.error ? `${className}__value--error` : '';
+      return `${className}__value ${valueErrorClass}`;
     },
   },
   methods: {
