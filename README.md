@@ -2,8 +2,6 @@
 
 Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
 
-<small>_There is also a ReactJS version of **Writr**: https://github.com/radoslawkuswik/writr-react_</small>
-
 ## Writr Roadmap
 
 > **DONE** means final code, tests & documentation are written. Everything is green and ready to deploy.
