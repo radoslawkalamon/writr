@@ -1,5 +1,3 @@
-import types from './types';
-
 export default {
   settings: {
     editor: {
@@ -20,5 +18,4 @@ export default {
     },
   },
   textEditorElement: null,
-  types: types,
 };

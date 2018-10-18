@@ -1,0 +1,13 @@
+.base-section {
+  &__title {
+    font-size: 1.2 * $baseSize;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: $baseSize;
+  }
+
+  &__content {
+    margin-bottom: $baseSize;
+  }
+}

@@ -1,18 +1,15 @@
-export default {
-  getTextEditorElement(_state, _payload) {
-    // if (_payload instanceof HTMLElement) {
-    _state.textEditorElement = _payload;
-    // }
-  },
-  changeSettings(_state, _payload) {
-    const propertyPath = _payload.item.split('/');
+import config from '@/config';
 
-    propertyPath.reduce((_prevValue, _curValue, _index, _array) => {
-      if (_index + 1 === _array.length) {
-        _prevValue[_curValue] = _payload.value;
-      } else {
-        return _prevValue[_curValue];
-      }
-    }, _state.settings);
+export default {
+  CHANGE_STATE(state, payload) {
+    payload.item
+      .split(config.splitChar)
+      .reduce((prev, cur, index, array) => {
+        if (index + 1 === array.length) {
+          prev[cur] = payload.value;
+        }
+
+        return prev[cur];
+      }, state);
   },
 };

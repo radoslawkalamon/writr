@@ -1,0 +1,15 @@
+@keyframes panel-transition {
+  0% {
+    left: -$maxWidth;
+  }
+  100% {
+    left: $sidebarWidth;
+  }
+}
+
+.panel-transition-enter-active {
+  animation: panel-transition $animationTime;
+}
+.panel-transition-leave-active {
+  animation: panel-transition $animationTime reverse;
+}

@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "title": "Settings",
+    "theme": {
+      "title": "Theme",
+      "names": ["Dark", "Light"]
+    },
+    "text": {
+      "title": "Text"
+    },
+    "texteditor": {
+      "title": "Text Editor"
+    },
+    "spellcorrection": {
+      "title": "Spell correction"
+    },
+    "language": {
+      "title": "Language"
+    },
+    "copyright": "// writr created by // 2018"
+  }
+}
