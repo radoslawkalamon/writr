@@ -5,16 +5,17 @@ export default {
       text: {
         paragraphIndent: 'Number|>=0',
         fontSize: 'Number|>=4',
-        fontLineHeight: 'Number|>=0',
+        lineHeight: 'Number|>=0',
       },
       window: {
-        widthValue: 'Number|>=320',
+        maxWidth: 'Number|>=320',
         marginTop: 'Number|>=0',
         marginBottom: 'Number|>=0',
       },
     },
     misc: {
-      spellChecker: "isEqualTo|'true'|'false'",
+      spellChecker: 'Boolean',
+      language: "isEqualTo|'en'|'pl'",
     },
   },
 };

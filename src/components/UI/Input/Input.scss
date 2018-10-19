@@ -1,0 +1,176 @@
+.base-input {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 0.75 * $baseSize;
+    display: block;
+    width: 55%;
+    padding: 0 0.5 * $baseSize;
+    box-sizing: border-box;
+  }
+
+  &__input-wrapper {
+    width: 45%;
+    position: relative;
+
+    &::before {
+
+    }
+  
+    &::after {
+      @include transition(z-index opacity background-color border-color);
+
+      position: absolute;
+      width: 100%;
+      height: $unitSize;
+      content: attr(data-error);
+      top: 100%;
+      left: 0;
+      z-index: 9;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-top: 0;
+      font-size: 0.6 * $fontSize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &--unit {
+      &::before {
+        content: attr(data-unit);
+        @include transition(background-color border-color);
+  
+        height: $unitSize;
+        width: $unitSize;
+        box-sizing: border-box;
+        font-size: 0.75 * $fontSize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 1px solid transparent;
+        border-left: 0;
+      }
+    }
+
+    &--error {
+      &::after {
+        z-index: 99;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    height: $unitSize;
+    appearance: none;
+    border: 1px solid transparent;
+    font-family: $fontFamily;
+    text-align: center;
+    font-size: 0.8 * $baseSize;
+
+    @include transition(color background-color border-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+
+    &--unit {
+      width: calc(100% - #{$unitSize});
+    }
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';  
+
+  .base-input {
+    &__input-wrapper {
+      &::after {
+        background-color: color(fourth);
+        border-color: color(fourth);
+      }
+
+      &--unit {
+        &::before {
+          border-color: color(fourth);
+        }
+      }
+    }
+
+    &__input {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: color(base);
+      }
+
+      &--error {
+        background-color: color(error);
+        color: color(contra);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: color(error-light);
+        }
+      }
+    }
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  .base-input {
+    &__input-wrapper {
+      &::after {
+        background-color: color(fourth);
+        border-color: color(fourth);
+      }
+
+      &--unit {
+        &::before {
+          border-color: color(fourth);
+        }
+      }
+    }
+
+    &__input {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: color(base);
+      }
+
+      &--error {
+        background-color: color(error);
+        color: color(base);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: color(error-light);
+        }
+      }
+    }
+  }
+}

@@ -27,6 +27,11 @@ export default {
       this.openPanel = this.openPanel === name ? false : name;
     },
   },
+  watch: {
+    '$store.state.settings.misc.language': function changeLanguage(newValue) {
+      this.$i18n.locale = newValue;
+    },
+  },
   data() {
     return {
       openPanel: false,

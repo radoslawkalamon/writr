@@ -8,4 +8,4 @@
 </template>
 
 <script src='./Section.js'></script>
-<style src='./Section.scss' lang='scss'></style>
+<style src='./Section.scss' lang='scss' scoped></style>

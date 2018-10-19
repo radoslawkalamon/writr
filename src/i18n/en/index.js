@@ -1,7 +1,7 @@
-import sidebar from '@/i18n/en/general/sidebar.json';
+import settings from '@/i18n/en/general/settings.json';
 
 export default {
   general: {
-    sidebar,
+    settings,
   },
 };

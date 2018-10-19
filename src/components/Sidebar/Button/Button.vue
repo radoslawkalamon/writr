@@ -5,4 +5,4 @@
 </template>
 
 <script src='./Button.js'></script>
-<style src='./Button.scss' lang='scss'></style>
+<style src='./Button.scss' lang='scss' scoped></style>

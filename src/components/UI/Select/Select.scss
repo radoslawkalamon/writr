@@ -1,0 +1,65 @@
+.base-select {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 0.75 * $baseSize;
+    display: block;
+    width: 55%;
+    padding: 0 0.5 * $baseSize;
+    box-sizing: border-box;
+  }
+
+  &__input-wrapper {
+    width: 45%;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    height: $unitSize;
+    // appearance: none;
+    border: 1px solid transparent;
+    font-family: $fontFamily;
+    font-size: 0.8 * $baseSize;
+    padding: 0 0.25 * $baseSize;
+
+    @include transition(color background-color border-color);
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';  
+
+  .base-select {
+    &__input {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: color(base);
+      }
+    }
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  .base-select {
+    &__input {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: color(base);
+      }
+    }
+  }
+}

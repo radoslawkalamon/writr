@@ -1,0 +1,51 @@
+{
+  "title": "Ustawienia",
+  "theme": {
+    "title": "Motyw",
+    "labels": {
+      "title": "Schemat",
+      "content": ["Jasny", "Ciemny"]
+    }
+  },
+  "text": {
+    "title": "Tekst",
+    "fontSize": {
+      "title": "Rozmiar czcionki",
+      "errorTip": "Liczba >= 4"
+    },
+    "paragraphIndent": {
+      "title": "Wcięcie paragrafu",
+      "errorTip": "Liczba >= 0"
+    },
+    "lineHeight": {
+      "title": "Wysokość linii",
+      "errorTip": "Liczba >= 0"
+    }
+  },
+  "textEditor": {
+    "title": "Edytor tekstu",
+    "maxWidth": {
+      "title": "Szerokość",
+      "errorTip": "Liczba >= 320"
+    },
+    "marginTop": {
+      "title": "Margines górny",
+      "errorTip": "Liczba >= 0"
+    },
+    "marginBottom": {
+      "title": "Margines dolny",
+      "errorTip": "Liczba >= 0"
+    }
+  },
+  "misc": {
+    "title": "Pozostałe",
+    "spellChecker": {
+      "title": "Sprawdzanie pisowni"
+    },
+    "language": {
+      "title": "Język (Language)",
+      "labels": ["English", "Polski"]
+    }
+  },
+  "copyright": "// writr stworzony przez // 2018"
+}

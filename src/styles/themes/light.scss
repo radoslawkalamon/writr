@@ -7,6 +7,8 @@ $color-stack: (
   contra-lighter: #455a64,
   error-light: #c0392b,
   error: #c0392b,
+  success-light: #1abc9c,
+  success: #78e08f,
 );
 
 @function color($name) {

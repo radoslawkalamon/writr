@@ -25,7 +25,7 @@ describe('@Components/Sidebar/Button', () => {
     });
   });
 
-  it('renders when props passed and get class with prop NAME', () => {
+  it('should render when props passed and get class with prop NAME', () => {
     const propName = 'NAME';
     const propsData = propsDataGenerator(propName, false);
 
@@ -34,7 +34,7 @@ describe('@Components/Sidebar/Button', () => {
     expect(wrapper.find('button').classes(`sidebar-button--${propName}`)).toBeTruthy();
   });
 
-  it('emit event and payload when clicked', () => {
+  it('should emit event and payload when clicked', () => {
     const propName = 'NAME';
     const propsData = propsDataGenerator(propName, false);
 
@@ -44,7 +44,7 @@ describe('@Components/Sidebar/Button', () => {
     expect(wrapper.emitted('action')[0]).toEqual([propName]);
   });
 
-  it('when toggle set to true, after click have "toggle class"', () => {
+  it('when toggle set to true, should after click have "toggle class"', () => {
     const propsData = propsDataGenerator(undefined, true);
 
     const wrapper = shallowMount(SidebarButton, { store, localVue, propsData });

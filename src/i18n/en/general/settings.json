@@ -1,0 +1,51 @@
+{
+  "title": "Settings",
+  "theme": {
+    "title": "Theme",
+    "labels": {
+      "title": "Schema",
+      "content": ["Light", "Dark"]
+    }
+  },
+  "text": {
+    "title": "Text",
+    "fontSize": {
+      "title": "Font size",
+      "errorTip": "Number >= 4"
+    },
+    "paragraphIndent": {
+      "title": "Paragraph indent",
+      "errorTip": "Number >= 0"
+    },
+    "lineHeight": {
+      "title": "Line height",
+      "errorTip": "Number >= 0"
+    }
+  },
+  "textEditor": {
+    "title": "Text editor",
+    "maxWidth": {
+      "title": "Width",
+      "errorTip": "Number >= 320"
+    },
+    "marginTop": {
+      "title": "Top margin",
+      "errorTip": "Number >= 0"
+    },
+    "marginBottom": {
+      "title": "Bottom margin",
+      "errorTip": "Number >= 0"
+    }
+  },
+  "misc": {
+    "title": "Others",
+    "spellChecker": {
+      "title": "Spell checker"
+    },
+    "language": {
+      "title": "Język (Language)",
+      "labels": ["English", "Polski"]
+    }
+  },
+  "copyright": "// writr created by // 2018"
+}
