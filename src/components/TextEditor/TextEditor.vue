@@ -1,5 +1,15 @@
 <template>
-  <div class='text-editor' contenteditable='true' :spellcheck='spellcheckValue' :style='textEditorStyle'>Hello World!</div>
+  <div 
+    id='text-editor'
+    class='text-editor'
+    contenteditable='true'
+    :spellcheck='spellcheckValue'
+    :style='textEditorStyle'
+    @paste.prevent='onPaste'
+    @input='onChange'
+  >
+    <div>Hello World!</div>
+  </div>
 </template>
 
 <script src='./TextEditor.js'></script>
