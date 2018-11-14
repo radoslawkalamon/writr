@@ -2,22 +2,7 @@
   display: flex;
   align-items: center;
 
-  &__title {
-    font-size: 0.75 * $baseSize;
-    display: block;
-    width: 55%;
-    padding: 0 0.5 * $baseSize;
-    box-sizing: border-box;
-  }
-
-  &__input-wrapper {
-    width: 45%;
-    position: relative;
-
-    &::before {
-
-    }
-  
+  &__form-wrapper {
     &::after {
       @include transition(z-index opacity background-color border-color);
 
@@ -95,7 +80,7 @@
   @import '@/styles/themes/dark.scss';  
 
   .base-input {
-    &__input-wrapper {
+    &__form-wrapper {
       &::after {
         background-color: color(fourth);
         border-color: color(fourth);
@@ -137,7 +122,7 @@
   @import '@/styles/themes/light.scss';
 
   .base-input {
-    &__input-wrapper {
+    &__form-wrapper {
       &::after {
         background-color: color(fourth);
         border-color: color(fourth);

@@ -16,8 +16,9 @@ export default {
   computed: {
     inputWrapperClassNames() {
       return [
-        'base-toggle__input-wrapper',
-        this.value ? 'base-toggle__input-wrapper--active' : '',
+        'base-section__form-wrapper',
+        'base-toggle__form-wrapper',
+        this.value ? 'base-toggle__form-wrapper--active' : '',
       ].join(' ');
     },
     inputClassNames() {

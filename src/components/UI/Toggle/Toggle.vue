@@ -1,6 +1,6 @@
 <template>
   <div class='base-toggle'>
-    <span class='base-toggle__title' v-text='this.title'></span>
+    <span class='base-section__label-wrapper base-toggle__label-wrapper' v-text='this.title'></span>
     <div :class='inputWrapperClassNames' @click='onClick()'>
       <div :class='inputClassNames'></div>
     </div>

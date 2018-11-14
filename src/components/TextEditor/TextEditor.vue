@@ -8,7 +8,7 @@
     @paste.prevent='onPaste'
     @input='onChange'
   >
-    <div>Hello World!</div>
+    <div v-text='welcomeText'></div>
   </div>
 </template>
 

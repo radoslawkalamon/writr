@@ -2,19 +2,10 @@
   display: flex;
   align-items: center;
 
-  &__title {
-    font-size: 0.75 * $baseSize;
-    display: block;
-    width: 55%;
-    padding: 0 0.5 * $baseSize;
-    box-sizing: border-box;
-  }
-
-  &__input-wrapper {
+  &__form-wrapper {
     width: calc(45% - 1px);
     height: $unitSize;
     border: 1px solid transparent;
-    position: relative;
     font-size: 0.75 * $baseSize;
     cursor: pointer;
 
@@ -69,7 +60,7 @@
   @import '@/styles/themes/dark.scss';  
 
   .base-toggle {
-    &__input-wrapper {
+    &__form-wrapper {
       color: color(contra);
       background-color: color(secondary);
       border-color: color(fourth);
@@ -91,7 +82,7 @@
   @import '@/styles/themes/light.scss';
 
   .base-toggle {
-    &__input-wrapper {
+    &__form-wrapper {
       color: color(contra);
       background-color: color(secondary);
       border-color: color(fourth);

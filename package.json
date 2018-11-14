@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "handy-validator": "^1.2.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.2.1",

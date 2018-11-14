@@ -1,9 +1,10 @@
 .text-editor {
   width: 100%;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Courier New', Courier, monospace;
+  padding: 0 $contentPadding;
+  box-sizing: border-box;
 
   &:focus {
     box-shadow: 0;

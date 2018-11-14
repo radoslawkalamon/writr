@@ -40,4 +40,9 @@ export default {
       }
     },
   },
+  data() {
+    return {
+      welcomeText: this.$t('components.TextEditor.welcomeText'),
+    };
+  },
 };

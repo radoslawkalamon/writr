@@ -24,9 +24,10 @@ export default {
   computed: {
     inputWrapperClassNames() {
       return [
-        'base-input__input-wrapper',
-        this.unit !== '' ? 'base-input__input-wrapper--unit' : '',
-        this.error ? 'base-input__input-wrapper--error' : '',
+        'base-section__form-wrapper',
+        'base-input__form-wrapper',
+        this.unit !== '' ? 'base-input__form-wrapper--unit' : '',
+        this.error ? 'base-input__form-wrapper--error' : '',
       ].join(' ');
     },
     inputClassNames() {

@@ -10,4 +10,17 @@
   &__content {
     margin-bottom: $baseSize;
   }
+
+  /deep/ &__label-wrapper {
+    font-size: 0.75 * $baseSize;
+    display: block;
+    width: 55%;
+    padding: 0 0.5 * $baseSize;
+    box-sizing: border-box;
+  }
+
+  /deep/ &__form-wrapper {
+    width: 45%;
+    position: relative;
+  }
 }
