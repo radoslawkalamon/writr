@@ -4,7 +4,7 @@ export default {
   props: {
     icon: {
       type: String,
-      default: '',
+      required: true,
     },
     alt: {
       type: String,
@@ -27,21 +27,22 @@ export default {
         this.toggled ? 'sidebar-button--active' : '',
       ].join(' ');
     },
+    resolveIcon() {
+      const stateThemeName = 'settings.editor.theme';
+      const themeName = this.$store.getters.getValue(stateThemeName);
+      return this.iconList[themeName][this.icon];
+    },
   },
   methods: {
     onClick() {
       this.toggled = this.toggle ? !this.toggled : false;
       this.$emit('action', this.name);
     },
-    resolveIcon(icon) {
-      const stateThemeName = 'settings.editor.theme';
-      const themeName = this.$store.getters.getValue(stateThemeName);
-      return iconList[themeName][icon];
-    },
   },
   data() {
     return {
       toggled: false,
+      iconList,
     };
   },
 };

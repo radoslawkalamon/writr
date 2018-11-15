@@ -1,6 +1,10 @@
 <template>
-  <h1 class='base-header base-header--1' v-text='this.$slots.default' v-if='this.header'></h1>
-  <h2 class='base-header base-header--2' v-text='this.$slots.default' v-else></h2>
+  <h1 class='base-header base-header--1' v-if='this.header'>
+    <slot></slot>
+  </h1>
+  <h2 class='base-header base-header--2' v-else>
+    <slot></slot>
+  </h2>
 </template>
 
 <script src='./Header.js'></script>

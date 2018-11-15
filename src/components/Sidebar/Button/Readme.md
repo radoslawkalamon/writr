@@ -18,6 +18,6 @@ Should be used within `<sidebar-base>`
 ## @props
 
 - `name` : emitted on `@action` and used to create `<button>` class name,
-- `icon` : filename of picture from `@assets/icons/${theme}/${icon}.svg`,
+- `icon` : `required` : filename of picture from `@assets/icons/${theme}/${icon}.svg`,
 - `alt` : sets `title` of `<button>` and `alt` of `<img>`,
 - `toggle` = `true` : onClick toggle class `sidebar-button--active`.
