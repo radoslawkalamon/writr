@@ -4,7 +4,11 @@ import GLOBS from './Sidebar.Button.globs';
 
 describe('@Components/Sidebar/Button#template', () => {
   let wrapper;
+  let onClickMock;
   beforeAll(() => {
+    // mock onClick function
+    onClickMock = jest.spyOn(SidebarButton.methods, 'onClick');
+
     wrapper = shallowMount(SidebarButton, {
       mocks: GLOBS.mocks,
       propsData: {
@@ -40,9 +44,7 @@ describe('@Components/Sidebar/Button#template', () => {
   });
 
   it('should trigger onClick function after click', () => {
-    // Function mocking is not working?! o_O
-    jest.spyOn(wrapper.vm, 'onClick');
     wrapper.trigger('click');
-    expect(wrapper.vm.onClick).toBeCalled();
+    expect(onClickMock).toBeCalled();
   });
 });
