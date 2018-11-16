@@ -43,7 +43,7 @@ describe('@Components/Sidebar/Button#computed', () => {
   });
 
   describe('resolveIcon', () => {
-    it.only('should return icon url', () => {
+    it('should return icon url', () => {
       const assertion = GLOBS.test.iconUrl;
       const wrapper = shallowMount(SidebarButton, {
         mocks: GLOBS.mocks,
