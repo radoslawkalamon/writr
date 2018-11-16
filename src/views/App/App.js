@@ -22,6 +22,7 @@ export default {
     },
   },
   methods: {
+    downloadFile,
     closePanel() {
       this.openPanel = false;
     },
@@ -32,7 +33,7 @@ export default {
       const date = new Date();
       const filename = `writr_${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}__${date.getHours()}_${date.getMinutes()}.txt`;
       const text = document.getElementById('text-editor').innerText;
-      downloadFile(text, filename, 'text/plain');
+      this.downloadFile(text, filename, 'text/plain');
     },
   },
   watch: {
