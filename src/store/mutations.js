@@ -5,6 +5,11 @@ export default {
     payload.item
       .split(config.splitChar)
       .reduce((prev, cur, index, array) => {
+        if (prev[cur] === undefined) {
+          const s = `$store.mutations.CHANGE_STATE :: Item does not exists! :: ${payload.item}`;
+          throw new Error(s);
+        }
+
         if (index + 1 === array.length) {
           prev[cur] = payload.value;
         }

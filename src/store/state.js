@@ -18,5 +18,4 @@ export default {
       language: 'pl',
     },
   },
-  textEditorElement: null,
 };
