@@ -21,6 +21,7 @@ export default {
       });
     }
 
+    // Send error to componentObject
     if (typeof payload.componentObject === 'object') {
       payload.componentObject[componentErrorProperty] = !isValueValid;
     }
