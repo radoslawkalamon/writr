@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     id='text-editor'
     class='text-editor'
     contenteditable='true'

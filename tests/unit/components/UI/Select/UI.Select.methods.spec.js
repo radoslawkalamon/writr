@@ -36,7 +36,3 @@ describe('@/components/UI/Select#methods', () => {
   });
 });
 
-
-
-
-

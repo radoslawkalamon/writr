@@ -56,7 +56,7 @@ describe('@/components/UI/Input#template', () => {
   it('should .base-input__input have value equal to TEST_VALUE', () => {
     const elementSelector = '.base-input__input';
     const assertion = GLOBS.test.storeValue;
-    const elementValue = parseInt(wrapper.find(elementSelector).element.value);
+    const elementValue = parseInt(wrapper.find(elementSelector).element.value, 10);
 
     expect(elementValue).toEqual(assertion);
   });

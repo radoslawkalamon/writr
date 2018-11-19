@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import UISelect  from '@/components/UI/Select/Select.vue';
+import UISelect from '@/components/UI/Select/Select.vue';
 import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#created', () => {
@@ -17,5 +17,5 @@ describe('@/components/UI/Select#created', () => {
     const assertion = GLOBS.test.storeValidatorArray;
 
     expect(wrapper.vm.options).toEqual(assertion);
-  })
+  });
 });
