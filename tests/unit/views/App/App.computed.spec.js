@@ -12,15 +12,7 @@ describe('@views/App#computed', () => {
 
       const wrapper = shallowMount(App, {
         mocks: {
-          $store: {
-            getters: {
-              getValue: () => GLOBS.test.themeName,
-            },
-          },
-          $i18n: {
-            locale: GLOBS.test.lang,
-          },
-          $t: () => '',
+          ...GLOBS.mocks,
         },
       });
 
