@@ -1,3 +1,5 @@
+import Vue from 'vue';
+import mockdate from 'mockdate';
 import { shallowMount } from '@vue/test-utils';
 import App from '@/views/App/App.vue';
 import GLOBS from './App.globs';
@@ -47,8 +49,52 @@ describe('@views/App#methods', () => {
   });
 
   describe('sidebarButtonDownload', () => {
-    it('sidebarButtonDownload tests in End2End', () => {
-      expect(true).toBeTruthy();
+    it('should downloadFile function be called with 3 arguments equal to assertion', () => {
+      // This one is very, very bad o_o
+      const getElementByIdOriginal = global.document.getElementById;
+      const downloadFileOriginal = App.methods.downloadFile;
+
+      const timestamp = 1542836053153;
+      const filename = 'writr_2018_11_21__22_34.txt';
+      const component = Vue.component('text-editor', {
+        template: `
+        <div id='text-editor'>
+          <div>${GLOBS.test.text}</div>
+        </div>
+        `,
+      });
+
+      // Mock Function
+      App.methods.downloadFile = jest.fn(() => {});
+      // Mock date
+      mockdate.set(new Date(timestamp), new Date().getTimezoneOffset());
+      // Mock document function
+      global.document.getElementById = () => ({
+        innerText: GLOBS.test.text,
+      });
+
+      const wrapper = shallowMount(App, {
+        stubs: {
+          textEditor: component,
+        },
+        mocks: {
+          ...GLOBS.mocks,
+        },
+      });
+
+      const assertion = [
+        GLOBS.test.text,
+        filename,
+        'text/plain',
+      ];
+
+      wrapper.vm.sidebarButtonDownload();
+      expect(App.methods.downloadFile).toHaveBeenCalledWith(...assertion);
+
+      // Reset
+      mockdate.reset();
+      App.methods.downloadFile = downloadFileOriginal;
+      global.document.getElementById = getElementByIdOriginal;
     });
   });
 });

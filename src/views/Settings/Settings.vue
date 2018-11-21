@@ -67,7 +67,6 @@
         item='settings.misc.language'
         action='changeState'
       ></base-select>
-      <!-- <base-toggle> -->
     </base-section>
     <base-text v-text='$t("general.settings.copyright")'></base-text>
   </sidebar-panel>

@@ -13,7 +13,7 @@ Current development stage: **Alpha [α]**
 - [ ] Editor window
   - [ ] Unformat / reformat text on paste
   - [ ] Contenteditable first line `<div>` glitch fix
-  - [ ] Save to file
+  - [x] Save to file
 - [ ] Sidebar
   - [x] Buttons system - Top
   - [x] Buttons system - Bottom
