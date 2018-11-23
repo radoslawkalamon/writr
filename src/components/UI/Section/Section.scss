@@ -1,0 +1,26 @@
+.base-section {
+  &__title {
+    font-size: $baseSize;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: $baseSize;
+  }
+
+  &__content {
+    margin-bottom: $baseSize;
+  }
+
+  /deep/ &__label-wrapper {
+    font-size: 0.75 * $baseSize;
+    display: block;
+    width: 55%;
+    padding: 0 0.5 * $baseSize;
+    box-sizing: border-box;
+  }
+
+  /deep/ &__form-wrapper {
+    width: 45%;
+    position: relative;
+  }
+}

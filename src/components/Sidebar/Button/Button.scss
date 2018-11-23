@@ -1,0 +1,56 @@
+.sidebar-button {
+  @include transition(background-color border-color);
+
+  border: 1px solid transparent;
+  border-right: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $sidebarWidth;
+  height: $sidebarWidth;
+  cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';
+
+  .sidebar-button {
+    &:hover {
+      border-color: color(third);
+    }
+
+    &:active {
+      background-color: color(fourth);
+    }
+
+    &--active {
+      background-color: color(third);
+    }
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  .sidebar-button {
+    &:hover {
+      border-color: color(third);
+    }
+
+    &:active {
+      background-color: color(fourth);
+    }
+
+    &--active {
+      background-color: color(third);
+    }
+  }
+}

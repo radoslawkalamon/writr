@@ -1,0 +1,101 @@
+.base-toggle {
+  display: flex;
+  align-items: center;
+
+  &__form-wrapper {
+    width: calc(45% - 1px);
+    height: $unitSize;
+    border: 1px solid transparent;
+    font-size: 0.75 * $baseSize;
+    cursor: pointer;
+
+    @include transition(color background-color border-color);
+
+    &::before {
+      content: 'I';
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &::after {
+      content: 'O';
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__input {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+
+    @include transition(left background-color border-color);
+
+    &--active {
+      left: 50%;
+    }
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';  
+
+  .base-toggle {
+    &__form-wrapper {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &--active {
+        background-color: color(success);
+        color: color(contra);
+      }
+    }
+
+    &__input {
+      background-color: color(fourth);
+      border-color: color(third);
+    }
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  .base-toggle {
+    &__form-wrapper {
+      color: color(contra);
+      background-color: color(secondary);
+      border-color: color(fourth);
+
+      &--active {
+        background-color: color(success);
+        color: color(contra);
+      }
+    }
+
+    &__input {
+      background-color: color(fourth);
+      border-color: color(third);
+    }
+  }
+}

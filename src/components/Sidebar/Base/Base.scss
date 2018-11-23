@@ -1,0 +1,46 @@
+.sidebar {
+  @include transition(background-color border-color);
+
+  position: fixed;
+  z-index: 5;
+  width: $sidebarWidth;
+  border-right: 1px solid transparent;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  &__box {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+
+    &--top {
+      top: 0;
+      width: 100%;
+    }
+
+    &--bottom {
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+@import '@/styles/themes/dark.scss';
+
+  .sidebar {
+    background-color: color(secondary);
+    border-color: color(third);
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+@import '@/styles/themes/light.scss';
+
+  .sidebar {
+    background-color: color(secondary);
+    border-color: color(third);
+  }
+}

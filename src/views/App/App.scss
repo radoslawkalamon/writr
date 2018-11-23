@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: 1.25em;
+}
+
+.writr {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  padding-left: $sidebarWidth;
+  box-sizing: border-box;
+
+  @include transition(background-color color);
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';  
+
+  color: color(contra);
+  background-color: color(base);
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  color: color(contra);
+  background-color: color(base);
+}
+
+@import '@/styles/_transitions.scss'
