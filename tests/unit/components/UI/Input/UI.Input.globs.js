@@ -4,6 +4,7 @@ const TEST_ITEM = 'testItem';
 const TEST_ACTION = 'testAction';
 const TEST_STORE_VALUE = 1337;
 const TEST_TITLE = 'This is test title!';
+const TEST_NAME = 'test-name';
 
 export default {
   test: {
@@ -13,6 +14,7 @@ export default {
     action: TEST_ACTION,
     storeValue: TEST_STORE_VALUE,
     title: TEST_TITLE,
+    name: TEST_NAME,
   },
   mocks: {
     $store: {
@@ -26,5 +28,6 @@ export default {
     errorTip: TEST_ERROR_TIP,
     item: TEST_ITEM,
     action: TEST_ACTION,
+    name: TEST_NAME,
   },
 };

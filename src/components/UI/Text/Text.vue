@@ -1,5 +1,7 @@
 <template>
-  <div class='base-text'>
+  <div
+    :class='mainElementClassNames'
+  >
     <slot></slot>
   </div>
 </template>

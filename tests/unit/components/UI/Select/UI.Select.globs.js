@@ -5,6 +5,7 @@ const TEST_ACTION = 'testAction';
 const TEST_STORE_VALUE = 'label1';
 const TEST_STORE_VALIDATOR = "isEqualTo|'label1'|'2label'";
 const TEST_STORE_VALIDATOR_ARRAY = ['label1', '2label'];
+const TEST_NAME = 'test-name';
 
 export default {
   test: {
@@ -15,6 +16,7 @@ export default {
     storeValue: TEST_STORE_VALUE,
     storeValidator: TEST_STORE_VALIDATOR,
     storeValidatorArray: TEST_STORE_VALIDATOR_ARRAY,
+    name: TEST_NAME,
   },
   mocks: {
     $store: {
@@ -29,5 +31,6 @@ export default {
     labels: TEST_LABELS,
     item: TEST_ITEM,
     action: TEST_ACTION,
+    name: TEST_NAME,
   },
 };

@@ -14,9 +14,21 @@ export default {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+      default: 'generic',
+    },
     action: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    mainElementClassNames() {
+      return [
+        'base-select',
+        `base-select--${this.name}`,
+      ].join(' ');
     },
   },
   methods: {

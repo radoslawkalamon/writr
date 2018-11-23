@@ -16,12 +16,22 @@ export default {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+      default: 'generic',
+    },
     action: {
       type: String,
       required: true,
     },
   },
   computed: {
+    mainElementClassNames() {
+      return [
+        'base-input',
+        `base-input--${this.name}`,
+      ].join(' ');
+    },
     inputWrapperClassNames() {
       return [
         'base-section__form-wrapper',

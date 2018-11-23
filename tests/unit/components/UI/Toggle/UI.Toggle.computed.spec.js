@@ -14,10 +14,23 @@ const SHALLOW_MOUNT_FUNCTION = testValue =>
     propsData: {
       item: GLOBS.test.item,
       action: GLOBS.test.action,
+      name: GLOBS.test.name,
     },
   });
 
 describe('@Components/UI/Toggle#computed', () => {
+  describe('mainElementClassNames', () => {
+    it('should return class list with name from props', () => {
+      const testValue = false;
+      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
+      const assertion = [
+        'base-toggle',
+        `base-toggle--${GLOBS.test.name}`,
+      ].join(' ');
+
+      expect(wrapper.vm.mainElementClassNames).toEqual(assertion);
+    });
+  });
   describe('inputWrapperClassNames', () => {
     it('should return class list without active when value is set to FALSE', () => {
       const assertion = [

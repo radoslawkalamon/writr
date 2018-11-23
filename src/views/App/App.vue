@@ -1,13 +1,35 @@
 <template>
-  <div id="app" :class='this.appClassNames'>
+  <div
+    id="app"
+    :class='this.appClassNames'
+  >
     <sidebar-base>
-      <sidebar-button @action='sidebarButtonDownload' name='download' icon='download' :alt='$t("general.download.title")' :toggle='false' slot='top'></sidebar-button>
-      <sidebar-button @action='sidebarButtonToggle' name='settings' icon='settings' :alt='$t("general.settings.title")' :toggle='true' slot='bottom'></sidebar-button>
+      <sidebar-button
+        slot='top'
+        name='download'
+        icon='download'
+        :toggle='false'
+        :alt='$t("general.download.title")'
+        @action='sidebarButtonDownload'
+      />
+      <sidebar-button
+        slot='bottom'
+        name='settings'
+        icon='settings'
+        :toggle='true'
+        :alt='$t("general.settings.title")'
+        @action='sidebarButtonToggle'
+      />
     </sidebar-base>
-    <transition name='panel-transition' mode='out-in'>
-      <settings v-if='this.openPanel === "settings"'></settings>
+    <transition
+      name='panel-transition'
+      mode='out-in'
+    >
+      <settings
+        v-if='this.openPanel === "settings"'
+      />
     </transition>
-    <text-editor></text-editor>
+    <text-editor />
   </div>
 </template>
 

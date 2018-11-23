@@ -3,6 +3,22 @@ import UIInput from '@/components/UI/Input/Input.vue';
 import GLOBS from './UI.Input.globs';
 
 describe('@/components/UI/Input#computed', () => {
+  describe('mainElementClassNames', () => {
+    it('should return class list with name from props', () => {
+      const wrapper = shallowMount(UIInput, {
+        propsData: {
+          ...GLOBS.propsData,
+        },
+        mocks: GLOBS.mocks,
+      });
+      const assertion = [
+        'base-input',
+        `base-input--${GLOBS.test.name}`,
+      ].join(' ');
+
+      expect(wrapper.vm.mainElementClassNames).toEqual(assertion);
+    });
+  });
   describe('inputWrapperClassNames', () => {
     it('should return class list without unit and error classes', () => {
       const wrapper = shallowMount(UIInput, {

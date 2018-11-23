@@ -8,12 +8,22 @@ export default {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+      default: 'generic',
+    },
     action: {
       type: String,
       required: true,
     },
   },
   computed: {
+    mainElementClassNames() {
+      return [
+        'base-toggle',
+        `base-toggle--${this.name}`,
+      ].join(' ');
+    },
     inputWrapperClassNames() {
       return [
         'base-section__form-wrapper',
@@ -47,4 +57,3 @@ export default {
     };
   },
 };
-

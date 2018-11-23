@@ -12,16 +12,16 @@ Current development stage: **Alpha [α]**
 
 - [ ] Editor window
   - [ ] Unformat / reformat text on paste
-  - [ ] Contenteditable first line `<div>` glitch fix
+  - [x] Contenteditable first line `<div>` glitch fix
   - [x] Save to file
-- [ ] Sidebar
+- [x] Sidebar
   - [x] Buttons system - Top
   - [x] Buttons system - Bottom
-  - [ ] Save button
-  - [ ] Settings button
+  - [x] Save button
+  - [x] Settings button
 - [ ] Settings
-  - [ ] Light / Dark theme
-  - [ ] Preselected fonts
+  - [ ] Language changer
+  - [x] Light / Dark theme
   - [ ] Font size
   - [ ] Line height
   - [ ] First line text indent
@@ -32,7 +32,6 @@ Current development stage: **Alpha [α]**
 
 **Beta** Stage [β]:
 
-- [ ] Proper modal system
 - [ ] Status bar
 - [ ] Statistics
   - [ ] Page count
@@ -50,7 +49,8 @@ Current development stage: **Alpha [α]**
 **Gamma** Stage [γ]:
 
 - [ ] Alarms & targets
-- [ ] Language changer
+- [ ] Settings
+  - [ ] Preselected fonts
 
 **Delta** Stage [δ]:
 
