@@ -15,6 +15,9 @@ describe('TextEditor#methods', () => {
   });
 
   describe('onPaste', () => {
-
+    it('Should paste plain text into TextEditor', () => {
+      // For now there is not way to test paste event
+      // Manual tests needed!
+    });
   });
 });

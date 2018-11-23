@@ -6,12 +6,12 @@ Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
 
 > **DONE** means final code, tests & documentation are written. Everything is green and ready to deploy.
 
-Current development stage: **Alpha [α]**
+Current development stage: **Prebeta [pre-β]**
 
 **Alpha** Stage [α]:
 
-- [ ] Editor window
-  - [ ] Unformat / reformat text on paste
+- [x] Editor window
+  - [x] Unformat / reformat text on paste
   - [x] Contenteditable first line `<div>` glitch fix
   - [x] Save to file
 - [x] Sidebar
@@ -19,16 +19,24 @@ Current development stage: **Alpha [α]**
   - [x] Buttons system - Bottom
   - [x] Save button
   - [x] Settings button
-- [ ] Settings
-  - [ ] Language changer
+- [x] Settings
+  - [x] Language changer
   - [x] Light / Dark theme
-  - [ ] Font size
-  - [ ] Line height
-  - [ ] First line text indent
-  - [ ] Spellchecker
-  - [ ] Max width of text
-  - [ ] Window top margin
-  - [ ] Window bottom margin
+  - [x] Font size
+  - [x] Line height
+  - [x] First line text indent
+  - [x] Spellchecker
+  - [x] Max width of text
+  - [x] Window top margin
+  - [x] Window bottom margin
+
+**Prebeta** Stage [pre-β]:
+- [ ] Code cleanup
+- [ ] Code guide update
+- [ ] Test cleanup
+- [ ] Test guide update
+- [ ] Readme update
+- [ ] Public release *.*
 
 **Beta** Stage [β]:
 
