@@ -4,7 +4,7 @@
   >
     <span
       class='base-section__label-wrapper base-toggle__label-wrapper'
-      v-text='this.title'
+      v-text='title'
     />
     <div
       @click='onClick()'

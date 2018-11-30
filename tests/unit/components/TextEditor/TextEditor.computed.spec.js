@@ -4,13 +4,13 @@ import GLOBS from './TextEditor.globs';
 
 describe('@Components/TextEditor#computed', () => {
   describe('textEditorStyle', () => {
-    it('should return styles with test values', () => {
-      const wrapper = shallowMount(TextEditor, {
+    it('should return proper styles', () => {
+      const w = shallowMount(TextEditor, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
-      const assertion = `
+      const a = `
       font-size: ${GLOBS.test.fontSize}px;
       line-height: ${GLOBS.test.lineHeight}em;
       text-indent: ${GLOBS.test.paragraphIndent}px;
@@ -20,20 +20,20 @@ describe('@Components/TextEditor#computed', () => {
       margin-bottom: ${GLOBS.test.marginBottom}px;
       `;
 
-      expect(wrapper.vm.textEditorStyle).toEqual(assertion);
+      expect(w.vm.textEditorStyle).toEqual(a);
     });
   });
 
   describe('spellcheckValue', () => {
-    it('should return value equal to TEST_SPELLCHECKER', () => {
-      const wrapper = shallowMount(TextEditor, {
+    it('should return value be equal to GLOBS.test.spellChecker', () => {
+      const w = shallowMount(TextEditor, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
-      const assertion = GLOBS.test.spellChecker;
+      const a = GLOBS.test.spellChecker;
 
-      expect(wrapper.vm.spellcheckValue).toEqual(assertion);
+      expect(w.vm.spellcheckValue).toEqual(a);
     });
   });
 });

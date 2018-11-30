@@ -2,7 +2,7 @@
   <div
     :class='mainElementClassNames'
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

@@ -1,14 +1,16 @@
 <template>
   <div
-    id='text-editor'
+    @input='onChange'
+    @paste.prevent='onPaste'
     class='text-editor'
     contenteditable='true'
+    id='text-editor'
     :spellcheck='spellcheckValue'
     :style='textEditorStyle'
-    @paste.prevent='onPaste'
-    @input='onChange'
   >
-    <div v-text='welcomeText'></div>
+    <div
+      v-text='welcomeText'
+    />
   </div>
 </template>
 

@@ -1,6 +1,13 @@
 <template>
-  <button :class='this.wrapperClassNames' @click='onClick' :title='this.alt'>
-    <img :src='resolveIcon' :alt='this.alt' />
+  <button
+    @click='onClick()'
+    :class='wrapperClassNames'
+    :title='alt'
+  >
+    <img
+      :alt='alt'
+      :src='resolveIcon'
+    />
   </button>
 </template>
 

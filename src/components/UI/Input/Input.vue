@@ -4,18 +4,18 @@
   >
     <span
       class='base-section__label-wrapper base-input__title'
-      v-text='this.title'
+      v-text='title'
     />
     <div
       :class='inputWrapperClassNames'
-      :data-unit='this.unit'
-      :data-error='this.errorTip'
+      :data-error='errorTip'
+      :data-unit='unit'
     >
       <!-- before with unit -->
       <input
         @change='onChange()'
-        type='text'
         :class='inputClassNames'
+        type='text'
         v-model.number='value'
       />
       <!-- after with tooltip -->

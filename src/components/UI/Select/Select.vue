@@ -4,7 +4,7 @@
   >
     <span
       class='base-section__label-wrapper base-select__label-wrapper'
-      v-text='this.title'
+      v-text='title'
     />
     <div
       class='base-section__form-wrapper base-select__form-wrapper'
@@ -15,9 +15,9 @@
         v-model='value'
       >
         <option
-          v-for='(item, index) in options'
           :key='`option_${index}`'
           :value='item'
+          v-for='(item, index) in options'
           v-text='labels[index]'
         />
       </select>

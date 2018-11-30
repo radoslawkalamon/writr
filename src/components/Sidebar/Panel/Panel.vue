@@ -1,6 +1,8 @@
 <template>
-  <div :class='this.wrapperClassNames'>
-    <slot></slot>
+  <div
+    :class='wrapperClassNames'
+  >
+    <slot />
   </div>
 </template>
 

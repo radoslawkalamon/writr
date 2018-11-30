@@ -1,8 +1,15 @@
 <template>
-  <section :class='this.wrapperClassNames'>
-    <h2 class='base-section__title' v-text='this.title'></h2>
-    <div class='base-section__content'>
-      <slot></slot>
+  <section 
+    :class='wrapperClassNames'
+  >
+    <h2
+      class='base-section__title'
+      v-text='title'
+    />
+    <div
+      class='base-section__content'
+    >
+      <slot />
     </div>
   </section>
 </template>
