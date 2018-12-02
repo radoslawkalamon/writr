@@ -16,13 +16,13 @@ describe('@Components/TextEditor#template', () => {
   });
 
   describe('Styles & Attributes', () => {
-    it('should wrapper\'s "spellcheck" attr be equal to GLOBS.test.spellChecker', () => {
+    it('should wrapper\'s SPELLCHECK attr be equal to GLOBS.test.spellChecker', () => {
       const a = GLOBS.test.spellChecker.toString();
 
       expect(w.attributes('spellcheck')).toEqual(a);
     });
 
-    it('should wrapper\'s "style" attr be equal to textEditorStyle computed prop', () => {
+    it('should wrapper\'s STYLE attr be equal to textEditorStyle computed prop', () => {
       // Yep, this one is terrible ._.
       const a = w.vm.textEditorStyle.replace(/(\r\n\t|\n|\r\t)/gm, '').replace(/\s/g, '');
 
@@ -32,13 +32,12 @@ describe('@Components/TextEditor#template', () => {
 
   describe('Wrapper\'s children', () => {
     it('should wrapper have exactly one child', () => {
-      const selector = '.text-editor > *';
       const a = 1;
 
-      expect(w.findAll(selector).length).toEqual(a);
+      expect(w.findAll('.text-editor > *').length).toEqual(a);
     });
 
-    it('should wrapper children be <div>', () => {
+    it('should wrapper child be <div>', () => {
       const a = 'div';
 
       expect(w.contains(a)).toBeTruthy();

@@ -3,9 +3,10 @@ import UISelect from '@/components/UI/Select/Select.vue';
 import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#created', () => {
-  let wrapper;
+  let w;
+
   beforeAll(() => {
-    wrapper = shallowMount(UISelect, {
+    w = shallowMount(UISelect, {
       propsData: {
         ...GLOBS.propsData,
       },
@@ -13,9 +14,9 @@ describe('@/components/UI/Select#created', () => {
     });
   });
 
-  it('should options be equal to storeValidatorArray', () => {
-    const assertion = GLOBS.test.storeValidatorArray;
+  it('should OPTIONS be equal to GLOBS.test.storeValidatorArray', () => {
+    const a = GLOBS.test.storeValidatorArray;
 
-    expect(wrapper.vm.options).toEqual(assertion);
+    expect(w.vm.options).toEqual(a);
   });
 });

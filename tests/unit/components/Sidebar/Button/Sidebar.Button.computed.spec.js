@@ -4,59 +4,57 @@ import GLOBS from './Sidebar.Button.globs';
 
 describe('@Components/Sidebar/Button#computed', () => {
   describe('wrapperClassNames', () => {
-    it('should create class list [w/ name, w/o active]', () => {
-      const assertion = [
-        'sidebar-button',
-        `sidebar-button--${GLOBS.test.name}`,
-        '',
-      ].join(' ');
-      const wrapper = shallowMount(SidebarButton, {
+    it('should return classes: name, !active', () => {
+      const w = shallowMount(SidebarButton, {
         mocks: GLOBS.mocks,
         propsData: {
           name: GLOBS.test.name,
           icon: GLOBS.test.icon,
         },
       });
+      const a = [
+        'sidebar-button',
+        `sidebar-button--${GLOBS.test.name}`,
+        '',
+      ].join(' ');
 
-      expect(wrapper.vm.wrapperClassNames).toEqual(assertion);
+      expect(w.vm.wrapperClassNames).toEqual(a);
     });
 
-    it('should create class list [w/ name, w/ active]', () => {
-      const assertion = [
+    it('should return classes: name, active', () => {
+      const w = shallowMount(SidebarButton, {
+        mocks: GLOBS.mocks,
+        propsData: {
+          name: GLOBS.test.name,
+          icon: GLOBS.test.icon,
+        },
+      });
+      const a = [
         'sidebar-button',
         `sidebar-button--${GLOBS.test.name}`,
         'sidebar-button--active',
       ].join(' ');
 
-      const wrapper = shallowMount(SidebarButton, {
-        mocks: GLOBS.mocks,
-        propsData: {
-          name: GLOBS.test.name,
-          icon: GLOBS.test.icon,
-        },
-      });
+      w.setData({ toggled: true });
 
-      wrapper.setData({ toggled: true });
-
-      expect(wrapper.vm.wrapperClassNames).toEqual(assertion);
+      expect(w.vm.wrapperClassNames).toEqual(a);
     });
   });
 
   describe('resolveIcon', () => {
-    it('should return icon url', () => {
-      const assertion = GLOBS.test.iconUrl;
-      const wrapper = shallowMount(SidebarButton, {
+    it('should return icon URL', () => {
+      const w = shallowMount(SidebarButton, {
         mocks: GLOBS.mocks,
         propsData: {
           icon: GLOBS.test.icon,
         },
       });
+      const a = GLOBS.test.iconUrl;
 
       // Force iconList mock
-      wrapper.setData({ iconList: GLOBS.mocks.iconList });
+      w.setData({ iconList: GLOBS.mocks.iconList });
 
-      expect(wrapper.vm.resolveIcon).toEqual(assertion);
+      expect(w.vm.resolveIcon).toEqual(a);
     });
   });
 });
-

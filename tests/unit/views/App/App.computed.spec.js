@@ -4,19 +4,18 @@ import GLOBS from './App.globs';
 
 describe('@views/App#computed', () => {
   describe('appClassNames', () => {
-    it('should return class list with theme name', () => {
-      const assertion = [
-        'writr',
-        `writr-theme--${GLOBS.test.themeName}`,
-      ].join(' ');
-
-      const wrapper = shallowMount(App, {
+    it('should return classes: name', () => {
+      const w = shallowMount(App, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
+      const a = [
+        'writr',
+        `writr-theme--${GLOBS.test.themeName}`,
+      ].join(' ');
 
-      expect(wrapper.vm.appClassNames).toEqual(assertion);
+      expect(w.vm.appClassNames).toEqual(a);
     });
   });
 });

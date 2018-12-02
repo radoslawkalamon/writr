@@ -33,7 +33,7 @@ Current development stage: **Prebeta [pre-β]**
 **Prebeta** Stage [pre-β]:
 - [ ] Code cleanup
 - [x] Code guide update
-- [ ] Test cleanup
+- [x] Test cleanup
 - [x] Test guide update
 - [x] Color scheme tweak
 - [ ] Writr icon

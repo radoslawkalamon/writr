@@ -3,18 +3,14 @@ import SidebarPanel from '@/components/Sidebar/Panel/Panel.vue';
 import GLOBS from './Sidebar.Panel.globs';
 
 describe('@Components/Sidebar/Panel#computed', () => {
-  it('should main <div> have class list with name provided', () => {
-    const assertion = [
-      'sidebar-panel',
-      `sidebar-panel--${GLOBS.test.name}`,
-    ].join(' ');
-
-    const wrapper = shallowMount(SidebarPanel, {
+  it('should wrapper have proper classes', () => {
+    const w = shallowMount(SidebarPanel, {
       propsData: {
         name: GLOBS.test.name,
       },
     });
+    const a = w.vm.wrapperClassNames;
 
-    expect(wrapper.attributes('class')).toEqual(assertion);
+    expect(w.attributes('class')).toEqual(a);
   });
 });

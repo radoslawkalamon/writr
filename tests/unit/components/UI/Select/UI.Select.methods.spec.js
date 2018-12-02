@@ -4,26 +4,27 @@ import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#methods', () => {
   describe('onChange', () => {
-    let wrapper;
+    let w;
+
     beforeAll(() => {
-      wrapper = shallowMount(UISelect, {
+      w = shallowMount(UISelect, {
         propsData: {
           ...GLOBS.propsData,
         },
         mocks: GLOBS.mocks,
       });
 
-      wrapper.vm.onChange();
+      w.vm.onChange();
     });
 
     it('should call $store.dispatch function exactly once', () => {
-      const assertion = 1;
+      const a = 1;
 
-      expect(wrapper.vm.$store.dispatch).toHaveBeenCalledTimes(assertion);
+      expect(w.vm.$store.dispatch).toHaveBeenCalledTimes(a);
     });
 
-    it('should call $store.dispatch with 2 arguments with data equal to assertion', () => {
-      const assertion = [
+    it('should call $store.dispatch with 2 arguments: action name, data', () => {
+      const a = [
         GLOBS.test.action,
         {
           item: GLOBS.test.item,
@@ -31,8 +32,7 @@ describe('@/components/UI/Select#methods', () => {
         },
       ];
 
-      expect(wrapper.vm.$store.dispatch).toBeCalledWith(...assertion);
+      expect(w.vm.$store.dispatch).toBeCalledWith(...a);
     });
   });
 });
-

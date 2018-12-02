@@ -3,12 +3,12 @@ import UIInput from '@/components/UI/Input/Input.vue';
 import GLOBS from './UI.Input.globs';
 
 describe('@/components/UI/Input#template', () => {
-  let wrapper;
+  let w;
   let onChangeMock;
 
   beforeAll(() => {
     onChangeMock = jest.spyOn(UIInput.methods, 'onChange');
-    wrapper = shallowMount(UIInput, {
+    w = shallowMount(UIInput, {
       propsData: {
         ...GLOBS.propsData,
         title: GLOBS.test.title,
@@ -18,55 +18,48 @@ describe('@/components/UI/Input#template', () => {
     });
   });
 
-  it('should .base-input__title have innerText equal to title prop', () => {
-    const elementSelector = '.base-input__title';
-    const assertion = GLOBS.test.title;
+  it('should .base-input__title\'s innerText be equal to TITLE prop', () => {
+    const a = GLOBS.test.title;
 
-    expect(wrapper.find(elementSelector).text()).toEqual(assertion);
+    expect(w.find('.base-input__title').text()).toEqual(a);
   });
 
-  it('should .base-input__form-wrapper have classes equal to inputWrapperClassNames return', () => {
-    const elementSelector = '.base-input__form-wrapper';
-    const assertion = wrapper.vm.inputWrapperClassNames;
+  it('should .base-input__form-wrapper have proper classes', () => {
+    const a = w.vm.inputWrapperClassNames;
 
-    expect(wrapper.find(elementSelector).attributes('class')).toEqual(assertion);
+    expect(w.find('.base-input__form-wrapper').attributes('class')).toEqual(a);
   });
 
-  it('should .base-input__form-wrapper have data-unit attr equal to unit prop', () => {
-    const elementSelector = '.base-input__form-wrapper';
-    const assertion = GLOBS.test.unit;
+  it('should .base-input__form-wrapper\'s DATA-UNIT attr be equal to UNIT prop', () => {
+    const a = GLOBS.test.unit;
 
-    expect(wrapper.find(elementSelector).attributes('data-unit')).toEqual(assertion);
+    expect(w.find('.base-input__form-wrapper').attributes('data-unit')).toEqual(a);
   });
 
-  it('should .base-input__form-wrapper have data-error attr qual to errorTip prop', () => {
-    const elementSelector = '.base-input__form-wrapper';
-    const assertion = GLOBS.test.errorTip;
+  it('should .base-input__form-wrapper\'s DATA-ERROR attr be equal to ERRORTIP prop', () => {
+    const a = GLOBS.test.errorTip;
 
-    expect(wrapper.find(elementSelector).attributes('data-error')).toEqual(assertion);
+    expect(w.find('.base-input__form-wrapper').attributes('data-error')).toEqual(a);
   });
 
-  it('should .base-input__input have classes equal to inputClassNames return', () => {
-    const elementSelector = '.base-input__input';
-    const assertion = wrapper.vm.inputClassNames;
+  it('should .base-input__input have proper classes', () => {
+    const a = w.vm.inputClassNames;
 
-    expect(wrapper.find(elementSelector).attributes('class')).toEqual(assertion);
+    expect(w.find('.base-input__input').attributes('class')).toEqual(a);
   });
 
-  it('should .base-input__input have value equal to TEST_VALUE', () => {
-    const elementSelector = '.base-input__input';
-    const assertion = GLOBS.test.storeValue;
-    const elementValue = parseInt(wrapper.find(elementSelector).element.value, 10);
+  it('should .base-input__input\'s value be equal to GLOBS.test.storeValue', () => {
+    const elementValue = parseInt(w.find('.base-input__input').element.value, 10);
+    const a = GLOBS.test.storeValue;
 
-    expect(elementValue).toEqual(assertion);
+    expect(elementValue).toEqual(a);
   });
 
-  it('should .base-input__input on event change trigger onChange function exactly once', () => {
-    const elementSelector = '.base-input__input';
-    const assertion = 1;
+  it('should .base-input__input on @change trigger onChange function exactly once', () => {
+    const a = 1;
 
-    wrapper.find(elementSelector).trigger('change');
+    w.find('.base-input__input').trigger('change');
 
-    expect(onChangeMock).toHaveBeenCalledTimes(assertion);
+    expect(onChangeMock).toHaveBeenCalledTimes(a);
   });
 });

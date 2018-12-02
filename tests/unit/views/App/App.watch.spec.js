@@ -4,17 +4,17 @@ import GLOBS from './App.globs';
 
 describe('@views/App#computed', () => {
   describe('$store.state.settings.misc.language', () => {
-    it('should change lang variable after changing it in store', () => {
-      const wrapper = shallowMount(App, {
+    it('should change LOCALE after changing it in store', () => {
+      const w = shallowMount(App, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
-      const assertion = GLOBS.test.langChange;
+      const a = GLOBS.test.langChange;
 
-      wrapper.vm.$store.state.settings.misc.language = GLOBS.test.langChange;
+      w.vm.$store.state.settings.misc.language = GLOBS.test.langChange;
 
-      expect(wrapper.vm.$i18n.locale).toEqual(assertion);
+      expect(w.vm.$i18n.locale).toEqual(a);
     });
   });
 });

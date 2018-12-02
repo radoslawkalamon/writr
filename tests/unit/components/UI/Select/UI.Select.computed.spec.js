@@ -4,19 +4,19 @@ import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#computed', () => {
   describe('mainElementClassNames', () => {
-    it('should return class list with name from props', () => {
-      const wrapper = shallowMount(UISelect, {
+    it('should return classes: name', () => {
+      const w = shallowMount(UISelect, {
         propsData: {
           ...GLOBS.propsData,
         },
         mocks: GLOBS.mocks,
       });
-      const assertion = [
+      const a = [
         'base-select',
         `base-select--${GLOBS.test.name}`,
       ].join(' ');
 
-      expect(wrapper.vm.mainElementClassNames).toEqual(assertion);
+      expect(w.vm.mainElementClassNames).toEqual(a);
     });
   });
 });

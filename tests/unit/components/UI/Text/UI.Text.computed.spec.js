@@ -4,18 +4,18 @@ import GLOBS from './UI.Text.globs';
 
 describe('@/components/UI/Text#computed', () => {
   describe('mainElementClassNames', () => {
-    it('should return class list with name from props', () => {
-      const wrapper = shallowMount(UIText, {
+    it('should return classes: name', () => {
+      const w = shallowMount(UIText, {
         propsData: {
-          ...GLOBS.propsData,
+          name: GLOBS.test.name,
         },
       });
-      const assertion = [
+      const a = [
         'base-text',
         `base-text--${GLOBS.test.name}`,
       ].join(' ');
 
-      expect(wrapper.vm.mainElementClassNames).toEqual(assertion);
+      expect(w.vm.mainElementClassNames).toEqual(a);
     });
   });
 });

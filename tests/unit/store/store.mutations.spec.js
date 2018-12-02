@@ -9,11 +9,11 @@ describe('$store#mutations', () => {
         item: GLOBS.test.item,
         value: GLOBS.test.value,
       };
-      const assertion = GLOBS.test.value;
+      const a = GLOBS.test.value;
 
       mutations.CHANGE_STATE(state, payload);
 
-      expect(state.test.item.store).toEqual(assertion);
+      expect(state.test.item.store).toEqual(a);
     });
 
     it('should throw error if state not exists', () => {

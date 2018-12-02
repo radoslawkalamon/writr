@@ -7,44 +7,44 @@ import GLOBS from './App.globs';
 describe('@views/App#methods', () => {
   describe('closePanel', () => {
     it('should change openPanel to FALSE', () => {
-      const wrapper = shallowMount(App, {
+      const w = shallowMount(App, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
 
-      wrapper.setData({ openPanel: GLOBS.test.panelName });
-      wrapper.vm.closePanel();
+      w.setData({ openPanel: GLOBS.test.panelName });
+      w.vm.closePanel();
 
-      expect(wrapper.vm.openPanel).toBeFalsy();
+      expect(w.vm.openPanel).toBeFalsy();
     });
   });
 
   describe('sidebarButtonToggle', () => {
-    it('should change openPanel to TEST_PANEL_NAME', () => {
-      const wrapper = shallowMount(App, {
+    it('should change openPanel to GLOBS.test.panelName', () => {
+      const w = shallowMount(App, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
-      const assertion = GLOBS.test.panelName;
+      const a = GLOBS.test.panelName;
 
-      wrapper.vm.sidebarButtonToggle(GLOBS.test.panelName);
+      w.vm.sidebarButtonToggle(GLOBS.test.panelName);
 
-      expect(wrapper.vm.openPanel).toEqual(assertion);
+      expect(w.vm.openPanel).toEqual(a);
     });
 
-    it('after setting openPanel to TEST_PANEL_NAME, should change openPanel to FALSE', () => {
-      const wrapper = shallowMount(App, {
+    it('after setting openPanel to GLOBS.test.panelName, should change openPanel to FALSE', () => {
+      const w = shallowMount(App, {
         mocks: {
           ...GLOBS.mocks,
         },
       });
 
-      wrapper.setData({ openPanel: GLOBS.test.panelName });
-      wrapper.vm.sidebarButtonToggle(GLOBS.test.panelName);
+      w.setData({ openPanel: GLOBS.test.panelName });
+      w.vm.sidebarButtonToggle(GLOBS.test.panelName);
 
-      expect(wrapper.vm.openPanel).toBeFalsy();
+      expect(w.vm.openPanel).toBeFalsy();
     });
   });
 
@@ -73,7 +73,7 @@ describe('@views/App#methods', () => {
         innerText: GLOBS.test.text,
       });
 
-      const wrapper = shallowMount(App, {
+      const w = shallowMount(App, {
         stubs: {
           textEditor: component,
         },
@@ -81,15 +81,14 @@ describe('@views/App#methods', () => {
           ...GLOBS.mocks,
         },
       });
-
-      const assertion = [
+      const a = [
         GLOBS.test.text,
         filename,
         'text/plain',
       ];
 
-      wrapper.vm.sidebarButtonDownload();
-      expect(App.methods.downloadFile).toHaveBeenCalledWith(...assertion);
+      w.vm.sidebarButtonDownload();
+      expect(App.methods.downloadFile).toHaveBeenCalledWith(...a);
 
       // Reset
       mockdate.reset();

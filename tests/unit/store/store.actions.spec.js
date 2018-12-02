@@ -19,29 +19,29 @@ describe('$store#actions', () => {
         item: GLOBS.test.item,
         value: GLOBS.test.value,
       };
-      const assertion = [
+      const a = [
         commitName,
         payload,
       ];
 
       actions.changeState(context, payload);
 
-      expect(context.commit).toHaveBeenCalledWith(...assertion);
+      expect(context.commit).toHaveBeenCalledWith(...a);
     });
 
-    it('should not commit if validator return FALSE', () => {
+    it('shouldn\'t commit if validator return FALSE', () => {
       const payload = {
         item: GLOBS.test.item,
         value: GLOBS.test.valueWrong,
       };
-      const assertion = 0;
+      const a = 0;
 
       actions.changeState(context, payload);
 
-      expect(context.commit).toHaveBeenCalledTimes(assertion);
+      expect(context.commit).toHaveBeenCalledTimes(a);
     });
 
-    it('should not send error if componentObject is null', () => {
+    it('shouldn\'t send error if componentObject is null', () => {
       const payload = {
         item: GLOBS.test.item,
         value: GLOBS.test.valueWrong,

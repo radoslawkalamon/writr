@@ -3,14 +3,13 @@ import UIToggle from '@/components/UI/Toggle/Toggle.vue';
 import GLOBS from './UI.Toggle.globs';
 
 describe('@Components/UI/Toggle#template', () => {
-  let wrapper;
+  let w;
   let onClickMock;
   const testValue = false;
 
   beforeAll(() => {
     onClickMock = jest.spyOn(UIToggle.methods, 'onClick');
-
-    wrapper = shallowMount(UIToggle, {
+    w = shallowMount(UIToggle, {
       mocks: {
         $store: {
           getters: {
@@ -27,33 +26,29 @@ describe('@Components/UI/Toggle#template', () => {
     });
   });
 
-  it('should <span> have title equal to title prop', () => {
-    const element = wrapper.find('span.base-section__label-wrapper');
-    const assertion = GLOBS.test.title;
+  it('should .base-section__label-wrapper\'s TITLE attr be equal to TITLE prop', () => {
+    const a = GLOBS.test.title;
 
-    expect(element.text()).toEqual(assertion);
+    expect(w.find('.base-section__label-wrapper').text()).toEqual(a);
   });
 
-  it('should <div.base-section__form-wrapper> have classes equal to computed function', () => {
-    const element = wrapper.find('div.base-section__form-wrapper');
-    const assertion = wrapper.vm.inputWrapperClassNames;
+  it('should .base-section__form-wrapper have proper classes', () => {
+    const a = w.vm.inputWrapperClassNames;
 
-    expect(element.attributes('class')).toEqual(assertion);
+    expect(w.find('.base-section__form-wrapper').attributes('class')).toEqual(a);
   });
 
-  it('should onClick be called after click on <div.base-section__form-wrapper>', () => {
-    const element = wrapper.find('div.base-section__form-wrapper');
-    const assertion = 1;
+  it('should .base-input__input on @click trigger onClick function exactly once', () => {
+    const a = 1;
 
-    element.trigger('click');
+    w.find('.base-section__form-wrapper').trigger('click');
 
-    expect(onClickMock).toBeCalledTimes(assertion);
+    expect(onClickMock).toBeCalledTimes(a);
   });
 
-  it('should <div.base-toggle__input> have classes equal to computed function', () => {
-    const element = wrapper.find('div.base-toggle__input');
-    const assertion = wrapper.vm.inputClassNames;
+  it('should .base-toggle__input have proper classes', () => {
+    const a = w.vm.inputClassNames;
 
-    expect(element.attributes('class')).toEqual(assertion);
+    expect(w.find('.base-toggle__input').attributes('class')).toEqual(a);
   });
 });

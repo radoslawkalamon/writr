@@ -3,30 +3,33 @@ import UIHeader from '@/components/UI/Header/Header.vue';
 import GLOBS from './UI.Header.globs';
 
 describe('@/components/UI/Header#template', () => {
-  describe('with header set to FALSE', () => {
-    let wrapper;
+  describe('with HEADER prop set to false', () => {
+    let w;
+
     beforeAll(() => {
-      wrapper = shallowMount(UIHeader, {
+      w = shallowMount(UIHeader, {
         slots: {
           default: GLOBS.test.text,
         },
       });
     });
 
-    it('should tag be <h2>', () => {
-      const assertion = 'h2';
-      expect(wrapper.find(assertion).exists()).toBeTruthy();
+    it('should wrapper tag be <h2>', () => {
+      expect(w.find('h2').exists()).toBeTruthy();
     });
 
-    it('should be text inside header', () => {
-      expect(wrapper.text()).toBe(GLOBS.test.text);
+    it('should text be inside wrapper', () => {
+      const a = GLOBS.test.text;
+
+      expect(w.text()).toEqual(a);
     });
   });
 
-  describe('with header set to TRUE', () => {
-    let wrapper;
+  describe('with HEADER prop set to true', () => {
+    let w;
+
     beforeAll(() => {
-      wrapper = shallowMount(UIHeader, {
+      w = shallowMount(UIHeader, {
         slots: {
           default: GLOBS.test.text,
         },
@@ -36,13 +39,14 @@ describe('@/components/UI/Header#template', () => {
       });
     });
 
-    it('should tag be <h1>', () => {
-      const assertion = 'h1';
-      expect(wrapper.find(assertion).exists()).toBeTruthy();
+    it('should wrapper tag be <h1>', () => {
+      expect(w.find('h1').exists()).toBeTruthy();
     });
 
-    it('should be text inside header', () => {
-      expect(wrapper.text()).toBe(GLOBS.test.text);
+    it('should text be inside wrapper', () => {
+      const a = GLOBS.test.text;
+
+      expect(w.text()).toEqual(a);
     });
   });
 });

@@ -4,36 +4,37 @@ import GLOBS from './UI.Input.globs';
 
 describe('@/components/UI/Input#computed', () => {
   describe('onChange', () => {
-    let wrapper;
+    let w;
+
     beforeAll(() => {
-      wrapper = shallowMount(UIInput, {
+      w = shallowMount(UIInput, {
         propsData: {
           ...GLOBS.propsData,
         },
         mocks: GLOBS.mocks,
       });
 
-      wrapper.vm.onChange();
+      w.vm.onChange();
     });
 
-    it('should call $store.dispatch function exatcly once', () => {
-      const assertion = 1;
+    it('should call $store.dispatch function exactly once', () => {
+      const a = 1;
 
-      expect(wrapper.vm.$store.dispatch).toHaveBeenCalledTimes(assertion);
+      expect(w.vm.$store.dispatch).toHaveBeenCalledTimes(a);
     });
 
-    it('should call $store.dispatch with 2 arguments with data equal to assertion', () => {
-      const assertion = [
+    it('should call $store.dispatch with 2 arguments: action name, data', () => {
+      const a = [
         GLOBS.test.action,
         {
           item: GLOBS.test.item,
           value: GLOBS.test.storeValue,
-          componentObject: wrapper.vm,
+          componentObject: w.vm,
           componentErrorProperty: 'error',
         },
       ];
 
-      expect(wrapper.vm.$store.dispatch).toBeCalledWith(...assertion);
+      expect(w.vm.$store.dispatch).toBeCalledWith(...a);
     });
   });
 });

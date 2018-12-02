@@ -20,64 +20,64 @@ const SHALLOW_MOUNT_FUNCTION = testValue =>
 
 describe('@Components/UI/Toggle#computed', () => {
   describe('mainElementClassNames', () => {
-    it('should return class list with name from props', () => {
+    it('should return classes: name', () => {
       const testValue = false;
-      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
-      const assertion = [
+      const w = SHALLOW_MOUNT_FUNCTION(testValue);
+      const a = [
         'base-toggle',
         `base-toggle--${GLOBS.test.name}`,
       ].join(' ');
 
-      expect(wrapper.vm.mainElementClassNames).toEqual(assertion);
+      expect(w.vm.mainElementClassNames).toEqual(a);
     });
   });
   describe('inputWrapperClassNames', () => {
-    it('should return class list without active when value is set to FALSE', () => {
-      const assertion = [
+    it('should return classes: !active', () => {
+      const testValue = false;
+      const w = SHALLOW_MOUNT_FUNCTION(testValue);
+      const a = [
         'base-section__form-wrapper',
         'base-toggle__form-wrapper',
         '',
       ].join(' ');
-      const testValue = false;
-      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
 
-      expect(wrapper.vm.inputWrapperClassNames).toEqual(assertion);
+      expect(w.vm.inputWrapperClassNames).toEqual(a);
     });
 
-    it('should return class list with active when value is set to TRUE', () => {
-      const assertion = [
+    it('should return classes: active', () => {
+      const testValue = true;
+      const w = SHALLOW_MOUNT_FUNCTION(testValue);
+      const a = [
         'base-section__form-wrapper',
         'base-toggle__form-wrapper',
         'base-toggle__form-wrapper--active',
       ].join(' ');
-      const testValue = true;
-      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
 
-      expect(wrapper.vm.inputWrapperClassNames).toEqual(assertion);
+      expect(w.vm.inputWrapperClassNames).toEqual(a);
     });
   });
 
   describe('inputClassNames', () => {
-    it('should return class list without active when value is set to FALSE', () => {
-      const assertion = [
+    it('should return classes: !active', () => {
+      const testValue = false;
+      const w = SHALLOW_MOUNT_FUNCTION(testValue);
+      const a = [
         'base-toggle__input',
         '',
       ].join(' ');
-      const testValue = false;
-      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
 
-      expect(wrapper.vm.inputClassNames).toEqual(assertion);
+      expect(w.vm.inputClassNames).toEqual(a);
     });
 
-    it('should return class list with active when value is set to TRUE', () => {
-      const assertion = [
+    it('should return classes: active', () => {
+      const testValue = true;
+      const w = SHALLOW_MOUNT_FUNCTION(testValue);
+      const a = [
         'base-toggle__input',
         'base-toggle__input--active',
       ].join(' ');
-      const testValue = true;
-      const wrapper = SHALLOW_MOUNT_FUNCTION(testValue);
 
-      expect(wrapper.vm.inputClassNames).toEqual(assertion);
+      expect(w.vm.inputClassNames).toEqual(a);
     });
   });
 });

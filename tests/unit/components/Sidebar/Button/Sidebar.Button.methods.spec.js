@@ -4,10 +4,10 @@ import GLOBS from './Sidebar.Button.globs';
 
 describe('@Components/Sidebar/Button#methods', () => {
   describe('onClick', () => {
-    describe('with toggle FALSE', () => {
-      let wrapper;
+    describe('with TOGGLE prop set to false', () => {
+      let w;
       beforeAll(() => {
-        wrapper = shallowMount(SidebarButton, {
+        w = shallowMount(SidebarButton, {
           mocks: GLOBS.mocks,
           propsData: {
             name: GLOBS.test.name,
@@ -15,27 +15,29 @@ describe('@Components/Sidebar/Button#methods', () => {
           },
         });
 
-        wrapper.vm.onClick();
+        // Simulate click
+        w.vm.onClick();
       });
 
-      it('should not toggle button if toggle is false', () => {
-        expect(wrapper.vm.toggled).toBeFalsy();
+      it('shouldn\'t toggle button', () => {
+        expect(w.vm.toggled).toBeFalsy();
       });
 
-      it('should emit "action" event', () => {
-        expect(wrapper.emitted().action).toBeTruthy();
+      it('should emit ACTION', () => {
+        expect(w.emitted().action).toBeTruthy();
       });
 
-      it('should emitted "action" has payload with name', () => {
-        const assertion = [GLOBS.test.name];
-        expect(wrapper.emitted().action[0]).toEqual(assertion);
+      it('should emitted ACTION have payload with NAME prop', () => {
+        const a = [GLOBS.test.name];
+
+        expect(w.emitted().action[0]).toEqual(a);
       });
     });
 
-    describe('with toggle TRUE', () => {
-      let wrapper;
+    describe('with TOGGLE prop set to true', () => {
+      let w;
       beforeAll(() => {
-        wrapper = shallowMount(SidebarButton, {
+        w = shallowMount(SidebarButton, {
           mocks: GLOBS.mocks,
           propsData: {
             name: GLOBS.test.name,
@@ -44,20 +46,21 @@ describe('@Components/Sidebar/Button#methods', () => {
           },
         });
 
-        wrapper.vm.onClick();
+        // Simulate click
+        w.vm.onClick();
       });
 
-      it('should toggle button if toggle is true', () => {
-        expect(wrapper.vm.toggled).toBeTruthy();
+      it('should toggle button', () => {
+        expect(w.vm.toggled).toBeTruthy();
       });
 
-      it('should emit "action" event', () => {
-        expect(wrapper.emitted().action).toBeTruthy();
+      it('should emit ACTION', () => {
+        expect(w.emitted().action).toBeTruthy();
       });
 
-      it('should emitted "action" has payload with name', () => {
-        const assertion = [GLOBS.test.name];
-        expect(wrapper.emitted().action[0]).toEqual(assertion);
+      it('should emitted ACTION has payload with name', () => {
+        const a = [GLOBS.test.name];
+        expect(w.emitted().action[0]).toEqual(a);
       });
     });
   });

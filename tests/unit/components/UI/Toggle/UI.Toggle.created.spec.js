@@ -3,11 +3,11 @@ import UIToggle from '@/components/UI/Toggle/Toggle.vue';
 import GLOBS from './UI.Toggle.globs';
 
 describe('@Components/UI/Toggle#created', () => {
-  let wrapper;
+  let w;
   const testValue = false;
 
   beforeAll(() => {
-    wrapper = shallowMount(UIToggle, {
+    w = shallowMount(UIToggle, {
       mocks: {
         $store: {
           getters: {
@@ -26,9 +26,9 @@ describe('@Components/UI/Toggle#created', () => {
   });
 
   it(`should change value after changing $store.state.${GLOBS.test.item}`, () => {
-    const assertion = !testValue;
-    wrapper.vm.$store.state[GLOBS.test.item] = assertion;
+    const a = !testValue;
+    w.vm.$store.state[GLOBS.test.item] = a;
 
-    expect(wrapper.vm.value).toEqual(assertion);
+    expect(w.vm.value).toEqual(a);
   });
 });

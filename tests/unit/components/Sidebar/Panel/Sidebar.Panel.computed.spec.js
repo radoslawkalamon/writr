@@ -4,19 +4,18 @@ import GLOBS from './Sidebar.Panel.globs';
 
 describe('@Components/Sidebar/Panel#computed', () => {
   describe('wrapperClassNames', () => {
-    it('should return class list with name provided', () => {
-      const assertion = [
-        'sidebar-panel',
-        `sidebar-panel--${GLOBS.test.name}`,
-      ].join(' ');
-
-      const wrapper = shallowMount(SidebarPanel, {
+    it('should return classes: name', () => {
+      const w = shallowMount(SidebarPanel, {
         propsData: {
           name: GLOBS.test.name,
         },
       });
+      const a = [
+        'sidebar-panel',
+        `sidebar-panel--${GLOBS.test.name}`,
+      ].join(' ');
 
-      expect(wrapper.vm.wrapperClassNames).toEqual(assertion);
+      expect(w.vm.wrapperClassNames).toEqual(a);
     });
   });
 });

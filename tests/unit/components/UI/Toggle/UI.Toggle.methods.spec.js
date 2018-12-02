@@ -4,11 +4,11 @@ import GLOBS from './UI.Toggle.globs';
 
 describe('@Components/UI/Toggle#methods', () => {
   describe('onClick', () => {
-    let wrapper;
+    let w;
     const testValue = false;
 
     beforeAll(() => {
-      wrapper = shallowMount(UIToggle, {
+      w = shallowMount(UIToggle, {
         mocks: {
           $store: {
             getters: {
@@ -23,16 +23,17 @@ describe('@Components/UI/Toggle#methods', () => {
         },
       });
 
-      wrapper.vm.onClick();
+      w.vm.onClick();
     });
 
-    it('should call $store.dispatch exatcly once', () => {
-      const assertion = 1;
-      expect(wrapper.vm.$store.dispatch).toBeCalledTimes(assertion);
+    it('should call $store.dispatch function exactly once', () => {
+      const a = 1;
+
+      expect(w.vm.$store.dispatch).toBeCalledTimes(a);
     });
 
-    it('should call $store.dispatch with two arguments with data equal to assertion', () => {
-      const assertion = [
+    it('should call $store.dispatch with 2 arguments: action name, data', () => {
+      const a = [
         GLOBS.test.action,
         {
           item: GLOBS.test.item,
@@ -40,7 +41,7 @@ describe('@Components/UI/Toggle#methods', () => {
         },
       ];
 
-      expect(wrapper.vm.$store.dispatch).toBeCalledWith(...assertion);
+      expect(w.vm.$store.dispatch).toBeCalledWith(...a);
     });
   });
 });

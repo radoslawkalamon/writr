@@ -25,7 +25,7 @@ describe('@Components/TextEditor#computed', () => {
   });
 
   describe('spellcheckValue', () => {
-    it('should return value be equal to GLOBS.test.spellChecker', () => {
+    it('should return value equal to GLOBS.test.spellChecker', () => {
       const w = shallowMount(TextEditor, {
         mocks: {
           ...GLOBS.mocks,
