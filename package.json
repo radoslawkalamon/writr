@@ -1,6 +1,6 @@
 {
   "name": "writr-alfa-rewrite",
-  "version": "0.1.0",
+  "version": "α-1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

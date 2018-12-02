@@ -1,7 +1,12 @@
 # Component Naming guide
 
-## Major component
-`@/components/${name}/${name}.vue`
+```javascript
+/// Main files
+@/components/${category}/${name}/${name}.vue
+@/components/${category}/${name}/${name}.js
+@/components/${category}/${name}/${name}.scss
+@/components/${category}/${name}/Readme.md
 
-## Minor component
-`@/components/${category}/${name}/${name}.vue`
+/// Language strings
+@/i18n/${lang}/components/${category}/${name}.json
+```

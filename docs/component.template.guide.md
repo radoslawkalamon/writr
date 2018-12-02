@@ -1,6 +1,6 @@
 # Component Template guide
 
-```
+```javascript
 // App.js
 import ExampleTag from '@/components/UI/ExampleTag/ExampleTag.vue';
 
