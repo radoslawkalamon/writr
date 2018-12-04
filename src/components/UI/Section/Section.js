@@ -1,12 +1,12 @@
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
     name: {
       type: String,
       default: 'generic',
+    },
+    title: {
+      type: String,
+      required: true,
     },
   },
   computed: {

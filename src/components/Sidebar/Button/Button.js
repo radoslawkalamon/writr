@@ -2,13 +2,13 @@ import iconList from '@/assets/icons/index';
 
 export default {
   props: {
-    icon: {
-      type: String,
-      required: true,
-    },
     alt: {
       type: String,
       default: '',
+    },
+    icon: {
+      type: String,
+      required: true,
     },
     name: {
       type: String,
@@ -20,17 +20,17 @@ export default {
     },
   },
   computed: {
+    resolveIcon() {
+      const stateThemeName = 'settings.editor.theme';
+      const themeName = this.$store.getters.getValue(stateThemeName);
+      return this.iconList[themeName][this.icon];
+    },
     wrapperClassNames() {
       return [
         'sidebar-button',
         `sidebar-button--${this.name}`,
         this.toggled ? 'sidebar-button--active' : '',
       ].join(' ');
-    },
-    resolveIcon() {
-      const stateThemeName = 'settings.editor.theme';
-      const themeName = this.$store.getters.getValue(stateThemeName);
-      return this.iconList[themeName][this.icon];
     },
   },
   methods: {
@@ -41,8 +41,8 @@ export default {
   },
   data() {
     return {
-      toggled: false,
       iconList,
+      toggled: false,
     };
   },
 };

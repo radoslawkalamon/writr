@@ -1,16 +1,12 @@
 export default {
   props: {
-    title: {
+    action: {
       type: String,
-      default: 'Please provide title!',
+      required: true,
     },
     errorTip: {
       type: String,
       required: true,
-    },
-    unit: {
-      type: String,
-      default: '',
     },
     item: {
       type: String,
@@ -20,16 +16,21 @@ export default {
       type: String,
       default: 'generic',
     },
-    action: {
+    title: {
       type: String,
-      required: true,
+      default: 'Please provide title!',
+    },
+    unit: {
+      type: String,
+      default: '',
     },
   },
   computed: {
-    mainElementClassNames() {
+    inputClassNames() {
       return [
-        'base-input',
-        `base-input--${this.name}`,
+        'base-input__input',
+        this.unit !== '' ? 'base-input__input--unit' : '',
+        this.error ? 'base-input__input--error' : '',
       ].join(' ');
     },
     inputWrapperClassNames() {
@@ -40,11 +41,10 @@ export default {
         this.error ? 'base-input__form-wrapper--error' : '',
       ].join(' ');
     },
-    inputClassNames() {
+    mainElementClassNames() {
       return [
-        'base-input__input',
-        this.unit !== '' ? 'base-input__input--unit' : '',
-        this.error ? 'base-input__input--error' : '',
+        'base-input',
+        `base-input--${this.name}`,
       ].join(' ');
     },
   },
@@ -60,8 +60,8 @@ export default {
   },
   data() {
     return {
-      value: this.$store.getters.getValue(this.item),
       error: false,
+      value: this.$store.getters.getValue(this.item),
     };
   },
 };

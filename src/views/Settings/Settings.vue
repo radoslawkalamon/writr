@@ -7,78 +7,78 @@
       v-text='$t("general.settings.title")'
     />
     <base-section
-      :title='$t("general.settings.theme.title")'
       name='theme'
+      :title='$t("general.settings.theme.title")'
     >
       <base-select
-        :title='$t("general.settings.theme.labels.title")'
-        :labels='$t("general.settings.theme.labels.content")'
+        action='changeState'
         item='settings.editor.theme'
-        action='changeState'
+        :labels='$t("general.settings.theme.labels.content")'
         name='theme-change-theme'
+        :title='$t("general.settings.theme.labels.title")'
       />
     </base-section>
     <base-section
-      :title='$t("general.settings.text.title")'
       name='text'
+      :title='$t("general.settings.text.title")'
     >
       <base-input
-        :title='$t("general.settings.text.fontSize.title")'
+        action='changeState'
         :errorTip='$t("general.settings.text.fontSize.errorTip")'
-        unit='px'
         item='settings.editor.text.fontSize'
-        action='changeState'
         name='text-font-size'
-      />
-      <base-input
-        :title='$t("general.settings.text.paragraphIndent.title")'
-        :errorTip='$t("general.settings.text.paragraphIndent.errorTip")'
+        :title='$t("general.settings.text.fontSize.title")'
         unit='px'
-        item='settings.editor.text.paragraphIndent'
-        action='changeState'
-        name='text-paragraph-indent'
       />
       <base-input
-        :title='$t("general.settings.text.lineHeight.title")'
-        :errorTip='$t("general.settings.text.lineHeight.errorTip")'
-        unit='em'
-        item='settings.editor.text.lineHeight'
         action='changeState'
+        :errorTip='$t("general.settings.text.paragraphIndent.errorTip")'
+        item='settings.editor.text.paragraphIndent'
+        name='text-paragraph-indent'
+        :title='$t("general.settings.text.paragraphIndent.title")'
+        unit='px'
+      />
+      <base-input
+        action='changeState'
+        :errorTip='$t("general.settings.text.lineHeight.errorTip")'
+        item='settings.editor.text.lineHeight'
         name='text-line-height'
+        :title='$t("general.settings.text.lineHeight.title")'
+        unit='em'
       />
     </base-section>
     <base-section
-      :title='$t("general.settings.textEditor.title")'
       name='texteditor'
+      :title='$t("general.settings.textEditor.title")'
     >
       <base-input
-        :title='$t("general.settings.textEditor.maxWidth.title")'
+        action='changeState'
         :errorTip='$t("general.settings.textEditor.maxWidth.errorTip")'
-        unit='px'
         item='settings.editor.window.maxWidth'
-        action='changeState'
         name='texteditor-max-width'
+        :title='$t("general.settings.textEditor.maxWidth.title")'
+        unit='px'
       />
       <base-input
-        :title='$t("general.settings.textEditor.marginTop.title")'
+        action='changeState'
         :errorTip='$t("general.settings.textEditor.marginTop.errorTip")'
-        unit='px'
         item='settings.editor.window.marginTop'
-        action='changeState'
         name='texteditor-margin-top'
+        :title='$t("general.settings.textEditor.marginTop.title")'
+        unit='px'
       />
       <base-input
-        :title='$t("general.settings.textEditor.marginBottom.title")'
-        :errorTip='$t("general.settings.textEditor.marginBottom.errorTip")'
-        unit='px'
-        item='settings.editor.window.marginBottom'
         action='changeState'
+        :errorTip='$t("general.settings.textEditor.marginBottom.errorTip")'
+        item='settings.editor.window.marginBottom'
         name='texteditor-margin-bottom'
+        :title='$t("general.settings.textEditor.marginBottom.title")'
+        unit='px'
       />
     </base-section>
     <base-section
-      :title='$t("general.settings.misc.title")'
       name='misc'
+      :title='$t("general.settings.misc.title")'
     >
       <base-toggle
         :title='$t("general.settings.misc.spellChecker.title")'
@@ -87,11 +87,11 @@
         name='misc-spellchecker'
       />
       <base-select
-        :title='$t("general.settings.misc.language.title")'
-        :labels='$t("general.settings.misc.language.labels")'
-        item='settings.misc.language'
         action='changeState'
+        item='settings.misc.language'
+        :labels='$t("general.settings.misc.language.labels")'
         name='misc-language'
+        :title='$t("general.settings.misc.language.title")'
       />
     </base-section>
     <base-text

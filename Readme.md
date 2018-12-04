@@ -31,7 +31,7 @@ Current development stage: **Prebeta [pre-β]**
   - [x] Window bottom margin
 
 **Prebeta** Stage [pre-β]:
-- [ ] Code cleanup
+- [x] Code cleanup
 - [x] Code guide update
 - [x] Test cleanup
 - [x] Test guide update

@@ -1,5 +1,8 @@
 export default {
   computed: {
+    spellcheckValue() {
+      return this.$store.state.settings.misc.spellChecker;
+    },
     textEditorStyle() {
       const store = this.$store.state.settings.editor;
       return `
@@ -12,11 +15,15 @@ export default {
       margin-bottom: ${store.window.marginBottom}px;
       `;
     },
-    spellcheckValue() {
-      return this.$store.state.settings.misc.spellChecker;
-    },
   },
   methods: {
+    onChange(_e) {
+      const textEditor = _e.target;
+      if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
+        textEditor.innerHTML = `<div>${textEditor.innerText}</div>`;
+        window.getSelection().collapse(textEditor.firstChild, 1);
+      }
+    },
     onPaste(_e) {
       // How to insert text without losing formatting?
       // 1. Get selection position
@@ -31,13 +38,6 @@ export default {
       const clipboardText = _e.clipboardData.getData('text').replace(/\n/g, '');
       document.execCommand('insertText', false, clipboardText);
       return true;
-    },
-    onChange(_e) {
-      const textEditor = _e.target;
-      if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
-        textEditor.innerHTML = `<div>${textEditor.innerText}</div>`;
-        window.getSelection().collapse(textEditor.firstChild, 1);
-      }
     },
   },
   data() {

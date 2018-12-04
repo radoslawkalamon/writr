@@ -2,25 +2,25 @@ import { getIsEqualToValues } from 'handy-validator';
 
 export default {
   props: {
-    title: {
+    action: {
       type: String,
-      default: 'Please provide title!',
-    },
-    labels: {
-      type: Array,
       required: true,
     },
     item: {
       type: String,
       required: true,
     },
+    labels: {
+      type: Array,
+      required: true,
+    },
     name: {
       type: String,
       default: 'generic',
     },
-    action: {
+    title: {
       type: String,
-      required: true,
+      default: 'Please provide title!',
     },
   },
   computed: {

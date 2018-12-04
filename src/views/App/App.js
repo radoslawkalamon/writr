@@ -22,18 +22,18 @@ export default {
     },
   },
   methods: {
-    downloadFile,
     closePanel() {
       this.openPanel = false;
     },
-    sidebarButtonToggle(name) {
-      this.openPanel = this.openPanel === name ? false : name;
-    },
+    downloadFile,
     sidebarButtonDownload() {
       const date = new Date();
       const filename = `writr_${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}__${date.getHours()}_${date.getMinutes()}.txt`;
       const text = document.getElementById('text-editor').innerText;
       this.downloadFile(text, filename, 'text/plain');
+    },
+    sidebarButtonToggle(name) {
+      this.openPanel = this.openPanel === name ? false : name;
     },
   },
   watch: {

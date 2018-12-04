@@ -1,8 +1,8 @@
 export default {
   props: {
-    title: {
+    action: {
       type: String,
-      default: 'Please provide title!',
+      required: true,
     },
     item: {
       type: String,
@@ -12,16 +12,16 @@ export default {
       type: String,
       default: 'generic',
     },
-    action: {
+    title: {
       type: String,
-      required: true,
+      default: 'Please provide title!',
     },
   },
   computed: {
-    mainElementClassNames() {
+    inputClassNames() {
       return [
-        'base-toggle',
-        `base-toggle--${this.name}`,
+        'base-toggle__input',
+        this.value ? 'base-toggle__input--active' : '',
       ].join(' ');
     },
     inputWrapperClassNames() {
@@ -31,10 +31,10 @@ export default {
         this.value ? 'base-toggle__form-wrapper--active' : '',
       ].join(' ');
     },
-    inputClassNames() {
+    mainElementClassNames() {
       return [
-        'base-toggle__input',
-        this.value ? 'base-toggle__input--active' : '',
+        'base-toggle',
+        `base-toggle--${this.name}`,
       ].join(' ');
     },
   },
