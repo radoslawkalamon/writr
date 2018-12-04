@@ -36,8 +36,10 @@ Current development stage: **Prebeta [pre-β]**
 - [x] Test cleanup
 - [x] Test guide update
 - [x] Color scheme tweak
+- [x] Status bar concept
+- [x] Statistics panel concept
+- [x] Readme update
 - [ ] Writr icon
-- [ ] Readme update
 - [ ] Public release *.*
 
 **Beta** Stage [β]:
@@ -49,12 +51,14 @@ Current development stage: **Prebeta [pre-β]**
   - [ ] Words count
   - [ ] Nonspaces characters count
   - [ ] Characters count
+  - [ ] Work time
 - [ ] Settings
   - [ ] Is status bar visible
   - [ ] Placement of status bar
   - [ ] Show clock
   - [ ] Preselected page count formula
   - [ ] Status bar content
+- ?[ ] Update modal window - migrating from previous version
 
 **Gamma** Stage [γ]:
 
