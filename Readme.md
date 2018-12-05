@@ -6,7 +6,7 @@ Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
 
 > **DONE** means final code, tests & documentation are written. Everything is green and ready to deploy.
 
-Current development stage: **Prebeta [pre-β]**
+Current development stage: **Beta [β]**
 
 **Alpha** Stage [α]:
 
@@ -39,8 +39,8 @@ Current development stage: **Prebeta [pre-β]**
 - [x] Status bar concept
 - [x] Statistics panel concept
 - [x] Readme update
-- [ ] Writr icon
-- [ ] Public release *.*
+- [x] Writr icon
+- [x] Public release *.*
 
 **Beta** Stage [β]:
 
@@ -58,7 +58,7 @@ Current development stage: **Prebeta [pre-β]**
   - [ ] Show clock
   - [ ] Preselected page count formula
   - [ ] Status bar content
-- ?[ ] Update modal window - migrating from previous version
+- [ ] Store migration from previous version
 
 **Gamma** Stage [γ]:
 
