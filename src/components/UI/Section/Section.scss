@@ -1,6 +1,6 @@
 .base-section {
   &__title {
-    font-size: $baseSize;
+    font-size: 1.25 * $baseSize;
     line-height: 1.2em;
     word-wrap: break-word;
     margin-top: 0;
@@ -17,6 +17,7 @@
     width: 55%;
     padding: 0 0.5 * $baseSize;
     box-sizing: border-box;
+    line-height: 1.25em;
   }
 
   /deep/ &__form-wrapper {

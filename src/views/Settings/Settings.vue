@@ -4,99 +4,15 @@
   >
     <base-header
       :header='true'
-      v-text='$t("general.settings.title")'
+      v-text='$t("settings.title")'
     />
-    <base-section
-      name='theme'
-      :title='$t("general.settings.theme.title")'
-    >
-      <base-select
-        action='changeState'
-        item='settings.editor.theme'
-        :labels='$t("general.settings.theme.labels.content")'
-        name='theme-change-theme'
-        :title='$t("general.settings.theme.labels.title")'
-      />
-    </base-section>
-    <base-section
-      name='text'
-      :title='$t("general.settings.text.title")'
-    >
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.text.fontSize.errorTip")'
-        item='settings.editor.text.fontSize'
-        name='text-font-size'
-        :title='$t("general.settings.text.fontSize.title")'
-        unit='px'
-      />
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.text.paragraphIndent.errorTip")'
-        item='settings.editor.text.paragraphIndent'
-        name='text-paragraph-indent'
-        :title='$t("general.settings.text.paragraphIndent.title")'
-        unit='px'
-      />
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.text.lineHeight.errorTip")'
-        item='settings.editor.text.lineHeight'
-        name='text-line-height'
-        :title='$t("general.settings.text.lineHeight.title")'
-        unit='em'
-      />
-    </base-section>
-    <base-section
-      name='texteditor'
-      :title='$t("general.settings.textEditor.title")'
-    >
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.textEditor.maxWidth.errorTip")'
-        item='settings.editor.window.maxWidth'
-        name='texteditor-max-width'
-        :title='$t("general.settings.textEditor.maxWidth.title")'
-        unit='px'
-      />
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.textEditor.marginTop.errorTip")'
-        item='settings.editor.window.marginTop'
-        name='texteditor-margin-top'
-        :title='$t("general.settings.textEditor.marginTop.title")'
-        unit='px'
-      />
-      <base-input
-        action='changeState'
-        :errorTip='$t("general.settings.textEditor.marginBottom.errorTip")'
-        item='settings.editor.window.marginBottom'
-        name='texteditor-margin-bottom'
-        :title='$t("general.settings.textEditor.marginBottom.title")'
-        unit='px'
-      />
-    </base-section>
-    <base-section
-      name='misc'
-      :title='$t("general.settings.misc.title")'
-    >
-      <base-toggle
-        :title='$t("general.settings.misc.spellChecker.title")'
-        item='settings.misc.spellChecker'
-        action='changeState'
-        name='misc-spellchecker'
-      />
-      <base-select
-        action='changeState'
-        item='settings.misc.language'
-        :labels='$t("general.settings.misc.language.labels")'
-        name='misc-language'
-        :title='$t("general.settings.misc.language.title")'
-      />
-    </base-section>
-    <base-text
-      v-text='$t("general.settings.copyright")'
-    />
+    <section-theme />
+    <section-text />
+    <section-text-editor />
+    <section-stats />
+    <section-statusbar />
+    <section-statusbar-content />
+    <section-misc />
   </sidebar-panel>
 </template>
 

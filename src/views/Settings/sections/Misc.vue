@@ -1,0 +1,20 @@
+<template functional>
+  <base-section
+    name='misc'
+    :title='parent.$t("settings.misc.title")'
+  >
+    <base-toggle
+      action='changeState'
+      item='settings.misc.spellChecker'
+      name='misc-spellchecker'
+      :title='parent.$t("settings.misc.spellChecker.title")'
+    />
+    <base-select
+      action='changeState'
+      item='settings.misc.language'
+      :labels='parent.$t("settings.misc.language.labels")'
+      name='misc-language'
+      :title='parent.$t("settings.misc.language.title")'
+    />
+  </base-section>
+</template>

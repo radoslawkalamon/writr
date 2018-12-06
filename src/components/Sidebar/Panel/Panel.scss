@@ -10,6 +10,18 @@
   overflow-y: auto;
 
   @include transition(background-color border-color);
+
+  &::-webkit-scrollbar {
+    width: 0.5 * $baseSize;
+  }
+  
+  &::-webkit-scrollbar-track-piece  {
+    @include transition(background-color);
+  }
+  
+  &::-webkit-scrollbar-thumb:vertical {
+    @include transition(background-color);
+  }
 }
 
 .writr-theme--#{$themesClassDark} {
@@ -18,6 +30,19 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
+    scrollbar-color: dark;
+
+    &::-webkit-scrollbar {
+      width: 0.5 * $baseSize;
+    }
+    
+    &::-webkit-scrollbar-track-piece  {
+      background-color: color(secondary);
+    }
+    
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: color(fourth);
+    }
   }
 }
 
@@ -27,5 +52,18 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
+    scrollbar-color: light;
+
+    &::-webkit-scrollbar {
+      width: 0.5 * $baseSize;
+    }
+    
+    &::-webkit-scrollbar-track-piece  {
+      background-color: color(secondary);
+    }
+    
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: color(fourth);
+    }
   }
 }

@@ -14,7 +14,7 @@
       />
       <sidebar-button
         @action='sidebarButtonToggle'
-        :alt='$t("general.settings.title")'
+        :alt='$t("settings.title")'
         icon='settings'
         name='settings'
         slot='bottom'

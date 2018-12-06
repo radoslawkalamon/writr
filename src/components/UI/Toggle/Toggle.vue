@@ -8,7 +8,10 @@
     />
     <div
       @click='onClick()'
+      @keyup.enter='onClick()'
+      @keyup.space='onClick()'
       :class='inputWrapperClassNames'
+      tabIndex='0'
     >
       <div
         :class='inputClassNames'

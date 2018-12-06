@@ -52,12 +52,17 @@ Current development stage: **Beta [β]**
   - [ ] Nonspaces characters count
   - [ ] Characters count
   - [ ] Work time
-- [ ] Settings
-  - [ ] Is status bar visible
-  - [ ] Placement of status bar
-  - [ ] Show clock
-  - [ ] Preselected page count formula
-  - [ ] Status bar content
+- [x] Settings
+  - [x] Stats :: Page Formula Ingredient
+  - [x] Stats :: Page Formula Divider
+  - [x] Statusbar :: Is visible
+  - [x] Statusbar :: Position
+  - [x] Statusbar Content :: Characters
+  - [x] Statusbar Content :: Characters without spaces
+  - [x] Statusbar Content :: Words
+  - [x] Statusbar Content :: Paragraphs
+  - [x] Statusbar Content :: Pages
+  - [x] Statusbar Content :: Clock
 - [ ] Store migration from previous version
 
 **Gamma** Stage [γ]:

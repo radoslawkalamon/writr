@@ -37,6 +37,49 @@
       "errorTip": "Liczba >= 0"
     }
   },
+  "stats": {
+    "title": "Statystyki",
+    "pageFormulaMainIngredient": {
+      "title": "Składnik formuły przeliczania stron",
+      "labels": ["Znaki ze spacjami", "Znaki bez spacji", "Słowa", "Akapity"]
+    },
+    "pageFormulaDivider": {
+      "title": "Dzielnik",
+      "errorTip": "Liczba >= 1"
+    },
+    "formulaTip": "Składnik / dzielnik = ilość stron"
+  },
+  "statusBar": {
+    "title": "Pasek stanu",
+    "isVisible": {
+      "title": "Pokaż pasek stanu"
+    },
+    "position": {
+      "title": "Umiejscowienie",
+      "labels": ["Na górze", "Na dole"]
+    }
+  },
+  "statusBarContent": {
+    "title": "Pokaż na pasku stanu",
+    "characters": {
+      "title": "Znaki ze spacjami"
+    },
+    "charactersWithoutSpaces": {
+      "title": "Znaki bez spacji"
+    },
+    "words": {
+      "title": "Słowa"
+    },
+    "paragraphs": {
+      "title": "Akapity"
+    },
+    "pages": {
+      "title": "Strony"
+    },
+    "clock": {
+      "title": "Zegarek"
+    }
+  },
   "misc": {
     "title": "Pozostałe",
     "spellChecker": {
