@@ -1,4 +1,7 @@
 import validate from 'handy-validator';
+import { throttle } from 'throttle-debounce';
+
+const CALCULATE_STATS_THROTTLE = 2000;
 
 export default {
   changeState(context, payload) {
@@ -26,4 +29,22 @@ export default {
       payload.componentObject[componentErrorProperty] = !isValueValid;
     }
   },
+  calculateStats: throttle(
+    CALCULATE_STATS_THROTTLE,
+    (context, text) => {
+      const { pageFormulaMainIngredient, pageFormulaDivider } = context.state.settings.stats;
+      const statsToSave = {
+        characters:              text.length,
+        charactersWithoutSpaces: text.length - (text.split(/\s/).length - 1),
+        words:                   text.split(/\s/).filter(n => n !== '').length,
+        paragraphs:              text.split(/\n/).filter(n => n !== '').length,
+      };
+      const pages = ~~((statsToSave[pageFormulaMainIngredient] / pageFormulaDivider) + 1);
+
+      context.commit('COMMIT_STATS', {
+        ...statsToSave,
+        pages,
+      });
+    },
+  ),
 };

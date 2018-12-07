@@ -17,4 +17,13 @@ export default {
         return prev[cur];
       }, state);
   },
+  COMMIT_STATS(state, payload) {
+    state.stats = {
+      characters: payload.characters,
+      charactersWithoutSpaces: payload.charactersWithoutSpaces,
+      words: payload.words,
+      paragraphs: payload.paragraphs,
+      pages: payload.pages,
+    };
+  },
 };

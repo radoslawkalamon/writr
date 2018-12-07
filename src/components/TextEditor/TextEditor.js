@@ -23,6 +23,9 @@ export default {
         textEditor.innerHTML = `<div>${textEditor.innerText}</div>`;
         window.getSelection().collapse(textEditor.firstChild, 1);
       }
+
+      // Calculate stats
+      this.$store.dispatch('calculateStats', textEditor.innerText);
     },
     onPaste(_e) {
       // How to insert text without losing formatting?
