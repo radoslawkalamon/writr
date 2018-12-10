@@ -14,6 +14,14 @@
       />
       <sidebar-button
         @action='sidebarButtonToggle'
+        alt='Statystyki'
+        icon='stats'
+        name='stats'
+        slot='bottom'
+        :toggle='true'
+      />
+      <sidebar-button
+        @action='sidebarButtonToggle'
         :alt='$t("settings.title")'
         icon='settings'
         name='settings'
@@ -26,7 +34,10 @@
       name='panel-transition'
     >
       <settings
-        v-if='this.openPanel === "settings"'
+        v-if='openPanel === "settings"'
+      />
+      <stats
+        v-if='openPanel === "stats"'
       />
     </transition>
     <text-editor />

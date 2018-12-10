@@ -1,0 +1,17 @@
+{
+  "title": "Statystyki",
+  "longNames": {
+    "characters": "Ilość znaków ze spacjami",
+    "charactersWithoutSpaces": "Ilość znaków bez spacji",
+    "words": "Ilość słów",
+    "paragraphs": "Ilość akapitów",
+    "pages": "Ilość stron"
+  },
+  "shortNames": {
+    "characters": "Znaki",
+    "charactersWithoutSpaces": "Znaki bez spacji",
+    "words": "Słowa",
+    "paragraphs": "Akapity",
+    "pages": "Strony"
+  }
+}

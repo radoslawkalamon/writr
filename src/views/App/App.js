@@ -2,6 +2,7 @@ import SidebarBase from '@/components/Sidebar/Base/Base.vue';
 import SidebarButton from '@/components/Sidebar/Button/Button.vue';
 import TextEditor from '@/components/TextEditor/TextEditor.vue';
 import Settings from '@/views/Settings/Settings.vue';
+import Stats from '@/views/Stats/Stats.vue';
 
 import downloadFile from 'downloadjs';
 
@@ -11,6 +12,7 @@ export default {
     SidebarBase,
     SidebarButton,
     Settings,
+    Stats,
     TextEditor,
   },
   computed: {
