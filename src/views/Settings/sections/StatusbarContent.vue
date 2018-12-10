@@ -5,39 +5,27 @@
   >
     <base-toggle
       action='changeState'
-      item='settings.statusBar.showContent.characters'
-      name='statusbar-content-characters'
-      :title='parent.$t("settings.statusBarContent.characters.title")'
-    />
-    <base-toggle
-      action='changeState'
-      item='settings.statusBar.showContent.charactersWithoutSpaces'
-      name='statusbar-content-characters-without-spaces'
-      :title='parent.$t("settings.statusBarContent.charactersWithoutSpaces.title")'
-    />
-    <base-toggle
-      action='changeState'
       item='settings.statusBar.showContent.words'
       name='statusbar-content-words'
-      :title='parent.$t("settings.statusBarContent.words.title")'
-    />
-    <base-toggle
-      action='changeState'
-      item='settings.statusBar.showContent.paragraphs'
-      name='statusbar-content-paragraphs'
-      :title='parent.$t("settings.statusBarContent.paragraphs.title")'
+      :title='parent.$t("stats.longNames.words")'
     />
     <base-toggle
       action='changeState'
       item='settings.statusBar.showContent.pages'
       name='statusbar-content-pages'
-      :title='parent.$t("settings.statusBarContent.pages.title")'
+      :title='parent.$t("stats.longNames.pages")'
     />
     <base-toggle
       action='changeState'
-      item='settings.statusBar.showContent.clock'
-      name='statusbar-content-clock'
-      :title='parent.$t("settings.statusBarContent.clock.title")'
+      item='settings.statusBar.showContent.paragraphs'
+      name='statusbar-content-paragraphs'
+      :title='parent.$t("stats.longNames.paragraphs")'
+    />
+    <base-toggle
+      action='changeState'
+      item='settings.statusBar.showContent.characters'
+      name='statusbar-content-characters'
+      :title='parent.$t("stats.longNames.characters")'
     />
   </base-section>
 </template>

@@ -1,7 +1,7 @@
 {
   "title": "Statystyki",
   "longNames": {
-    "characters": "Ilość znaków ze spacjami",
+    "characters": "Ilość znaków",
     "charactersWithoutSpaces": "Ilość znaków bez spacji",
     "words": "Ilość słów",
     "paragraphs": "Ilość akapitów",

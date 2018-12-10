@@ -53,32 +53,10 @@
     "title": "Pasek stanu",
     "isVisible": {
       "title": "Pokaż pasek stanu"
-    },
-    "position": {
-      "title": "Umiejscowienie",
-      "labels": ["Na górze", "Na dole"]
     }
   },
   "statusBarContent": {
-    "title": "Pokaż na pasku stanu",
-    "characters": {
-      "title": "Znaki ze spacjami"
-    },
-    "charactersWithoutSpaces": {
-      "title": "Znaki bez spacji"
-    },
-    "words": {
-      "title": "Słowa"
-    },
-    "paragraphs": {
-      "title": "Akapity"
-    },
-    "pages": {
-      "title": "Strony"
-    },
-    "clock": {
-      "title": "Zegarek"
-    }
+    "title": "Pokaż na pasku stanu"
   },
   "misc": {
     "title": "Pozostałe",

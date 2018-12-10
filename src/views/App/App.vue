@@ -17,6 +17,13 @@
         v-if='openPanel === "stats"'
       />
     </transition>
+    <transition
+      name='fade'
+    >
+      <statusbar
+        v-if='$store.state.settings.statusBar.isVisible'
+      />
+    </transition>
     <text-editor />
   </div>
 </template>

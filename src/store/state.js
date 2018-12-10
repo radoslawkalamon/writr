@@ -19,10 +19,8 @@ export default {
     },
     statusBar: {
       isVisible: true,
-      position: 'top',
       showContent: {
         characters: true,
-        charactersWithoutSpaces: true,
         words: true,
         paragraphs: true,
         pages: true,
@@ -41,5 +39,10 @@ export default {
     words: 0,
     paragraphs: 0,
     pages: 0,
+  },
+  sizes: {
+    statusBar: {
+      height: 0,
+    },
   },
 };

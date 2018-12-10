@@ -1,7 +1,7 @@
 import validate from 'handy-validator';
 import { throttle } from 'throttle-debounce';
 
-const CALCULATE_STATS_THROTTLE = 2000;
+const CALCULATE_STATS_THROTTLE = 1000;
 
 export default {
   changeState(context, payload) {

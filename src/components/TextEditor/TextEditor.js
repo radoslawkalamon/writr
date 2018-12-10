@@ -20,7 +20,7 @@ export default {
     onChange(_e) {
       const textEditor = _e.target;
       if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
-        textEditor.innerHTML = `<div>${textEditor.innerText}</div>`;
+        textEditor.innerHTML = `<div>${textEditor.innerHTML}</div>`;
         window.getSelection().collapse(textEditor.firstChild, 1);
       }
 
@@ -38,7 +38,7 @@ export default {
       // 7. Get second #Text and change it into <div>#Text</div>
       // 8. PROFIT!!!
 
-      const clipboardText = _e.clipboardData.getData('text').replace(/\n/g, '');
+      const clipboardText = _e.clipboardData.getData('text');
       document.execCommand('insertText', false, clipboardText);
       return true;
     },

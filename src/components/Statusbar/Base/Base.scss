@@ -1,0 +1,36 @@
+.statusbar {
+  width: calc(100% - #{$sidebarWidth});
+  position: fixed;
+  left: $sidebarWidth;
+  font-size: 0.75 * $baseSize;
+  line-height: 1;
+  padding: 0.25 * $baseSize;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  border-top: 1px solid transparent;
+  bottom: 0;
+
+  @include transition(background-color border-top color);
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';
+  
+  .statusbar {
+    background-color: color(secondary);
+    border-top: 1px solid color(third);
+    color: color(contra-lighter);
+  }
+}
+  
+.writr-theme--#{$themesClassLight} {
+@import '@/styles/themes/light.scss';
+  
+  .statusbar {
+    background-color: color(secondary);
+    border-top: 1px solid color(third);
+    color: color(contra-lighter);
+  }
+}

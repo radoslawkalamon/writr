@@ -1,5 +1,6 @@
 import Sidebar from '@/views/Sidebar/Sidebar.vue';
 import TextEditor from '@/components/TextEditor/TextEditor.vue';
+import Statusbar from '@/components/Statusbar/Base/Base.vue';
 import Settings from '@/views/Settings/Settings.vue';
 import Stats from '@/views/Stats/Stats.vue';
 
@@ -9,6 +10,7 @@ export default {
     Sidebar,
     Settings,
     Stats,
+    Statusbar,
     TextEditor,
   },
   computed: {

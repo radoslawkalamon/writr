@@ -19,7 +19,6 @@ export default {
     },
     statusBar: {
       isVisible: 'Boolean',
-      position: "isEqualTo|'top'|'bottom'",
       showContent: {
         characters: 'Boolean',
         charactersWithoutSpaces: 'Boolean',
@@ -40,5 +39,10 @@ export default {
     words: 'Number|>=0',
     paragraphs: 'Number|>=0',
     pages: 'Number|>=0',
+  },
+  sizes: {
+    statusBar: {
+      height: 'Number|>=0',
+    },
   },
 };

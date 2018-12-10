@@ -44,6 +44,7 @@ Current development stage: **Beta [β]**
 
 **Beta** Stage [β]:
 
+- [ ] Text Editor CSS rebuild
 - [ ] Status bar
 - [ ] Statistics
   - [ ] Page count

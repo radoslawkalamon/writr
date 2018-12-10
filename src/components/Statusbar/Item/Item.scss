@@ -1,0 +1,9 @@
+.statusbar-item {
+  margin: 0.25 * $baseSize 0.5 * $baseSize;
+
+  &__label {
+    &::after {
+      content: ': ';
+    }
+  }
+}

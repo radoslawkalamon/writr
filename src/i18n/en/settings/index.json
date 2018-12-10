@@ -53,32 +53,10 @@
     "title": "Status bar",
     "isVisible": {
       "title": "Show status bar"
-    },
-    "position": {
-      "title": "Position",
-      "labels": ["Top", "Bottom"]
     }
   },
   "statusBarContent": {
-    "title": "Show on status bar",
-    "characters": {
-      "title": "Characters"
-    },
-    "charactersWithoutSpaces": {
-      "title": "Characters without spaces"
-    },
-    "words": {
-      "title": "Words"
-    },
-    "paragraphs": {
-      "title": "Paragraphs"
-    },
-    "pages": {
-      "title": "Pages"
-    },
-    "clock": {
-      "title": "Clock"
-    }
+    "title": "Show on status bar"
   },
   "misc": {
     "title": "Others",

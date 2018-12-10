@@ -8,8 +8,9 @@
   position: fixed;
   left: $sidebarWidth;
   overflow-y: auto;
+  scrollbar-width: thin;
 
-  @include transition(background-color border-color);
+  @include transition(background-color border-color scrollbar-face-color scrollbar-track-color);
 
   &::-webkit-scrollbar {
     width: 0.5 * $baseSize;
@@ -30,7 +31,8 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
-    scrollbar-color: dark;
+    scrollbar-face-color: color(fourth);
+    scrollbar-track-color: color(secondary);
 
     &::-webkit-scrollbar {
       width: 0.5 * $baseSize;
@@ -52,7 +54,8 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
-    scrollbar-color: light;
+    scrollbar-face-color: color(fourth);
+    scrollbar-track-color: color(secondary);
 
     &::-webkit-scrollbar {
       width: 0.5 * $baseSize;

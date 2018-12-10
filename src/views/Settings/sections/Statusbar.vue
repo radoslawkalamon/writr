@@ -9,12 +9,5 @@
       name='statusbar-is-visible'
       :title='parent.$t("settings.statusBar.isVisible.title")'
     />
-    <base-select
-      action='changeState'
-      item='settings.statusBar.position'
-      :labels='parent.$t("settings.statusBar.position.labels")'
-      name='statusbar-position'
-      :title='parent.$t("settings.statusBar.position.title")'
-    />
   </base-section>
 </template>

@@ -1,0 +1,17 @@
+{
+  "title": "Statistics",
+  "longNames": {
+    "characters": "Characters count",
+    "charactersWithoutSpaces": "Characters without spaces count",
+    "words": "Words count",
+    "paragraphs": "Paragraphs count",
+    "pages": "Pages count"
+  },
+  "shortNames": {
+    "words": "Words",
+    "pages": "Pages",
+    "paragraphs": "Paragraphs",
+    "characters": "Characters",
+    "charactersWithoutSpaces": "Characters without spaces"
+  }
+}
