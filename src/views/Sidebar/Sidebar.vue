@@ -1,0 +1,34 @@
+<template>
+  <sidebar-base>
+    <sidebar-button
+      :action='buttonDownload'
+      :activePanel='openPanel'
+      :alt='$t("general.download.title")'
+      icon='download'
+      name='download'
+      slot='top'
+      :toggle='false'
+    />
+    <sidebar-button
+      :action='togglePanel'
+      :activePanel='openPanel'
+      :alt='$t("stats.title")'
+      icon='stats'
+      name='stats'
+      slot='bottom'
+      :toggle='true'
+    />
+    <sidebar-button
+      :action='togglePanel'
+      :activePanel='openPanel'
+      :alt='$t("settings.title")'
+      icon='settings'
+      name='settings'
+      slot='bottom'
+      :toggle='true'
+    />
+  </sidebar-base>
+</template>
+
+<script src='./Sidebar.js'></script>
+<style  src='./Sidebar.scss' lang='scss' scoped></style>

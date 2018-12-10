@@ -1,5 +1,5 @@
 .sidebar-button {
-  @include transition(background-color border-color);
+  transition: background-color 2 * $animationTime ease, border-color $animationTime ease;
 
   border: 1px solid transparent;
   border-right: 0;

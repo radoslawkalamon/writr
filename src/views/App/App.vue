@@ -3,32 +3,9 @@
     :class='this.appClassNames'
     id="app"
   >
-    <sidebar-base>
-      <sidebar-button
-        @action='sidebarButtonDownload'
-        :alt='$t("general.download.title")'
-        icon='download'
-        name='download'
-        slot='top'
-        :toggle='false'
-      />
-      <sidebar-button
-        @action='sidebarButtonToggle'
-        alt='Statystyki'
-        icon='stats'
-        name='stats'
-        slot='bottom'
-        :toggle='true'
-      />
-      <sidebar-button
-        @action='sidebarButtonToggle'
-        :alt='$t("settings.title")'
-        icon='settings'
-        name='settings'
-        slot='bottom'
-        :toggle='true'
-      />
-    </sidebar-base>
+    <sidebar
+      @togglePanel='togglePanel'
+    />
     <transition
       mode='out-in'
       name='panel-transition'

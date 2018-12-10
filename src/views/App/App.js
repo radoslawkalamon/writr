@@ -1,16 +1,12 @@
-import SidebarBase from '@/components/Sidebar/Base/Base.vue';
-import SidebarButton from '@/components/Sidebar/Button/Button.vue';
+import Sidebar from '@/views/Sidebar/Sidebar.vue';
 import TextEditor from '@/components/TextEditor/TextEditor.vue';
 import Settings from '@/views/Settings/Settings.vue';
 import Stats from '@/views/Stats/Stats.vue';
 
-import downloadFile from 'downloadjs';
-
 export default {
   name: 'writr',
   components: {
-    SidebarBase,
-    SidebarButton,
+    Sidebar,
     Settings,
     Stats,
     TextEditor,
@@ -24,18 +20,8 @@ export default {
     },
   },
   methods: {
-    closePanel() {
-      this.openPanel = false;
-    },
-    downloadFile,
-    sidebarButtonDownload() {
-      const date = new Date();
-      const filename = `writr_${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}__${date.getHours()}_${date.getMinutes()}.txt`;
-      const text = document.getElementById('text-editor').innerText;
-      this.downloadFile(text, filename, 'text/plain');
-    },
-    sidebarButtonToggle(name) {
-      this.openPanel = this.openPanel === name ? false : name;
+    togglePanel(name) {
+      this.openPanel = name;
     },
   },
   watch: {

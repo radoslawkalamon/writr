@@ -1,6 +1,6 @@
-<template>
+<template functional>
   <div
-    :class='wrapperClassNames'
+    :class='`sidebar-panel sidebar-panel--${props.name}`'
   >
     <slot />
   </div>
