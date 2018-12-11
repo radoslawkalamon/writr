@@ -4,7 +4,7 @@
   >
     <base-header
       :header='true'
-      v-text='$t("settings.title")'
+      :title='$t("settings.title")'
     />
     <section-theme />
     <section-text />

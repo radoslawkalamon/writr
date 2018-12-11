@@ -31,8 +31,7 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
-    scrollbar-face-color: color(fourth);
-    scrollbar-track-color: color(secondary);
+    scrollbar-color: color(fourth) color(secondary);
 
     &::-webkit-scrollbar {
       width: 0.5 * $baseSize;
@@ -54,8 +53,7 @@
   .sidebar-panel {
     background-color: color(third);
     border-right-color: color(fourth);
-    scrollbar-face-color: color(fourth);
-    scrollbar-track-color: color(secondary);
+    scrollbar-color: color(fourth) color(secondary);
 
     &::-webkit-scrollbar {
       width: 0.5 * $baseSize;

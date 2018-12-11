@@ -4,7 +4,7 @@
   >
     <base-header
       :header='true'
-      v-text='$t("stats.title")'
+      :title='$t("stats.title")'
     />
     <base-labeled-value
       :label='$t("stats.longNames.characters")'

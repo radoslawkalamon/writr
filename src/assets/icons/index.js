@@ -1,4 +1,4 @@
-// Automatic resolve based on folder structure? Beta or Gamma stage?
+// Automatic resolve based on folder structure? Gamma stage?
 
 import DARK_ALARM from '@/assets/icons/dark/alarm.svg';
 import DARK_DOWNLOAD from '@/assets/icons/dark/download.svg';

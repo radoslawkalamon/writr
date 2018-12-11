@@ -1,10 +1,10 @@
-<template>
+<template functional>
   <section
-    :class='wrapperClassNames'
+    :class='`base-section base-section--${props.name}`'
   >
     <h2
       class='base-section__title'
-      v-text='title'
+      v-text='props.title'
     />
     <div
       class='base-section__content'

@@ -1,6 +1,7 @@
 .statusbar {
   width: calc(100% - #{$sidebarWidth});
   position: fixed;
+  z-index: 2;
   left: $sidebarWidth;
   font-size: 0.75 * $baseSize;
   line-height: 1;

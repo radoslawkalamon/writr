@@ -18,7 +18,8 @@
       :title='parent.$t("settings.stats.pageFormulaDivider.title")'
     />
     <base-text
-      v-text='parent.$t("settings.stats.formulaTip")'
+      name='stats-formula-tip'
+      :text='parent.$t("settings.stats.formulaTip")'
     />
   </base-section>
 </template>
