@@ -30,7 +30,7 @@ export default {
     misc: {
       spellChecker: true,
       language: 'pl',
-      version: 'alfa',
+      version: 'beta',
     },
   },
   stats: {

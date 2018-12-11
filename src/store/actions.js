@@ -34,10 +34,10 @@ export default {
     (context, text) => {
       const { pageFormulaMainIngredient, pageFormulaDivider } = context.state.settings.stats;
       const statsToSave = {
-        characters:              text.length,
+        characters: text.length,
         charactersWithoutSpaces: text.length - (text.split(/\s/).length - 1),
-        words:                   text.split(/\s/).filter(n => n !== '').length,
-        paragraphs:              text.split(/\n/).filter(n => n !== '').length,
+        words: text.split(/\s/).filter(n => n !== '').length,
+        paragraphs: text.split(/\n/).filter(n => n !== '').length,
       };
       const pages = ~~((statsToSave[pageFormulaMainIngredient] / pageFormulaDivider) + 1);
 

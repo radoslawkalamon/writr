@@ -4,10 +4,10 @@
 
 @keyframes panel-transition {
   0% {
-    left: -$maxWidth;
+    transform: translateX(-100%);
   }
   100% {
-    left: $sidebarWidth;
+    transform: translateX(0);
   }
 }
 

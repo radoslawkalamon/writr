@@ -61,7 +61,6 @@ Current development stage: **Beta [β]**
   - [x] Statusbar Content :: Paragraphs
   - [x] Statusbar Content :: Pages
   - [x] Statusbar Content :: Clock
-- [ ] Store migration from previous version
 
 **Gamma** Stage [γ]:
 

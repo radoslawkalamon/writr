@@ -1,5 +1,5 @@
 <template>
-  <section 
+  <section
     :class='wrapperClassNames'
   >
     <h2

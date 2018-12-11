@@ -34,6 +34,14 @@ export default {
       immediate: true,
     },
   },
+  mounted() {
+    /**
+     * Store upgrade from older version tool
+     */
+    if (this.$store.state.settings.misc.version === 'alfa') {
+      this.$store.state.settings.misc.version = 'beta';
+    }
+  },
   data() {
     return {
       openPanel: false,
