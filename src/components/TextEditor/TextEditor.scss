@@ -10,7 +10,7 @@
   left: $sidebarWidth;
   top: 0;
 
-  @include transition(height background-color border-color scrollbar-face-color scrollbar-track-color);
+  @include transition(height background-color border-color scrollbar-color);
 
   &::-webkit-scrollbar {
     width: 0.5 * $baseSize;

@@ -2,20 +2,20 @@
 * PANEL TRANSITION
 */
 
-@keyframes panel-transition {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.panel-transition-enter-active {
+  transform: translateX(-100%);
 }
 
-.panel-transition-enter-active {
-  animation: panel-transition $animationTime;
+.panel-transition-enter-to {
+  transform: translateX(0%);
 }
+
 .panel-transition-leave-active {
-  animation: panel-transition $animationTime reverse;
+  transform: translateX(0%);
+}
+
+.panel-transition-leave-to {
+  transform: translateX(-100%);
 }
 
 /*

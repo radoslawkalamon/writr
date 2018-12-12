@@ -10,7 +10,7 @@
   overflow-y: auto;
   scrollbar-width: thin;
 
-  @include transition(background-color border-color scrollbar-face-color scrollbar-track-color);
+  @include transition(background-color border-color scrollbar-color transform);
 
   &::-webkit-scrollbar {
     width: 0.5 * $baseSize;
