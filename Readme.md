@@ -10,42 +10,26 @@ Current development stage: **Beta [β]**
 
 **Alpha** Stage [α]:
 
-- [x] Editor window
+- [x] Text Editor
   - [x] Unformat / reformat text on paste
-  - [x] Contenteditable first line `<div>` glitch fix
   - [x] Save to file
 - [x] Sidebar
-  - [x] Buttons system - Top
-  - [x] Buttons system - Bottom
-  - [x] Save button
-  - [x] Settings button
 - [x] Settings
-  - [x] Language changer
-  - [x] Light / Dark theme
-  - [x] Font size
-  - [x] Line height
-  - [x] First line text indent
-  - [x] Spellchecker
-  - [x] Max width of text
-  - [x] Window top margin
-  - [x] Window bottom margin
-
-**Prebeta** Stage [pre-β]:
-- [x] Code cleanup
-- [x] Code guide update
-- [x] Test cleanup
-- [x] Test guide update
-- [x] Color scheme tweak
-- [x] Status bar concept
-- [x] Statistics panel concept
-- [x] Readme update
-- [x] Writr icon
-- [x] Public release *.*
+  - [x] Theme :: Schema
+  - [x] Text :: Font size
+  - [x] Text :: Paragraph indent
+  - [x] Text :: Line height
+  - [x] Text Editor :: Width
+  - [x] Text Editor :: Top margin
+  - [x] Text Editor :: Bottom margin
+  - [x] Others :: Spell check
+  - [x] Others :: Language change
 
 **Beta** Stage [β]:
 
-- [ ] Text Editor CSS rebuild
 - [ ] Status bar
+  - [ ] Statistics
+  - [ ] Clock
 - [ ] Statistics
   - [ ] Page count
   - [ ] Paragraphs count
@@ -64,17 +48,20 @@ Current development stage: **Beta [β]**
 
 **Gamma** Stage [γ]:
 
+- [ ] *.wrt file spec
+- [ ] Text Editor
+  - [ ] Open file
 - [ ] Alarms & targets
 - [ ] Settings
-  - [ ] Preselected fonts
+  - [ ] Theme :: Preselected fonts
 
 **Delta** Stage [δ]:
 
+- [ ] UI Redesign
 - [ ] Autosaves & backups
 
 **Epsilon** Stage [ε]:
 
-- [ ] Notes
-- [ ] Autoexpander
-- [ ] Find / Replace
-- [ ] On key press sound
+- [x] Text Editor
+  - [ ] Paragraphs notes
+  - [ ] Find / Replace
