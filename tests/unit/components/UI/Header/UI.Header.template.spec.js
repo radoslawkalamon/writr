@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import UIHeader from '@/components/UI/Header/Header.vue';
 import GLOBS from './UI.Header.globs';
 
@@ -7,9 +7,12 @@ describe('@/components/UI/Header#template', () => {
     let w;
 
     beforeAll(() => {
-      w = shallowMount(UIHeader, {
-        slots: {
-          default: GLOBS.test.text,
+      w = mount(UIHeader, {
+        context: {
+          props: {
+            header: false,
+            title: GLOBS.test.title,
+          },
         },
       });
     });
@@ -19,7 +22,7 @@ describe('@/components/UI/Header#template', () => {
     });
 
     it('should text be inside wrapper', () => {
-      const a = GLOBS.test.text;
+      const a = GLOBS.test.title;
 
       expect(w.text()).toEqual(a);
     });
@@ -29,12 +32,12 @@ describe('@/components/UI/Header#template', () => {
     let w;
 
     beforeAll(() => {
-      w = shallowMount(UIHeader, {
-        slots: {
-          default: GLOBS.test.text,
-        },
-        propsData: {
-          header: true,
+      w = mount(UIHeader, {
+        context: {
+          props: {
+            header: true,
+            title: GLOBS.test.title,
+          },
         },
       });
     });
@@ -44,7 +47,7 @@ describe('@/components/UI/Header#template', () => {
     });
 
     it('should text be inside wrapper', () => {
-      const a = GLOBS.test.text;
+      const a = GLOBS.test.title;
 
       expect(w.text()).toEqual(a);
     });
