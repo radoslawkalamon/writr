@@ -1,11 +1,8 @@
-describe('App#template', () => {
+describe('Statusbar#template', () => {
   it('should render correctly', () => {
-    const parent = '#app';
+    const parent = '.statusbar';
     const selectors = [
       '',
-      'button.sidebar-button--download > img',
-      'button.sidebar-button--stats > img',
-      'button.sidebar-button--settings > img',
       'div.statusbar-item--words > span.statusbar-item__label',
       'div.statusbar-item--words > span.statusbar-item__value',
       'div.statusbar-item--pages > span.statusbar-item__label',
@@ -15,7 +12,6 @@ describe('App#template', () => {
       'div.statusbar-item--characters > span.statusbar-item__label',
       'div.statusbar-item--characters > span.statusbar-item__value',
       'div.statusbar-clock',
-      '#text-editor',
     ];
 
     cy.clearLocalStorage();
