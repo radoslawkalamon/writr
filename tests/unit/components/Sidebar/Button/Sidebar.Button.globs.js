@@ -1,27 +1,41 @@
+import { mount } from '@vue/test-utils';
+import SidebarButton from '@/components/Sidebar/Button/Button.vue';
+
+const TEST_ACTION = jest.fn(() => {});
+const TEST_ALT = 'test-alt';
 const TEST_ICON = 'test';
 const TEST_ICON_URL = '/test/icon.svg';
-const TEST_THEME = 'dark';
 const TEST_NAME = 'test-name';
-const TEST_ALT = 'test-alt';
+const TEST_PARENT_RESOLVE_ICON = jest.fn(() => TEST_ICON_URL);
 
 export default {
   test: {
+    action: TEST_ACTION,
+    alt: TEST_ALT,
     icon: TEST_ICON,
     iconUrl: TEST_ICON_URL,
-    theme: TEST_THEME,
     name: TEST_NAME,
-    alt: TEST_ALT,
+    parent: {
+      resolveIcon: {
+        fn: TEST_PARENT_RESOLVE_ICON,
+        return: TEST_ICON_URL,
+      },
+    },
   },
-  mocks: {
-    $store: {
-      getters: {
-        getValue: () => TEST_THEME,
+  wrapperFactory(props = {}) {
+    return mount(SidebarButton, {
+      context: {
+        props: {
+          action: TEST_ACTION,
+          activePanel: false,
+          icon: TEST_ICON,
+          name: TEST_NAME,
+          ...props,
+        },
       },
-    },
-    iconList: {
-      [TEST_THEME]: {
-        [TEST_ICON]: TEST_ICON_URL,
+      methods: {
+        resolveIcon: TEST_PARENT_RESOLVE_ICON,
       },
-    },
+    });
   },
 };
