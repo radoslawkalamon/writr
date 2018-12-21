@@ -1,38 +1,32 @@
 export default {
   methods: {
-    readTime() {
+    intervalCallback() {
       const date = new Date();
-      const dateHours = date.getHours().toString();
-      const dateMinutes = date.getMinutes().toString();
+      const dateHours = date.getHours();
+      const dateMinutes = date.getMinutes();
+      const dateSeconds = date.getSeconds();
+      const dateMilliseconds = date.getMilliseconds();
 
+      this.updateTime(dateHours, dateMinutes);
+      this.setupNextUpdate(dateSeconds, dateMilliseconds);
+    },
+    updateTime(hours, minutes) {
       this.time = [
-        dateHours < 10 ? `0${dateHours}` : dateHours,
+        hours < 10 ? `0${hours}` : hours,
         ':',
-        dateMinutes < 10 ? `0${dateMinutes}` : dateMinutes,
+        minutes < 10 ? `0${minutes}` : minutes,
       ].join('');
     },
-    intervalCreate(interval) {
-      const checkedInterval = typeof interval === 'number' ? interval : this.interval;
-      setTimeout(this.intervalCallback, checkedInterval);
-    },
-    intervalCallback(isFirstTime) {
-      let interval;
+    setupNextUpdate(second, milliseconds) {
+      const baseInterval = 60000;
+      const nextUpdateIntervalDiff = (second * 1000) + milliseconds;
+      const nextUpdateInterval = baseInterval - nextUpdateIntervalDiff;
 
-      /**
-       * This is need to proper update time,
-       * eg. if someone open writr on HH:MM:50
-       */
-      if (isFirstTime) {
-        const date = new Date();
-        interval = ((this.interval / 1000) - date.getSeconds()) * 1000;
-      }
-
-      this.readTime();
-      this.intervalCreate(interval);
+      window.setTimeout(this.intervalCallback, nextUpdateInterval);
     },
   },
   created() {
-    this.intervalCallback(true);
+    this.intervalCallback();
   },
   data() {
     return {
