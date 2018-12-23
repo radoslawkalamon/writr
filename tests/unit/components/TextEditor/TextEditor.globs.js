@@ -1,9 +1,10 @@
-const TEST_FONTSIZE = 5;
+const TEST_FONTSIZE = 12;
 const TEST_LINEHEIGHT = 10;
 const TEST_PARAGRAPHINDENT = 20;
 const TEST_MAXWIDTH = 100;
 const TEST_MARGINTOP = 110;
 const TEST_MARGINBOTTOM = 120;
+const TEST_STATUS_BAR_HEIGHT = 30;
 const TEST_SPELLCHECKER = false;
 const TEST_WELCOMETEXT = 'Welcome Text';
 
@@ -16,6 +17,7 @@ export default {
     marginTop: TEST_MARGINTOP,
     marginBottom: TEST_MARGINBOTTOM,
     spellChecker: TEST_SPELLCHECKER,
+    statusBarHeight: TEST_STATUS_BAR_HEIGHT,
   },
   mocks: {
     $store: {
@@ -37,6 +39,11 @@ export default {
             spellChecker: TEST_SPELLCHECKER,
           },
         },
+        sizes: {
+          statusBar: {
+            height: TEST_STATUS_BAR_HEIGHT,
+          }
+        }
       },
     },
     $t: () => TEST_WELCOMETEXT,
