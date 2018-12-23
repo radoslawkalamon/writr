@@ -21,7 +21,7 @@ describe('@Components/TextEditor#template', () => {
       // https://github.com/jsdom/jsdom/issues/1332
 
       // const a = w.vm.mainStyle;
-      // expect(w.attributes('class')).toEqual(a);
+      // expect(w.attributes('style')).toEqual(a);
       expect(true).toBeTruthy();
     });
 

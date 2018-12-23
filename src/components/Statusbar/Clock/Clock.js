@@ -18,9 +18,8 @@ export default {
       ].join('');
     },
     setupNextUpdate(second, milliseconds) {
-      const baseInterval = 60000;
       const nextUpdateIntervalDiff = (second * 1000) + milliseconds;
-      const nextUpdateInterval = baseInterval - nextUpdateIntervalDiff;
+      const nextUpdateInterval = this.interval - nextUpdateIntervalDiff;
 
       window.setTimeout(this.intervalCallback, nextUpdateInterval);
     },
