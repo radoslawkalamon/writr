@@ -2,8 +2,7 @@ import createArrayClassesFromComputed from '@/../tests/unit/helpers/createArrayC
 
 export default (computedClasses, assertionArray) => {
   const arrayClasses = createArrayClassesFromComputed(computedClasses);
+  const a = assertionArray.every(v => arrayClasses.includes(v));
 
-  arrayClasses.forEach((element) => {
-    expect(assertionArray.includes(element)).toBeTruthy();
-  });
+  expect(a).toBeTruthy();
 };

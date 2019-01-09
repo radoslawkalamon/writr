@@ -2,8 +2,7 @@ import createArrayClassesFromComputed from '@/../tests/unit/helpers/createArrayC
 
 export default (computedClasses, DOMElement) => {
   const arrayClasses = createArrayClassesFromComputed(computedClasses);
+  const a = DOMElement.classes().every(v => arrayClasses.includes(v));
 
-  arrayClasses.forEach((element) => {
-    expect(DOMElement.classes(element)).toBeTruthy();
-  });
+  expect(a).toBeTruthy();
 };
