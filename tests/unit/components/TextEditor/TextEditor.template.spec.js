@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import TextEditor from '@/components/TextEditor/TextEditor.vue';
+import testStyleFromObject from '@/../tests/unit/helpers/testStyleFromObject';
 import GLOBS from './TextEditor.globs';
 
 describe('@Components/TextEditor#template', () => {
@@ -20,8 +21,8 @@ describe('@Components/TextEditor#template', () => {
       // Test not works because
       // https://github.com/jsdom/jsdom/issues/1332
 
-      // const a = w.vm.mainStyle;
-      // expect(w.attributes('style')).toEqual(a);
+      // testStyleFromObject(w.vm.mainStyle, w.element);
+
       expect(true).toBeTruthy();
     });
 
@@ -32,9 +33,9 @@ describe('@Components/TextEditor#template', () => {
     });
 
     it('should wrapper\'s STYLE attr be equal to textEditorStyle computed prop', () => {
-      const a = w.vm.textEditorStyle.replace(/;/g, '; ').concat(';');
+      const wrapperElement = w.find('.text-editor__wrapper').element;
 
-      expect(w.find('.text-editor__wrapper').attributes('style')).toEqual(a);
+      testStyleFromObject(w.vm.textEditorStyle, wrapperElement);
     });
   });
 
@@ -54,8 +55,9 @@ describe('@Components/TextEditor#template', () => {
 
   describe('Input event', () => {
     it('should wrapper on @input trigger onChange function exactly once', () => {
-      w.find('.text-editor__wrapper').trigger('input');
       const a = 1;
+
+      w.find('.text-editor__wrapper').trigger('input');
 
       expect(TextEditor.methods.onChange).toHaveBeenCalledTimes(a);
     });
@@ -63,8 +65,9 @@ describe('@Components/TextEditor#template', () => {
 
   describe('Paste event', () => {
     it('should wrapper on @paste trigger onPaste function exactly once', () => {
-      w.find('.text-editor__wrapper').trigger('paste');
       const a = 1;
+
+      w.find('.text-editor__wrapper').trigger('paste');
 
       expect(TextEditor.methods.onPaste).toHaveBeenCalledTimes(a);
     });

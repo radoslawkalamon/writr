@@ -23,9 +23,9 @@ describe('@Components/TextEditor#computed', () => {
           ...GLOBS.mocks,
         },
       });
-      const a = [
-        `height: calc(100vh - ${GLOBS.test.statusBarHeight}px)`,
-      ].join(';');
+      const a = {
+        height: `calc(100vh - ${GLOBS.test.statusBarHeight}px)`,
+      };
 
       expect(w.vm.mainStyle).toEqual(a);
     });
@@ -38,14 +38,14 @@ describe('@Components/TextEditor#computed', () => {
           ...GLOBS.mocks,
         },
       });
-      const a = [
-        `font-size: ${GLOBS.test.fontSize}px`,
-        `line-height: ${GLOBS.test.lineHeight}em`,
-        `text-indent: ${GLOBS.test.paragraphIndent}px`,
-        `max-width: ${GLOBS.test.maxWidth}px`,
-        `padding-top: ${GLOBS.test.marginTop}px`,
-        `padding-bottom: ${GLOBS.test.marginBottom}px`,
-      ].join(';');
+      const a = {
+        fontSize: `${GLOBS.test.fontSize}px`,
+        lineHeight: `${GLOBS.test.lineHeight}em`,
+        textIndent: `${GLOBS.test.paragraphIndent}px`,
+        maxWidth: `${GLOBS.test.maxWidth}px`,
+        paddingTop: `${GLOBS.test.marginTop}px`,
+        paddingBottom: `${GLOBS.test.marginBottom}px`,
+      };
 
       expect(w.vm.textEditorStyle).toEqual(a);
     });
