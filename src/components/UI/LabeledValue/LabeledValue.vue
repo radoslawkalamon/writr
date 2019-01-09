@@ -1,6 +1,6 @@
 <template functional>
   <div
-    :class='`base-labeled-value base-labeled-value--${props.name}`'
+    :class='["base-labeled-value", `base-labeled-value--${props.name}`]'
   >
     <strong
       class='base-labeled-value__value'

@@ -10,7 +10,8 @@ export default {
   },
   computed: {
     itemCharactersValue() {
-      return `${this.$store.state.stats.charactersWithoutSpaces} / ${this.$store.state.stats.characters}`;
+      const { stats } = this.$store.state;
+      return `${stats.charactersWithoutSpaces} / ${stats.characters}`;
     },
   },
 };

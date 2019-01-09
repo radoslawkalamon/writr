@@ -21,7 +21,7 @@ describe('@Components/TextEditor#computed', () => {
       const w = mount(TextEditor, {
         mocks: {
           ...GLOBS.mocks,
-        }
+        },
       });
       const a = [
         `height: calc(100vh - ${GLOBS.test.statusBarHeight}px)`,

@@ -1,6 +1,6 @@
 <template functional>
   <div
-    :class='`statusbar-item statusbar-item--${props.name}`'
+    :class='["statusbar-item", `statusbar-item--${props.name}`]'
   >
     <span
       class='statusbar-item__label'

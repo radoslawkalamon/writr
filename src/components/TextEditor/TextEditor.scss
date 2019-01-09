@@ -38,12 +38,14 @@
       border: 0;
     }
   }
+}
 
-  /deep/ > div {
+#text-editor {
+  /deep/ div {
     margin-bottom: 0.75em;
   }
 
-  /deep/ > div:last-child {
+  /deep/ div:last-child {
     margin-bottom: 0;
   }
 }

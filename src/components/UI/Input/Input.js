@@ -29,23 +29,23 @@ export default {
     inputClassNames() {
       return [
         'base-input__input',
-        this.unit !== '' ? 'base-input__input--unit' : '',
-        this.error ? 'base-input__input--error' : '',
-      ].join(' ');
+        { 'base-input__input--unit': this.unit !== '' },
+        { 'base-input__input--error': this.error },
+      ];
     },
     inputWrapperClassNames() {
       return [
         'base-section__form-wrapper',
         'base-input__form-wrapper',
-        this.unit !== '' ? 'base-input__form-wrapper--unit' : '',
-        this.error ? 'base-input__form-wrapper--error' : '',
-      ].join(' ');
+        { 'base-input__form-wrapper--unit': this.unit !== '' },
+        { 'base-input__form-wrapper--error': this.error },
+      ];
     },
     mainElementClassNames() {
       return [
         'base-input',
         `base-input--${this.name}`,
-      ].join(' ');
+      ];
     },
   },
   methods: {

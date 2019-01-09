@@ -39,7 +39,7 @@ export default {
         words: text.split(/\s/).filter(n => n !== '').length,
         paragraphs: text.split(/\n/).filter(n => n !== '').length,
       };
-      const pages = ~~((statsToSave[pageFormulaMainIngredient] / pageFormulaDivider) + 1);
+      const pages = Math.floor((statsToSave[pageFormulaMainIngredient] / pageFormulaDivider) + 1);
 
       context.commit('COMMIT_STATS', {
         ...statsToSave,

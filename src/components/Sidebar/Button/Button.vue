@@ -4,7 +4,7 @@
     :class="[
       'sidebar-button',
       `sidebar-button--${props.name}`,
-      props.toggle && props.activePanel === props.name ? 'sidebar-button--active' : '',
+      { 'sidebar-button--active': props.toggle && props.activePanel === props.name },
     ]"
     :title='props.alt'
   >

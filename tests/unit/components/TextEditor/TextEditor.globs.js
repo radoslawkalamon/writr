@@ -42,8 +42,8 @@ export default {
         sizes: {
           statusBar: {
             height: TEST_STATUS_BAR_HEIGHT,
-          }
-        }
+          },
+        },
       },
     },
     $t: () => TEST_WELCOMETEXT,

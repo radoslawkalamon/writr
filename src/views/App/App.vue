@@ -1,6 +1,6 @@
 <template>
   <div
-    :class='this.appClassNames'
+    :class='appClassNames'
     id="app"
   >
     <sidebar

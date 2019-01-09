@@ -17,7 +17,7 @@ describe('@Components/TextEditor#template', () => {
 
   describe('Styles & Attributes', () => {
     it('should main Element have style equal to mainStyle function', () => {
-      // Test not works because 
+      // Test not works because
       // https://github.com/jsdom/jsdom/issues/1332
 
       // const a = w.vm.mainStyle;

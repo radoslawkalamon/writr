@@ -29,7 +29,7 @@ Current development stage: **Beta [β]**
 
 - [ ] Status bar
   - [ ] Statistics
-  - [ ] Clock
+  - [x] Clock
 - [ ] Statistics
   - [ ] Page count
   - [ ] Paragraphs count

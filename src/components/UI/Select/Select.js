@@ -28,7 +28,7 @@ export default {
       return [
         'base-select',
         `base-select--${this.name}`,
-      ].join(' ');
+      ];
     },
   },
   methods: {

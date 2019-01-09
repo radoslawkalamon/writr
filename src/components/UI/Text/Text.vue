@@ -1,6 +1,6 @@
 <template functional>
   <div
-    :class='`base-text base-text--${props.name}`'
+    :class='["base-text", `base-text--${props.name}`]'
     v-text='props.text'
   />
 </template>

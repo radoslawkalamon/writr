@@ -1,6 +1,6 @@
 <template functional>
   <section
-    :class='`base-section base-section--${props.name}`'
+    :class='["base-section", `base-section--${props.name}`]'
   >
     <h2
       class='base-section__title'

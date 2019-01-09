@@ -2,21 +2,20 @@ import { shallowMount } from '@vue/test-utils';
 import UIToggle from '@/components/UI/Toggle/Toggle.vue';
 import GLOBS from './UI.Toggle.globs';
 
-const SHALLOW_MOUNT_FUNCTION = testValue =>
-  shallowMount(UIToggle, {
-    mocks: {
-      $store: {
-        getters: {
-          getValue: () => testValue,
-        },
+const SHALLOW_MOUNT_FUNCTION = testValue => shallowMount(UIToggle, {
+  mocks: {
+    $store: {
+      getters: {
+        getValue: () => testValue,
       },
     },
-    propsData: {
-      item: GLOBS.test.item,
-      action: GLOBS.test.action,
-      name: GLOBS.test.name,
-    },
-  });
+  },
+  propsData: {
+    item: GLOBS.test.item,
+    action: GLOBS.test.action,
+    name: GLOBS.test.name,
+  },
+});
 
 describe('@Components/UI/Toggle#computed', () => {
   describe('mainElementClassNames', () => {

@@ -5,20 +5,20 @@ export default {
     },
     mainStyle() {
       const store = this.$store.state;
-      return [
-        `height: calc(100vh - ${store.sizes.statusBar.height}px)`,
-      ].join(';');
+      return {
+        height: `calc(100vh - ${store.sizes.statusBar.height}px)`,
+      };
     },
     textEditorStyle() {
       const store = this.$store.state.settings.editor;
-      return [
-        `font-size: ${store.text.fontSize}px`,
-        `line-height: ${store.text.lineHeight}em`,
-        `text-indent: ${store.text.paragraphIndent}px`,
-        `max-width: ${store.window.maxWidth}px`,
-        `padding-top: ${store.window.marginTop}px`,
-        `padding-bottom: ${store.window.marginBottom}px`,
-      ].join(';');
+      return {
+        fontSize: `${store.text.fontSize}px`,
+        lineHeight: `${store.text.lineHeight}em`,
+        textIndent: `${store.text.paragraphIndent}px`,
+        maxWidth: `${store.window.maxWidth}px`,
+        paddingTop: `${store.window.marginTop}px`,
+        paddingBottom: `${store.window.marginBottom}px`,
+      };
     },
   },
   methods: {

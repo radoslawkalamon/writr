@@ -18,7 +18,7 @@ export default {
       return [
         'writr',
         `writr-theme--${this.$store.getters.getValue('settings.editor.theme')}`,
-      ].join(' ');
+      ];
     },
   },
   methods: {

@@ -1,4 +1,4 @@
-import EN_TEXT_SETTINGS from '@/i18n/en/general/settings.json';
+import EN_TEXT_SETTINGS from '@/i18n/en/settings/index.json';
 
 describe('Settings', () => {
   describe('Theme change', () => {
