@@ -4,7 +4,7 @@ Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
 
 ## Writr Roadmap
 
-> **DONE** means final code, tests & documentation are written. Everything is green and ready to deploy.
+> **DONE** means final code & tests are written. Everything is green and ready to deploy.
 
 Current development stage: **Beta [β]**
 
@@ -62,6 +62,6 @@ Current development stage: **Beta [β]**
 
 **Epsilon** Stage [ε]:
 
-- [x] Text Editor
+- [ ] Text Editor
   - [ ] Paragraphs notes
   - [ ] Find / Replace
