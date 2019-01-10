@@ -28,4 +28,25 @@ describe('$store#mutations', () => {
       }).toThrowError();
     });
   });
+
+  describe('COMMIT_STATS', () => {
+    const { state } = GLOBS;
+    const payload = {
+      characters: 1,
+      charactersWithoutSpaces: 2,
+      words: 3,
+      paragraphs: 4,
+      pages: 5,
+    };
+
+    beforeAll(() => {
+      mutations.COMMIT_STATS(state, payload);
+    });
+
+    Object.keys(payload).forEach((element) => {
+      it(`should commit stats to store [${element}]`, () => {
+        expect(state.stats[element]).toEqual(payload[element]);
+      });
+    });
+  });
 });

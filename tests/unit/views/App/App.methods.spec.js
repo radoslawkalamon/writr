@@ -25,7 +25,7 @@ describe('@views/App#methods', () => {
       });
       const a = false;
 
-      w.setData('togglePanel', 'simple-test-name');
+      w.vm.togglePanel('simple-test-name');
       w.vm.togglePanel();
 
       expect(w.vm.openPanel).toEqual(a);

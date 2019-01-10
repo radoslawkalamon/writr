@@ -12,7 +12,15 @@ export default {
   methods: {
     buttonDownload() {
       const date = new Date();
-      const filename = `writr_${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}__${date.getHours()}_${date.getMinutes()}.txt`;
+      const filename = [
+        'writr',
+        date.getFullYear(),
+        (date.getMonth() + 1).toString().padStart(2, '0'),
+        date.getDate().toString().padStart(2, '0'),
+        date.getHours().toString().padStart(2, '0'),
+        date.getMinutes().toString().padStart(2, '0'),
+        date.getSeconds().toString().padStart(2, '0'),
+      ].join('_');
       const text = document.getElementById('text-editor').innerText;
       this.downloadFile(text, filename, 'text/plain');
     },

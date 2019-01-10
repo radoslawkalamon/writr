@@ -1,6 +1,8 @@
 import actions from '@/store/actions';
 import GLOBS from './store.globs';
 
+jest.useFakeTimers();
+
 describe('$store#actions', () => {
   describe('changeState', () => {
     const commitName = 'CHANGE_STATE';
@@ -66,6 +68,54 @@ describe('$store#actions', () => {
       actions.changeState(context, payload);
 
       expect(payload.componentObject[testProperty]).toEqual(!testPropertyValue);
+    });
+  });
+
+  describe('calculateStats', () => {
+    const commitName = 'COMMIT_STATS';
+    let context;
+    beforeEach(() => {
+      context = {
+        commit: jest.fn(() => {}),
+        state: {
+          settings: {
+            stats: {
+              pageFormulaMainIngredient: 'characters',
+              pageFormulaDivider: 100,
+            },
+          },
+        },
+      };
+    });
+
+    it('should throttle commit within 1 seconds', (done) => {
+      const a = 2;
+
+      actions.calculateStats(context, '');
+      actions.calculateStats(context, '');
+      actions.calculateStats(context, '');
+
+      setTimeout(() => {
+        actions.calculateStats(context, '');
+
+        expect(context.commit).toHaveBeenCalledTimes(a);
+        done();
+      }, 3000);
+
+      jest.runAllTimers();
+    });
+
+    it('should commit proper stats to store', () => {
+      actions.calculateStats(context, GLOBS.test.statsText);
+
+      const a = [
+        commitName,
+        GLOBS.test.statsTextNumbers,
+      ];
+
+      jest.runAllTimers();
+
+      expect(context.commit).toHaveBeenCalledWith(...a);
     });
   });
 });
