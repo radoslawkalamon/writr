@@ -15,15 +15,17 @@ export default {
   },
   computed: {
     appClassNames() {
+      const appThemeName = this.$store.getters.getValue('settings.editor.theme');
+
       return [
         'writr',
-        `writr-theme--${this.$store.getters.getValue('settings.editor.theme')}`,
+        `writr-theme--${appThemeName}`,
       ];
     },
   },
   methods: {
     togglePanel(name) {
-      this.openPanel = name;
+      this.openPanel = typeof name === 'string' ? name : false;
     },
   },
   watch: {

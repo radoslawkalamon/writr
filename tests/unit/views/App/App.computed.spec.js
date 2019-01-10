@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import App from '@/views/App/App.vue';
+import testClassesListOnArray from '@/../tests/unit/helpers/testClassesListOnArray';
 import GLOBS from './App.globs';
 
 describe('@views/App#computed', () => {
@@ -13,9 +14,9 @@ describe('@views/App#computed', () => {
       const a = [
         'writr',
         `writr-theme--${GLOBS.test.themeName}`,
-      ].join(' ');
+      ];
 
-      expect(w.vm.appClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.appClassNames, a);
     });
   });
 });
