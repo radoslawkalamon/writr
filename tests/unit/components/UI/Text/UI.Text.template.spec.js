@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import UIText from '@/components/UI/Text/Text.vue';
+import testClassesListOnDOMElement from '@/../tests/unit/helpers/testClassesListOnDOMElement';
 import GLOBS from './UI.Text.globs';
 
 describe('@/components/UI/Text#template', () => {
@@ -16,9 +17,12 @@ describe('@/components/UI/Text#template', () => {
   });
 
   it('should wrapper have proper classes', () => {
-    const a = `base-text base-text--${GLOBS.test.name}`;
+    const a = [
+      'base-text',
+      `base-text--${GLOBS.test.name}`,
+    ];
 
-    expect(w.attributes('class')).toEqual(a);
+    testClassesListOnDOMElement(a, w);
   });
 
   it('should wrapper have proper text', () => {

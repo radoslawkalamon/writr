@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import UIToggle from '@/components/UI/Toggle/Toggle.vue';
+import testClassesListOnArray from '@/../tests/unit/helpers/testClassesListOnArray';
 import GLOBS from './UI.Toggle.globs';
 
 const SHALLOW_MOUNT_FUNCTION = testValue => shallowMount(UIToggle, {
@@ -25,9 +26,9 @@ describe('@Components/UI/Toggle#computed', () => {
       const a = [
         'base-toggle',
         `base-toggle--${GLOBS.test.name}`,
-      ].join(' ');
+      ];
 
-      expect(w.vm.mainElementClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.mainElementClassNames, a);
     });
   });
   describe('inputWrapperClassNames', () => {
@@ -37,10 +38,9 @@ describe('@Components/UI/Toggle#computed', () => {
       const a = [
         'base-section__form-wrapper',
         'base-toggle__form-wrapper',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
 
     it('should return classes: active', () => {
@@ -50,9 +50,9 @@ describe('@Components/UI/Toggle#computed', () => {
         'base-section__form-wrapper',
         'base-toggle__form-wrapper',
         'base-toggle__form-wrapper--active',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
   });
 
@@ -62,10 +62,9 @@ describe('@Components/UI/Toggle#computed', () => {
       const w = SHALLOW_MOUNT_FUNCTION(testValue);
       const a = [
         'base-toggle__input',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
 
     it('should return classes: active', () => {
@@ -74,9 +73,9 @@ describe('@Components/UI/Toggle#computed', () => {
       const a = [
         'base-toggle__input',
         'base-toggle__input--active',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
   });
 });
