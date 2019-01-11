@@ -1,0 +1,25 @@
+<template functional>
+  <base-section
+    name='stats'
+    :title='parent.$t("settings.stats.title")'
+  >
+    <base-select
+      action='changeState'
+      item='settings.stats.pageFormulaMainIngredient'
+      :labels='parent.$t("settings.stats.pageFormulaMainIngredient.labels")'
+      name='stats-formula-ingredient'
+      :title='parent.$t("settings.stats.pageFormulaMainIngredient.title")'
+    />
+    <base-input
+      action='changeState'
+      :errorTip='parent.$t("settings.stats.pageFormulaDivider.errorTip")'
+      item='settings.stats.pageFormulaDivider'
+      name='stats-formula-divider'
+      :title='parent.$t("settings.stats.pageFormulaDivider.title")'
+    />
+    <base-text
+      name='stats-formula-tip'
+      :text='parent.$t("settings.stats.formulaTip")'
+    />
+  </base-section>
+</template>

@@ -1,0 +1,18 @@
+.base-labeled-value {
+  width: 100%;
+  margin-bottom: $baseSize;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__value {
+    font-size: 1.5 * $baseSize;
+    display: block;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.75 * $baseSize;
+  }
+}

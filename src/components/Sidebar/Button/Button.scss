@@ -17,6 +17,12 @@
     width: 24px;
     height: 24px;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+  }
 }
 
 .writr-theme--#{$themesClassDark} {

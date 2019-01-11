@@ -16,7 +16,7 @@
       box-sizing: border-box;
       border: 1px solid transparent;
       border-top: 0;
-      font-size: 0.6 * $fontSize;
+      font-size: 0.75 * $baseSize;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,7 +60,7 @@
     border: 1px solid transparent;
     font-family: $fontFamily;
     text-align: center;
-    font-size: 0.8 * $baseSize;
+    font-size: 0.75 * $baseSize;
 
     @include transition(color background-color border-color);
 

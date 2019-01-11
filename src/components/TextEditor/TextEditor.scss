@@ -1,18 +1,91 @@
 .text-editor {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0 $contentPadding;
-  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  scrollbar-width: thin;
+  z-index: 1;
+  width: calc(100% - #{$sidebarWidth});
+  position: fixed;
+  left: $sidebarWidth;
+  top: 0;
 
-  &:focus {
-    box-shadow: 0;
-    outline: 0;
-    border: 0;
+  @include transition(height background-color border-color scrollbar-color);
+
+  &::-webkit-scrollbar {
+    width: 0.5 * $baseSize;
+  }
+  
+  &::-webkit-scrollbar-track-piece  {
+    @include transition(background-color);
+  }
+  
+  &::-webkit-scrollbar-thumb:vertical {
+    @include transition(background-color);
   }
 
-  /deep/ > div {
+  &__wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 $contentPadding;
+    box-sizing: border-box;
+  
+    &:focus {
+      box-shadow: 0;
+      outline: 0;
+      border: 0;
+    }
+  }
+}
+
+#text-editor {
+  /deep/ div {
     margin-bottom: 0.75em;
+  }
+
+  /deep/ div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.writr-theme--#{$themesClassDark} {
+  @import '@/styles/themes/dark.scss';  
+
+  .text-editor {
+    scrollbar-color: color(fourth) color(secondary);
+
+    &::-webkit-scrollbar {
+      width: 0.5 * $baseSize;
+    }
+    
+    &::-webkit-scrollbar-track-piece  {
+      background-color: color(secondary);
+    }
+    
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: color(fourth);
+    }
+  }
+}
+
+.writr-theme--#{$themesClassLight} {
+  @import '@/styles/themes/light.scss';
+
+  .text-editor {
+    scrollbar-color: color(fourth) color(secondary);
+
+    &::-webkit-scrollbar {
+      width: 0.5 * $baseSize;
+    }
+    
+    &::-webkit-scrollbar-track-piece  {
+      background-color: color(secondary);
+    }
+    
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: color(fourth);
+    }
   }
 }

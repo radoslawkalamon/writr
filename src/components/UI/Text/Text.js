@@ -4,13 +4,9 @@ export default {
       type: String,
       default: 'generic',
     },
-  },
-  computed: {
-    mainElementClassNames() {
-      return [
-        'base-text',
-        `base-text--${this.name}`,
-      ].join(' ');
+    text: {
+      type: String,
+      required: true,
     },
   },
 };

@@ -5,12 +5,4 @@ export default {
       default: 'generic',
     },
   },
-  computed: {
-    wrapperClassNames() {
-      return [
-        'sidebar-panel',
-        `sidebar-panel--${this.name}`,
-      ].join(' ');
-    },
-  },
 };

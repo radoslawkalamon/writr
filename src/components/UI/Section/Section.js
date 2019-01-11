@@ -9,12 +9,4 @@ export default {
       required: true,
     },
   },
-  computed: {
-    wrapperClassNames() {
-      return [
-        'base-section',
-        `base-section--${this.name}`,
-      ].join(' ');
-    },
-  },
 };

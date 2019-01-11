@@ -1,39 +1,31 @@
-import SidebarBase from '@/components/Sidebar/Base/Base.vue';
-import SidebarButton from '@/components/Sidebar/Button/Button.vue';
+import Sidebar from '@/views/Sidebar/Sidebar.vue';
 import TextEditor from '@/components/TextEditor/TextEditor.vue';
+import Statusbar from '@/views/Statusbar/Statusbar.vue';
 import Settings from '@/views/Settings/Settings.vue';
-
-import downloadFile from 'downloadjs';
+import Stats from '@/views/Stats/Stats.vue';
 
 export default {
   name: 'writr',
   components: {
-    SidebarBase,
-    SidebarButton,
+    Sidebar,
     Settings,
+    Stats,
+    Statusbar,
     TextEditor,
   },
   computed: {
     appClassNames() {
+      const appThemeName = this.$store.getters.getValue('settings.editor.theme');
+
       return [
         'writr',
-        `writr-theme--${this.$store.getters.getValue('settings.editor.theme')}`,
-      ].join(' ');
+        `writr-theme--${appThemeName}`,
+      ];
     },
   },
   methods: {
-    closePanel() {
-      this.openPanel = false;
-    },
-    downloadFile,
-    sidebarButtonDownload() {
-      const date = new Date();
-      const filename = `writr_${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}__${date.getHours()}_${date.getMinutes()}.txt`;
-      const text = document.getElementById('text-editor').innerText;
-      this.downloadFile(text, filename, 'text/plain');
-    },
-    sidebarButtonToggle(name) {
-      this.openPanel = this.openPanel === name ? false : name;
+    togglePanel(name) {
+      this.openPanel = typeof name === 'string' ? name : false;
     },
   },
   watch: {
@@ -43,6 +35,14 @@ export default {
       },
       immediate: true,
     },
+  },
+  mounted() {
+    /**
+     * Store upgrade from older version tool
+     */
+    if (this.$store.state.settings.misc.version === 'alfa') {
+      this.$store.state.settings.misc.version = 'beta';
+    }
   },
   data() {
     return {

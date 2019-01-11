@@ -1,7 +1,13 @@
-import iconList from '@/assets/icons/index';
-
 export default {
   props: {
+    action: {
+      type: Function,
+      required: true,
+    },
+    activePanel: {
+      type: [Boolean, String],
+      required: true,
+    },
     alt: {
       type: String,
       default: '',
@@ -18,31 +24,5 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  computed: {
-    resolveIcon() {
-      const stateThemeName = 'settings.editor.theme';
-      const themeName = this.$store.getters.getValue(stateThemeName);
-      return this.iconList[themeName][this.icon];
-    },
-    wrapperClassNames() {
-      return [
-        'sidebar-button',
-        `sidebar-button--${this.name}`,
-        this.toggled ? 'sidebar-button--active' : '',
-      ].join(' ');
-    },
-  },
-  methods: {
-    onClick() {
-      this.toggled = this.toggle ? !this.toggled : false;
-      this.$emit('action', this.name);
-    },
-  },
-  data() {
-    return {
-      iconList,
-      toggled: false,
-    };
   },
 };

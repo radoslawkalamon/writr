@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import UISelect from '@/components/UI/Select/Select.vue';
+import testClassesListOnDOMElement from '@/../tests/unit/helpers/testClassesListOnDOMElement';
 import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#template', () => {
@@ -15,6 +16,10 @@ describe('@/components/UI/Select#template', () => {
       },
       mocks: GLOBS.mocks,
     });
+  });
+
+  it('should main element have proper classes', () => {
+    testClassesListOnDOMElement(w.vm.mainElementClassNames, w);
   });
 
   it('should .base-select__label-wrapper\'s innerText be equal to TITLE prop', () => {

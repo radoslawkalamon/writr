@@ -22,6 +22,10 @@ export default {
         settings: {
           misc: {
             language: TEST_LANG,
+            version: 'alfa',
+          },
+          statusBar: {
+            isVisible: true,
           },
         },
       },

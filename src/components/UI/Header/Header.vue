@@ -1,16 +1,14 @@
-<template>
+<template functional>
   <h1
     class='base-header base-header--1'
-    v-if='header'
-  >
-    <slot />
-  </h1>
+    v-if='props.header'
+    v-text='props.title'
+  />
   <h2
     class='base-header base-header--2'
     v-else
-  >
-    <slot />
-  </h2>
+    v-text='props.title'
+  />
 </template>
 
 <script src='./Header.js'></script>

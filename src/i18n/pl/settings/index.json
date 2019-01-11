@@ -37,6 +37,27 @@
       "errorTip": "Liczba >= 0"
     }
   },
+  "stats": {
+    "title": "Statystyki",
+    "pageFormulaMainIngredient": {
+      "title": "Składnik formuły przeliczania stron",
+      "labels": ["Znaki ze spacjami", "Znaki bez spacji", "Słowa", "Akapity"]
+    },
+    "pageFormulaDivider": {
+      "title": "Dzielnik",
+      "errorTip": "Liczba >= 1"
+    },
+    "formulaTip": "Składnik / dzielnik = ilość stron"
+  },
+  "statusBar": {
+    "title": "Pasek stanu",
+    "isVisible": {
+      "title": "Pokaż pasek stanu"
+    }
+  },
+  "statusBarContent": {
+    "title": "Pokaż na pasku stanu"
+  },
   "misc": {
     "title": "Pozostałe",
     "spellChecker": {

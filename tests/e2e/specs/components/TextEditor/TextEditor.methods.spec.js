@@ -1,4 +1,4 @@
-describe('TextEditor#methods', () => {
+describe('@Components/TextEditor#methods', () => {
   describe('onChange', () => {
     it('Should create <div> after starting typing in blank TextEditor', () => {
       const TEST_TEXT = 'This is test text!';

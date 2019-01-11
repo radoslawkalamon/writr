@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import UIInput from '@/components/UI/Input/Input.vue';
+import testClassesListOnDOMElement from '@/../tests/unit/helpers/testClassesListOnDOMElement';
 import GLOBS from './UI.Input.globs';
 
 describe('@/components/UI/Input#template', () => {
@@ -25,9 +26,9 @@ describe('@/components/UI/Input#template', () => {
   });
 
   it('should .base-input__form-wrapper have proper classes', () => {
-    const a = w.vm.inputWrapperClassNames;
+    const DOMElement = w.find('.base-input__form-wrapper');
 
-    expect(w.find('.base-input__form-wrapper').attributes('class')).toEqual(a);
+    testClassesListOnDOMElement(w.vm.inputWrapperClassNames, DOMElement);
   });
 
   it('should .base-input__form-wrapper\'s DATA-UNIT attr be equal to UNIT prop', () => {
@@ -43,9 +44,9 @@ describe('@/components/UI/Input#template', () => {
   });
 
   it('should .base-input__input have proper classes', () => {
-    const a = w.vm.inputClassNames;
+    const DOMElement = w.find('.base-input__input');
 
-    expect(w.find('.base-input__input').attributes('class')).toEqual(a);
+    testClassesListOnDOMElement(w.vm.inputClassNames, DOMElement);
   });
 
   it('should .base-input__input\'s value be equal to GLOBS.test.storeValue', () => {

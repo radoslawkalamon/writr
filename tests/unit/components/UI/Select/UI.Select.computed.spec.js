@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import UISelect from '@/components/UI/Select/Select.vue';
+import testClassesListOnArray from '@/../tests/unit/helpers/testClassesListOnArray';
 import GLOBS from './UI.Select.globs';
 
 describe('@/components/UI/Select#computed', () => {
@@ -14,9 +15,9 @@ describe('@/components/UI/Select#computed', () => {
       const a = [
         'base-select',
         `base-select--${GLOBS.test.name}`,
-      ].join(' ');
+      ];
 
-      expect(w.vm.mainElementClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.mainElementClassNames, a);
     });
   });
 });

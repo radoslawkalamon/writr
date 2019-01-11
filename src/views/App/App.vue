@@ -1,32 +1,27 @@
 <template>
   <div
-    :class='this.appClassNames'
+    :class='appClassNames'
     id="app"
   >
-    <sidebar-base>
-      <sidebar-button
-        @action='sidebarButtonDownload'
-        :alt='$t("general.download.title")'
-        icon='download'
-        name='download'
-        slot='top'
-        :toggle='false'
-      />
-      <sidebar-button
-        @action='sidebarButtonToggle'
-        :alt='$t("general.settings.title")'
-        icon='settings'
-        name='settings'
-        slot='bottom'
-        :toggle='true'
-      />
-    </sidebar-base>
+    <sidebar
+      @togglePanel='togglePanel'
+    />
     <transition
       mode='out-in'
       name='panel-transition'
     >
       <settings
-        v-if='this.openPanel === "settings"'
+        v-if='openPanel === "settings"'
+      />
+      <stats
+        v-if='openPanel === "stats"'
+      />
+    </transition>
+    <transition
+      name='fade'
+    >
+      <statusbar
+        v-if='$store.state.settings.statusBar.isVisible'
       />
     </transition>
     <text-editor />

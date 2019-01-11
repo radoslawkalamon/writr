@@ -1,17 +1,22 @@
 <template>
-  <div
-    @input='onChange'
-    @paste.prevent='onPaste'
+  <main
     class='text-editor'
-    contenteditable='true'
-    id='text-editor'
-    :spellcheck='spellcheckValue'
-    :style='textEditorStyle'
+    :style='mainStyle'
   >
     <div
-      v-text='welcomeText'
-    />
-  </div>
+      @input='onChange'
+      @paste.prevent='onPaste'
+      class='text-editor__wrapper'
+      contenteditable='true'
+      id='text-editor'
+      :spellcheck='spellcheckValue'
+      :style='textEditorStyle'
+    >
+      <div
+        v-text='welcomeText'
+      />
+    </div>
+  </main>
 </template>
 
 <script src='./TextEditor.js'></script>

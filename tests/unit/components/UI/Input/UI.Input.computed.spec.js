@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import UIInput from '@/components/UI/Input/Input.vue';
+import testClassesListOnArray from '@/../tests/unit/helpers/testClassesListOnArray';
 import GLOBS from './UI.Input.globs';
 
 describe('@/components/UI/Input#computed', () => {
@@ -14,9 +15,9 @@ describe('@/components/UI/Input#computed', () => {
       const a = [
         'base-input',
         `base-input--${GLOBS.test.name}`,
-      ].join(' ');
+      ];
 
-      expect(w.vm.mainElementClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.mainElementClassNames, a);
     });
   });
   describe('inputWrapperClassNames', () => {
@@ -30,11 +31,9 @@ describe('@/components/UI/Input#computed', () => {
       const a = [
         'base-section__form-wrapper',
         'base-input__form-wrapper',
-        '',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
 
     it('should return classes: unit, !error', () => {
@@ -49,10 +48,9 @@ describe('@/components/UI/Input#computed', () => {
         'base-section__form-wrapper',
         'base-input__form-wrapper',
         'base-input__form-wrapper--unit',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
 
 
@@ -66,13 +64,12 @@ describe('@/components/UI/Input#computed', () => {
       const a = [
         'base-section__form-wrapper',
         'base-input__form-wrapper',
-        '',
         'base-input__form-wrapper--error',
-      ].join(' ');
+      ];
 
       w.setData({ error: true });
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
 
     it('should return classes: unit, error', () => {
@@ -88,11 +85,11 @@ describe('@/components/UI/Input#computed', () => {
         'base-input__form-wrapper',
         'base-input__form-wrapper--unit',
         'base-input__form-wrapper--error',
-      ].join(' ');
+      ];
 
       w.setData({ error: true });
 
-      expect(w.vm.inputWrapperClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputWrapperClassNames, a);
     });
   });
 
@@ -106,11 +103,9 @@ describe('@/components/UI/Input#computed', () => {
       });
       const a = [
         'base-input__input',
-        '',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
 
     it('should return classes: unit, !error', () => {
@@ -124,10 +119,9 @@ describe('@/components/UI/Input#computed', () => {
       const a = [
         'base-input__input',
         'base-input__input--unit',
-        '',
-      ].join(' ');
+      ];
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
 
 
@@ -140,13 +134,12 @@ describe('@/components/UI/Input#computed', () => {
       });
       const a = [
         'base-input__input',
-        '',
         'base-input__input--error',
-      ].join(' ');
+      ];
 
       w.setData({ error: true });
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
 
     it('should return classes: unit, error', () => {
@@ -161,11 +154,11 @@ describe('@/components/UI/Input#computed', () => {
         'base-input__input',
         'base-input__input--unit',
         'base-input__input--error',
-      ].join(' ');
+      ];
 
       w.setData({ error: true });
 
-      expect(w.vm.inputClassNames).toEqual(a);
+      testClassesListOnArray(w.vm.inputClassNames, a);
     });
   });
 });

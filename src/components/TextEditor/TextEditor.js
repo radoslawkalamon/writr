@@ -3,26 +3,34 @@ export default {
     spellcheckValue() {
       return this.$store.state.settings.misc.spellChecker;
     },
+    mainStyle() {
+      const store = this.$store.state;
+      return {
+        height: `calc(100vh - ${store.sizes.statusBar.height}px)`,
+      };
+    },
     textEditorStyle() {
       const store = this.$store.state.settings.editor;
-      return `
-      font-size: ${store.text.fontSize}px;
-      line-height: ${store.text.lineHeight}em;
-      text-indent: ${store.text.paragraphIndent}px;
-      max-width: ${store.window.maxWidth}px;
-      min-height: calc(100% - ${store.window.marginTop + store.window.marginBottom}px);
-      margin-top: ${store.window.marginTop}px;
-      margin-bottom: ${store.window.marginBottom}px;
-      `;
+      return {
+        fontSize: `${store.text.fontSize}px`,
+        lineHeight: `${store.text.lineHeight}em`,
+        textIndent: `${store.text.paragraphIndent}px`,
+        maxWidth: `${store.window.maxWidth}px`,
+        paddingTop: `${store.window.marginTop}px`,
+        paddingBottom: `${store.window.marginBottom}px`,
+      };
     },
   },
   methods: {
     onChange(_e) {
       const textEditor = _e.target;
       if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
-        textEditor.innerHTML = `<div>${textEditor.innerText}</div>`;
+        textEditor.innerHTML = `<div>${textEditor.innerHTML}</div>`;
         window.getSelection().collapse(textEditor.firstChild, 1);
       }
+
+      // Calculate stats
+      this.$store.dispatch('calculateStats', textEditor.innerText);
     },
     onPaste(_e) {
       // How to insert text without losing formatting?
@@ -35,7 +43,7 @@ export default {
       // 7. Get second #Text and change it into <div>#Text</div>
       // 8. PROFIT!!!
 
-      const clipboardText = _e.clipboardData.getData('text').replace(/\n/g, '');
+      const clipboardText = _e.clipboardData.getData('text');
       document.execCommand('insertText', false, clipboardText);
       return true;
     },

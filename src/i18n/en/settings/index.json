@@ -37,6 +37,27 @@
       "errorTip": "Number >= 0"
     }
   },
+  "stats": {
+    "title": "Statistics",
+    "pageFormulaMainIngredient": {
+      "title": "Main ingredient for page formula",
+      "labels": ["Characters", "Characters without spaces", "Words", "Paragraphs"]
+    },
+    "pageFormulaDivider": {
+      "title": "Divider",
+      "errorTip": "Number >= 1"
+    },
+    "formulaTip": "Ingredient / Divider = Page count"
+  },
+  "statusBar": {
+    "title": "Status bar",
+    "isVisible": {
+      "title": "Show status bar"
+    }
+  },
+  "statusBarContent": {
+    "title": "Show on status bar"
+  },
   "misc": {
     "title": "Others",
     "spellChecker": {

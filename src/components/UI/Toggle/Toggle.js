@@ -21,21 +21,21 @@ export default {
     inputClassNames() {
       return [
         'base-toggle__input',
-        this.value ? 'base-toggle__input--active' : '',
-      ].join(' ');
+        { 'base-toggle__input--active': this.value },
+      ];
     },
     inputWrapperClassNames() {
       return [
         'base-section__form-wrapper',
         'base-toggle__form-wrapper',
-        this.value ? 'base-toggle__form-wrapper--active' : '',
-      ].join(' ');
+        { 'base-toggle__form-wrapper--active': this.value },
+      ];
     },
     mainElementClassNames() {
       return [
         'base-toggle',
         `base-toggle--${this.name}`,
-      ].join(' ');
+      ];
     },
   },
   methods: {

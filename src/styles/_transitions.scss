@@ -1,15 +1,39 @@
-@keyframes panel-transition {
+/*
+* PANEL TRANSITION
+*/
+
+.panel-transition-enter-active {
+  transform: translateX(-100%);
+}
+
+.panel-transition-enter-to {
+  transform: translateX(0%);
+}
+
+.panel-transition-leave-active {
+  transform: translateX(0%);
+}
+
+.panel-transition-leave-to {
+  transform: translateX(-100%);
+}
+
+/*
+* FADE TRANSITION
+*/
+
+@keyframes fade {
   0% {
-    left: -$maxWidth;
+    opacity: 0.0;
   }
   100% {
-    left: $sidebarWidth;
+    opacity: 1.0;
   }
 }
 
-.panel-transition-enter-active {
-  animation: panel-transition $animationTime;
+.fade-enter-active {
+  animation: fade $animationTime;
 }
-.panel-transition-leave-active {
-  animation: panel-transition $animationTime reverse;
+.fade-leave-active {
+  animation: fade $animationTime reverse;
 }

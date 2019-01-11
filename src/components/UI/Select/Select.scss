@@ -9,10 +9,16 @@
     // appearance: none;
     border: 1px solid transparent;
     font-family: $fontFamily;
-    font-size: 0.8 * $baseSize;
+    font-size: 0.75 * $baseSize;
     padding: 0 0.25 * $baseSize;
 
     @include transition(color background-color border-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+    }
   }
 }
 
