@@ -19,15 +19,15 @@ describe('issue#2', () => {
       .should('have.length', a);
   });
 
-  it('should first <div> have margin-bottom: 16px;', function ctx() {
+  it('should first <div> have margin-bottom: 9px;', function ctx() {
     const a = `${0.75 * parseFloat(this.fontSize, 10)}px`;
 
     cy.get('#text-editor > div:nth-of-type(1)')
       .should('have.css', 'margin-bottom', a);
   });
 
-  it('should second <div> have margin-bottom: 16px;', function ctx() {
-    const a = `${0.75 * parseFloat(this.fontSize, 10)}px`;
+  it('should second <div> have margin-bottom: 0px;', function ctx() {
+    const a = '0px';
 
     cy.get('#text-editor > div:nth-of-type(2)')
       .should('have.css', 'margin-bottom', a);

@@ -42,9 +42,8 @@ describe('TextEditor#attrs', () => {
       .should('have.css', 'line-height', `${values[selectors[2]] * values[selectors[0]]}px`)
       .should('have.css', 'text-indent', `${values[selectors[1]]}px`)
       .should('have.css', 'max-width', `${values[selectors[3]]}px`)
-      .should('have.css', 'min-height', `calc(-${values[selectors[4]] + values[selectors[5]]}px + 100%)`)
-      .should('have.css', 'margin-top', `${values[selectors[4]]}px`)
-      .should('have.css', 'margin-bottom', `${values[selectors[5]]}px`)
+      .should('have.css', 'padding-top', `${values[selectors[4]]}px`)
+      .should('have.css', 'padding-bottom', `${values[selectors[5]]}px`)
       .should('have.attr', 'spellcheck', spellCheckValue);
   });
 });
