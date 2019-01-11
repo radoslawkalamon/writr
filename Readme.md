@@ -27,15 +27,15 @@ Current development stage: **Beta [β]**
 
 **Beta** Stage [β]:
 
-- [ ] Status bar
-  - [ ] Statistics
+- [x] Status bar
+  - [x] Statistics
   - [x] Clock
-- [ ] Statistics
-  - [ ] Page count
-  - [ ] Paragraphs count
-  - [ ] Words count
-  - [ ] Nonspaces characters count
-  - [ ] Characters count
+- [x] Statistics
+  - [x] Page count
+  - [x] Paragraphs count
+  - [x] Words count
+  - [x] Nonspaces characters count
+  - [x] Characters count
 - [x] Settings
   - [x] Stats :: Page Formula Ingredient
   - [x] Stats :: Page Formula Divider
