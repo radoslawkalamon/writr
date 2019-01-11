@@ -6,7 +6,7 @@ Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
 
 > **DONE** means final code & tests are written. Everything is green and ready to deploy.
 
-Current development stage: **Beta [β]**
+Current development stage: **Pregamma [pre-γ]**
 
 **Alpha** Stage [α]:
 

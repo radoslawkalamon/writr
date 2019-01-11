@@ -9,7 +9,7 @@ const PANEL_NAME = 'test-panel';
 
 const TRANSLATE_TEXT = 'translate-text';
 const FAKE_TEXT = 'Fake text';
-const FILENAME = 'writr_2018_11_21__22_34.txt';
+const FILENAME = 'writr_2018_11_21_22_34_13.txt';
 const FILETYPE = 'text/plain';
 
 const THEME_NAME = 'dark';

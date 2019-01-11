@@ -22,7 +22,7 @@ export default {
         date.getSeconds().toString().padStart(2, '0'),
       ].join('_');
       const text = document.getElementById('text-editor').innerText;
-      this.downloadFile(text, filename, 'text/plain');
+      this.downloadFile(text, `${filename}.txt`, 'text/plain');
     },
     downloadFile,
     togglePanel(name) {
