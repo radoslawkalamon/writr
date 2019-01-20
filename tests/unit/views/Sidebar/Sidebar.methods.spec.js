@@ -16,6 +16,12 @@ describe('@views/Sidebar#computed', () => {
     });
   });
 
+  describe('newFile', () => {
+    it('newFile test in End2End', () => {
+      expect(true).toBeTruthy();
+    });
+  });
+
   describe('buttonDownload', () => {
     let w;
     beforeAll(() => {

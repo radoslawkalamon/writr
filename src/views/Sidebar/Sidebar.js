@@ -10,6 +10,10 @@ export default {
     SidebarButton,
   },
   methods: {
+    newFile() {
+      document.getElementById('text-editor').innerHTML = `<div>${this.$t('components.TextEditor.welcomeText')}</div>`;
+      this.$store.dispatch('calculateStats', this.$t('components.TextEditor.welcomeText'));
+    },
     buttonDownload() {
       const date = new Date();
       const filename = [

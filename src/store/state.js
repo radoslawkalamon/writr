@@ -34,11 +34,11 @@ export default {
     },
   },
   stats: {
-    characters: 0,
-    charactersWithoutSpaces: 0,
-    words: 0,
-    paragraphs: 0,
-    pages: 0,
+    characters: 884,
+    charactersWithoutSpaces: 747,
+    words: 133,
+    paragraphs: 28,
+    pages: 1,
   },
   sizes: {
     statusBar: {

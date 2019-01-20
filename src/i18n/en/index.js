@@ -6,6 +6,7 @@ import TextEditor from '@/i18n/en/components/TextEditor.json';
 export default {
   general: {
     download,
+    newFile: 'New file',
   },
   settings,
   stats,

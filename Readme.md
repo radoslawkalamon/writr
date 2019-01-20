@@ -54,6 +54,9 @@ Current development stage: **Pregamma [pre-γ]**
 - [ ] Alarms & targets
 - [ ] Settings
   - [ ] Theme :: Preselected fonts
+- [x] Sidebar
+  - [x] New file button
+- [ ] No JS view
 
 **Delta** Stage [δ]:
 

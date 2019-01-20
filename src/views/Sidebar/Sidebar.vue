@@ -1,6 +1,15 @@
 <template>
   <sidebar-base>
     <sidebar-button
+      :action='newFile'
+      :activePanel='openPanel'
+      :alt='$t("general.newFile")'
+      icon='newfile'
+      name='newfile'
+      slot='top'
+      :toggle='false'
+    />
+    <sidebar-button
       :action='buttonDownload'
       :activePanel='openPanel'
       :alt='$t("general.download.title")'

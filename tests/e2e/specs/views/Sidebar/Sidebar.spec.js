@@ -35,6 +35,48 @@ describe('Sidebar', () => {
     });
   });
 
+  describe('New file', () => {
+    before(() => {
+      cy.clearLocalStorage();
+      cy.visit('/');
+
+      cy.get('.sidebar-button--newfile')
+        .click();
+    });
+
+    it('should erase text from TextEditor', () => {
+      cy.get('#text-editor > div:nth-of-type(1)')
+        .should('exist');
+    });
+
+    it('should update stats', () => {
+      cy.get('.sidebar-button--stats')
+        .click();
+
+      const selectors = [
+        '#app > .sidebar-panel--stats > .base-labeled-value--characters > .base-labeled-value__value',
+        '#app > .sidebar-panel--stats > .base-labeled-value--characters-without-spaces > .base-labeled-value__value',
+        '#app > .sidebar-panel--stats > .base-labeled-value--words > .base-labeled-value__value',
+        '#app > .sidebar-panel--stats > .base-labeled-value--paragraphs > .base-labeled-value__value',
+        '#app > .sidebar-panel--stats > .base-labeled-value--pages > .base-labeled-value__value',
+      ];
+
+      // O czym myślisz?
+      const values = [
+        '15',
+        '13',
+        '3',
+        '1',
+        '1',
+      ];
+
+      selectors.forEach((selector, index) => {
+        cy.get(selector)
+          .contains(values[index]);
+      });
+    });
+  });
+
   describe('Save file', () => {
     it('should save file with text from TextEditor', () => {
       // Can be tested right now :/
