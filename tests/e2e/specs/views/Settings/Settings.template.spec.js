@@ -46,18 +46,18 @@ describe('Settings#template', () => {
       '#app > div.sidebar-panel.sidebar-panel--settings:nth-child(2) > section.base-section.base-section--misc:nth-child(8) > div.base-section__content:nth-child(2) > div.base-toggle.base-toggle--misc-spellchecker:nth-child(1) > div.base-section__form-wrapper.base-toggle__form-wrapper.base-toggle__form-wrapper--active:nth-child(2) > div.base-toggle__input.base-toggle__input--active:nth-child(1)',
       '#app > div.sidebar-panel.sidebar-panel--settings:nth-child(2) > section.base-section.base-section--misc:nth-child(8) > div.base-section__content:nth-child(2) > div.base-select.base-select--misc-language:nth-child(2) > span.base-section__label-wrapper.base-select__label-wrapper:nth-child(1)',
       '#app > div.sidebar-panel.sidebar-panel--settings:nth-child(2) > section.base-section.base-section--misc:nth-child(8) > div.base-section__content:nth-child(2) > div.base-select.base-select--misc-language:nth-child(2) > div.base-section__form-wrapper.base-select__form-wrapper:nth-child(2) > select.base-select__input:nth-child(1) > option:nth-child(1)',
-      '#app > div.sidebar-panel.sidebar-panel--settings:nth-child(2) > section.base-section.base-section--misc:nth-child(8) > div.base-section__content:nth-child(2) > div.base-select.base-select--misc-language:nth-child(2) > div.base-section__form-wrapper.base-select__form-wrapper:nth-child(2) > select.base-select__input:nth-child(1) > option:nth-child(2)',
-    ];
+      '#app > div.sidebar-panel.sidebar-panel--settings:nth-child(2) > section.base-section.base-section--misc:nth-child(8) > div.base-section__content:nth-child(2) > div.base-select.base-select--misc-language:nth-child(2) > div.base-section__form-wrapper.base-select__form-wrapper:nth-child(2) > select.base-select__input:nth-child(1) > option:nth-child(2)'
+    ]
 
-    cy.clearLocalStorage();
-    cy.visit('/');
+    cy.clearLocalStorage()
+    cy.visit('/')
 
     cy.get('.sidebar-button--settings')
-      .click();
+      .click()
 
     selectors.forEach((selector) => {
       cy.get(`${selector}`)
-        .should('exist');
-    });
-  });
-});
+        .should('exist')
+    })
+  })
+})

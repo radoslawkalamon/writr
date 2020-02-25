@@ -2,11 +2,11 @@ export default {
   props: {
     name: {
       type: String,
-      default: 'generic',
+      default: 'generic'
     },
     title: {
       type: String,
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}

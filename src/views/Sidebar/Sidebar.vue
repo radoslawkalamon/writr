@@ -1,40 +1,40 @@
 <template>
   <sidebar-base>
     <sidebar-button
-      :action='newFile'
-      :activePanel='openPanel'
-      :alt='$t("general.newFile")'
-      icon='newfile'
-      name='newfile'
-      slot='top'
-      :toggle='false'
+      slot="top"
+      :action="newFile"
+      :active-panel="openPanel"
+      :alt="$t('general.newFile')"
+      :toggle="false"
+      icon="newfile"
+      name="newfile"
     />
     <sidebar-button
-      :action='buttonDownload'
-      :activePanel='openPanel'
-      :alt='$t("general.download.title")'
-      icon='download'
-      name='download'
-      slot='top'
-      :toggle='false'
+      slot="top"
+      :action="buttonDownload"
+      :active-panel="openPanel"
+      :alt="$t('general.download.title')"
+      :toggle="false"
+      icon="download"
+      name="download"
     />
     <sidebar-button
-      :action='togglePanel'
-      :activePanel='openPanel'
-      :alt='$t("stats.title")'
-      icon='stats'
-      name='stats'
-      slot='bottom'
-      :toggle='true'
+      slot="bottom"
+      :action="togglePanel"
+      :active-panel="openPanel"
+      :alt="$t('stats.title')"
+      :toggle="true"
+      icon="stats"
+      name="stats"
     />
     <sidebar-button
-      :action='togglePanel'
-      :activePanel='openPanel'
-      :alt='$t("settings.title")'
-      icon='settings'
-      name='settings'
-      slot='bottom'
-      :toggle='true'
+      slot="bottom"
+      :action="togglePanel"
+      :active-panel="openPanel"
+      :alt="$t('settings.title')"
+      :toggle="true"
+      icon="settings"
+      name="settings"
     />
   </sidebar-base>
 </template>

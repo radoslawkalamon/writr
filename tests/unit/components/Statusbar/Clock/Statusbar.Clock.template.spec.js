@@ -1,16 +1,16 @@
-import StatusbarClock from '@/components/Statusbar/Clock/Clock.vue';
-import { mount } from '@vue/test-utils';
+import StatusbarClock from '@/components/Statusbar/Clock/Clock.vue'
+import { mount } from '@vue/test-utils'
 
 describe('@Components/Statusbar/Clock#template', () => {
-  let w;
+  let w
   beforeAll(() => {
-    StatusbarClock.created = jest.fn(() => {});
-    w = mount(StatusbarClock);
-  });
+    StatusbarClock.created = jest.fn(() => {})
+    w = mount(StatusbarClock)
+  })
 
   it('should wrapper have text from DATA', () => {
-    const a = w.vm.time;
+    const a = w.vm.time
 
-    expect(w.text()).toEqual(a);
-  });
-});
+    expect(w.text()).toEqual(a)
+  })
+})

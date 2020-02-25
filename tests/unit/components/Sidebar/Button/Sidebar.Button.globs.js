@@ -1,12 +1,12 @@
-import { mount } from '@vue/test-utils';
-import SidebarButton from '@/components/Sidebar/Button/Button.vue';
+import { mount } from '@vue/test-utils'
+import SidebarButton from '@/components/Sidebar/Button/Button.vue'
 
-const TEST_ACTION = jest.fn(() => {});
-const TEST_ALT = 'test-alt';
-const TEST_ICON = 'test';
-const TEST_ICON_URL = '/test/icon.svg';
-const TEST_NAME = 'test-name';
-const TEST_PARENT_RESOLVE_ICON = jest.fn(() => TEST_ICON_URL);
+const TEST_ACTION = jest.fn(() => {})
+const TEST_ALT = 'test-alt'
+const TEST_ICON = 'test'
+const TEST_ICON_URL = '/test/icon.svg'
+const TEST_NAME = 'test-name'
+const TEST_PARENT_RESOLVE_ICON = jest.fn(() => TEST_ICON_URL)
 
 export default {
   test: {
@@ -18,11 +18,11 @@ export default {
     parent: {
       resolveIcon: {
         fn: TEST_PARENT_RESOLVE_ICON,
-        return: TEST_ICON_URL,
-      },
-    },
+        return: TEST_ICON_URL
+      }
+    }
   },
-  wrapperFactory(props = {}) {
+  wrapperFactory (props = {}) {
     return mount(SidebarButton, {
       context: {
         props: {
@@ -30,12 +30,12 @@ export default {
           activePanel: false,
           icon: TEST_ICON,
           name: TEST_NAME,
-          ...props,
-        },
+          ...props
+        }
       },
       methods: {
-        resolveIcon: TEST_PARENT_RESOLVE_ICON,
-      },
-    });
-  },
-};
+        resolveIcon: TEST_PARENT_RESOLVE_ICON
+      }
+    })
+  }
+}

@@ -1,17 +1,17 @@
 <template functional>
   <button
-    @click='props.action(props.name)'
     :class="[
       'sidebar-button',
       `sidebar-button--${props.name}`,
       { 'sidebar-button--active': props.toggle && props.activePanel === props.name },
     ]"
-    :title='props.alt'
+    :title="props.alt"
+    @click="props.action(props.name)"
   >
     <img
-      :alt='props.alt'
-      :src='parent.resolveIcon(props.icon)'
-    />
+      :alt="props.alt"
+      :src="parent.resolveIcon(props.icon)"
+    >
   </button>
 </template>
 

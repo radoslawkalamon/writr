@@ -1,22 +1,22 @@
-import { shallowMount } from '@vue/test-utils';
-import Statusbar from '@/views/Statusbar/Statusbar.vue';
-import GLOBS from './Statusbar.globs';
+import { shallowMount } from '@vue/test-utils'
+import Statusbar from '@/views/Statusbar/Statusbar.vue'
+import GLOBS from './Statusbar.globs'
 
 describe('@views/Statusbar#computed', () => {
   describe('itemCharactersValue', () => {
-    let w;
+    let w
     beforeAll(() => {
       w = shallowMount(Statusbar, {
         mocks: {
-          ...GLOBS.mocks,
-        },
-      });
-    });
+          ...GLOBS.mocks
+        }
+      })
+    })
 
     it('should return proper characters count', () => {
-      const a = `${GLOBS.test.charactersWithoutSpaces} / ${GLOBS.test.characters}`;
+      const a = `${GLOBS.test.charactersWithoutSpaces} / ${GLOBS.test.characters}`
 
-      expect(w.vm.itemCharactersValue).toEqual(a);
-    });
-  });
-});
+      expect(w.vm.itemCharactersValue).toEqual(a)
+    })
+  })
+})

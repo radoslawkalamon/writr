@@ -1,14 +1,14 @@
 <template functional>
   <base-section
-    name='theme'
-    :title='parent.$t("settings.theme.title")'
+    :title="parent.$t('settings.theme.title')"
+    name="theme"
   >
     <base-select
-      action='changeState'
-      item='settings.editor.theme'
-      :labels='parent.$t("settings.theme.labels.content")'
-      name='theme-change-theme'
-      :title='parent.$t("settings.theme.labels.title")'
+      :labels="parent.$t('settings.theme.labels.content')"
+      :title="parent.$t('settings.theme.labels.title')"
+      action="changeState"
+      item="settings.editor.theme"
+      name="theme-change-theme"
     />
   </base-section>
 </template>

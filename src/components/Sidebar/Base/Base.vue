@@ -1,19 +1,19 @@
 <template functional>
   <aside
-    class='sidebar'
+    class="sidebar"
   >
     <nav
-      class='sidebar__box sidebar__box--top'
+      class="sidebar__box sidebar__box--top"
     >
       <slot
-        name='top'
+        name="top"
       />
     </nav>
     <nav
-      class='sidebar__box sidebar__box--bottom'
+      class="sidebar__box sidebar__box--bottom"
     >
       <slot
-        name='bottom'
+        name="bottom"
       />
     </nav>
   </aside>

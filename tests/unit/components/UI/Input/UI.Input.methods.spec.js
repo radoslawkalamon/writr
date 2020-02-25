@@ -1,27 +1,27 @@
-import { shallowMount } from '@vue/test-utils';
-import UIInput from '@/components/UI/Input/Input.vue';
-import GLOBS from './UI.Input.globs';
+import { shallowMount } from '@vue/test-utils'
+import UIInput from '@/components/UI/Input/Input.vue'
+import GLOBS from './UI.Input.globs'
 
 describe('@/components/UI/Input#computed', () => {
   describe('onChange', () => {
-    let w;
+    let w
 
     beforeAll(() => {
       w = shallowMount(UIInput, {
         propsData: {
-          ...GLOBS.propsData,
+          ...GLOBS.propsData
         },
-        mocks: GLOBS.mocks,
-      });
+        mocks: GLOBS.mocks
+      })
 
-      w.vm.onChange();
-    });
+      w.vm.onChange()
+    })
 
     it('should call $store.dispatch function exactly once', () => {
-      const a = 1;
+      const a = 1
 
-      expect(w.vm.$store.dispatch).toHaveBeenCalledTimes(a);
-    });
+      expect(w.vm.$store.dispatch).toHaveBeenCalledTimes(a)
+    })
 
     it('should call $store.dispatch with 2 arguments: action name, data', () => {
       const a = [
@@ -30,11 +30,11 @@ describe('@/components/UI/Input#computed', () => {
           item: GLOBS.test.item,
           value: GLOBS.test.storeValue,
           componentObject: w.vm,
-          componentErrorProperty: 'error',
-        },
-      ];
+          componentErrorProperty: 'error'
+        }
+      ]
 
-      expect(w.vm.$store.dispatch).toBeCalledWith(...a);
-    });
-  });
-});
+      expect(w.vm.$store.dispatch).toBeCalledWith(...a)
+    })
+  })
+})

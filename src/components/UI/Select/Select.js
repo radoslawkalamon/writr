@@ -1,52 +1,51 @@
-import { getIsEqualToValues } from 'handy-validator';
-
 export default {
   props: {
     action: {
       type: String,
-      required: true,
+      required: true
     },
     item: {
       type: String,
-      required: true,
+      required: true
     },
     labels: {
       type: Array,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      default: 'generic',
+      default: 'generic'
     },
     title: {
       type: String,
-      default: 'Please provide title!',
-    },
+      default: 'Please provide title!'
+    }
   },
   computed: {
-    mainElementClassNames() {
+    mainElementClassNames () {
       return [
         'base-select',
-        `base-select--${this.name}`,
-      ];
-    },
+        `base-select--${this.name}`
+      ]
+    }
   },
   methods: {
-    onChange() {
+    onChange () {
       this.$store.dispatch(this.action, {
         item: this.item,
-        value: this.value,
-      });
-    },
+        value: this.value
+      })
+    }
   },
-  created() {
-    this.options = getIsEqualToValues(this.validator);
+  created () {
+    const validatorArrayGroup = this.validator[1]
+    this.options = validatorArrayGroup
   },
-  data() {
+  data () {
     return {
       value: this.$store.getters.getValue(this.item),
       validator: this.$store.getters.getValidator(this.item),
-      options: [],
-    };
-  },
-};
+      options: []
+    }
+  }
+}

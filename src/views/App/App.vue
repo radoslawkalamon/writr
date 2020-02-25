@@ -1,27 +1,27 @@
 <template>
   <div
-    :class='appClassNames'
     id="app"
+    :class="appClassNames"
   >
     <sidebar
-      @togglePanel='togglePanel'
+      @togglePanel="togglePanel"
     />
     <transition
-      mode='out-in'
-      name='panel-transition'
+      mode="out-in"
+      name="panel-transition"
     >
       <settings
-        v-if='openPanel === "settings"'
+        v-if="openPanel === 'settings'"
       />
       <stats
-        v-if='openPanel === "stats"'
+        v-if="openPanel === 'stats'"
       />
     </transition>
     <transition
-      name='fade'
+      name="fade"
     >
       <statusbar
-        v-if='$store.state.settings.statusBar.isVisible'
+        v-if="$store.state.settings.statusBar.isVisible"
       />
     </transition>
     <text-editor />

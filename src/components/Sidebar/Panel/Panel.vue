@@ -1,6 +1,6 @@
 <template functional>
   <div
-    :class='["sidebar-panel", `sidebar-panel--${props.name}`]'
+    :class="['sidebar-panel', `sidebar-panel--${props.name}`]"
   >
     <slot />
   </div>

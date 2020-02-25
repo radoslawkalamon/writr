@@ -1,7 +1,7 @@
-const TEST_TITLE = 'This is simple test text!';
+const TEST_TITLE = 'This is simple test text!'
 
 export default {
   test: {
-    title: TEST_TITLE,
-  },
-};
+    title: TEST_TITLE
+  }
+}

@@ -1,47 +1,47 @@
-import { shallowMount } from '@vue/test-utils';
-import UIToggle from '@/components/UI/Toggle/Toggle.vue';
-import GLOBS from './UI.Toggle.globs';
+import { shallowMount } from '@vue/test-utils'
+import UIToggle from '@/components/UI/Toggle/Toggle.vue'
+import GLOBS from './UI.Toggle.globs'
 
 describe('@Components/UI/Toggle#methods', () => {
   describe('onClick', () => {
-    let w;
-    const testValue = false;
+    let w
+    const testValue = false
 
     beforeAll(() => {
       w = shallowMount(UIToggle, {
         mocks: {
           $store: {
             getters: {
-              getValue: () => testValue,
+              getValue: () => testValue
             },
-            dispatch: jest.fn(),
-          },
+            dispatch: jest.fn()
+          }
         },
         propsData: {
           item: GLOBS.test.item,
-          action: GLOBS.test.action,
-        },
-      });
+          action: GLOBS.test.action
+        }
+      })
 
-      w.vm.onClick();
-    });
+      w.vm.onClick()
+    })
 
     it('should call $store.dispatch function exactly once', () => {
-      const a = 1;
+      const a = 1
 
-      expect(w.vm.$store.dispatch).toBeCalledTimes(a);
-    });
+      expect(w.vm.$store.dispatch).toBeCalledTimes(a)
+    })
 
     it('should call $store.dispatch with 2 arguments: action name, data', () => {
       const a = [
         GLOBS.test.action,
         {
           item: GLOBS.test.item,
-          value: !testValue,
-        },
-      ];
+          value: !testValue
+        }
+      ]
 
-      expect(w.vm.$store.dispatch).toBeCalledWith(...a);
-    });
-  });
-});
+      expect(w.vm.$store.dispatch).toBeCalledWith(...a)
+    })
+  })
+})

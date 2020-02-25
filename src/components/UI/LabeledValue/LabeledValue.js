@@ -2,14 +2,14 @@ export default {
   props: {
     label: {
       required: true,
-      type: String,
+      type: String
     },
     name: {
       required: true,
-      type: String,
+      type: String
     },
     value: {
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}

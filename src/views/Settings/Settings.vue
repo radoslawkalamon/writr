@@ -1,10 +1,10 @@
 <template>
   <sidebar-panel
-    name='settings'
+    name="settings"
   >
     <base-header
-      :header='true'
-      :title='$t("settings.title")'
+      :header="true"
+      :title="$t('settings.title')"
     />
     <section-theme />
     <section-text />

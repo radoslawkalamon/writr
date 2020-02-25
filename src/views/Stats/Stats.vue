@@ -1,35 +1,35 @@
 <template>
   <sidebar-panel
-    name='stats'
+    name="stats"
   >
     <base-header
-      :header='true'
-      :title='$t("stats.title")'
+      :header="true"
+      :title="$t('stats.title')"
     />
     <base-labeled-value
-      :label='$t("stats.longNames.characters")'
-      name='characters'
-      :value='$store.state.stats.characters'
+      :label="$t('stats.longNames.characters')"
+      :value="$store.state.stats.characters"
+      name="characters"
     />
     <base-labeled-value
-      :label='$t("stats.longNames.charactersWithoutSpaces")'
-      name='characters-without-spaces'
-      :value='$store.state.stats.charactersWithoutSpaces'
+      :label="$t('stats.longNames.charactersWithoutSpaces')"
+      :value="$store.state.stats.charactersWithoutSpaces"
+      name="characters-without-spaces"
     />
     <base-labeled-value
-      :label='$t("stats.longNames.words")'
-      name='words'
-      :value='$store.state.stats.words'
+      :label="$t('stats.longNames.words')"
+      :value="$store.state.stats.words"
+      name="words"
     />
     <base-labeled-value
-      :label='$t("stats.longNames.paragraphs")'
-      name='paragraphs'
-      :value='$store.state.stats.paragraphs'
+      :label="$t('stats.longNames.paragraphs')"
+      :value="$store.state.stats.paragraphs"
+      name="paragraphs"
     />
     <base-labeled-value
-      :label='$t("stats.longNames.pages")'
-      name='pages'
-      :value='$store.state.stats.pages'
+      :label="$t('stats.longNames.pages')"
+      :value="$store.state.stats.pages"
+      name="pages"
     />
   </sidebar-panel>
 </template>

@@ -1,9 +1,9 @@
-const TEST_THEMENAME = 'dark';
-const TEST_LANG = 'pl';
-const TEST_LANG_CHANGE = 'en';
-const TEST_TRANSLATE_TEXT = 'test-translate-text';
-const TEST_PANEL_NAME = 'testPanel';
-const TEST_TEXT = 'This is test text!';
+const TEST_THEMENAME = 'dark'
+const TEST_LANG = 'pl'
+const TEST_LANG_CHANGE = 'en'
+const TEST_TRANSLATE_TEXT = 'test-translate-text'
+const TEST_PANEL_NAME = 'testPanel'
+const TEST_TEXT = 'This is test text!'
 
 export default {
   test: {
@@ -11,28 +11,28 @@ export default {
     lang: TEST_LANG,
     langChange: TEST_LANG_CHANGE,
     panelName: TEST_PANEL_NAME,
-    text: TEST_TEXT,
+    text: TEST_TEXT
   },
   mocks: {
     $store: {
       getters: {
-        getValue: () => TEST_THEMENAME,
+        getValue: () => TEST_THEMENAME
       },
       state: {
         settings: {
           misc: {
             language: TEST_LANG,
-            version: 'alfa',
+            version: 'alfa'
           },
           statusBar: {
-            isVisible: true,
-          },
-        },
-      },
+            isVisible: true
+          }
+        }
+      }
     },
     $i18n: {
-      locale: TEST_LANG,
+      locale: TEST_LANG
     },
-    $t: () => TEST_TRANSLATE_TEXT,
-  },
-};
+    $t: () => TEST_TRANSLATE_TEXT
+  }
+}

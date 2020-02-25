@@ -1,13 +1,13 @@
 <template functional>
   <h1
-    class='base-header base-header--1'
-    v-if='props.header'
-    v-text='props.title'
+    v-if="props.header"
+    class="base-header base-header--1"
+    v-text="props.title"
   />
   <h2
-    class='base-header base-header--2'
     v-else
-    v-text='props.title'
+    class="base-header base-header--2"
+    v-text="props.title"
   />
 </template>
 

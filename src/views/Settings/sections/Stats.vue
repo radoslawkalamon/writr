@@ -1,25 +1,25 @@
 <template functional>
   <base-section
-    name='stats'
-    :title='parent.$t("settings.stats.title")'
+    :title="parent.$t('settings.stats.title')"
+    name="stats"
   >
     <base-select
-      action='changeState'
-      item='settings.stats.pageFormulaMainIngredient'
-      :labels='parent.$t("settings.stats.pageFormulaMainIngredient.labels")'
-      name='stats-formula-ingredient'
-      :title='parent.$t("settings.stats.pageFormulaMainIngredient.title")'
+      :labels="parent.$t('settings.stats.pageFormulaMainIngredient.labels')"
+      :title="parent.$t('settings.stats.pageFormulaMainIngredient.title')"
+      action="changeState"
+      item="settings.stats.pageFormulaMainIngredient"
+      name="stats-formula-ingredient"
     />
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.stats.pageFormulaDivider.errorTip")'
-      item='settings.stats.pageFormulaDivider'
-      name='stats-formula-divider'
-      :title='parent.$t("settings.stats.pageFormulaDivider.title")'
+      :error-tip="parent.$t('settings.stats.pageFormulaDivider.errorTip')"
+      :title="parent.$t('settings.stats.pageFormulaDivider.title')"
+      action="changeState"
+      item="settings.stats.pageFormulaDivider"
+      name="stats-formula-divider"
     />
     <base-text
-      name='stats-formula-tip'
-      :text='parent.$t("settings.stats.formulaTip")'
+      :text="parent.$t('settings.stats.formulaTip')"
+      name="stats-formula-tip"
     />
   </base-section>
 </template>

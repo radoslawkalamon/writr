@@ -2,27 +2,27 @@ export default {
   props: {
     action: {
       type: Function,
-      required: true,
+      required: true
     },
     activePanel: {
       type: [Boolean, String],
-      required: true,
+      required: true
     },
     alt: {
       type: String,
-      default: '',
+      default: ''
     },
     icon: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      default: 'generic',
+      default: 'generic'
     },
     toggle: {
       type: Boolean,
-      default: false,
-    },
-  },
-};
+      default: false
+    }
+  }
+}

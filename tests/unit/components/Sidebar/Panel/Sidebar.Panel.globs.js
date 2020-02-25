@@ -1,7 +1,7 @@
-const TEST_NAME = 'panel-test-name';
+const TEST_NAME = 'panel-test-name'
 
 export default {
   test: {
-    name: TEST_NAME,
-  },
-};
+    name: TEST_NAME
+  }
+}

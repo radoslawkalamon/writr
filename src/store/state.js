@@ -5,17 +5,17 @@ export default {
       text: {
         paragraphIndent: 40,
         fontSize: 12,
-        lineHeight: 1.5,
+        lineHeight: 1.5
       },
       window: {
         maxWidth: 900,
         marginTop: 40,
-        marginBottom: 40,
-      },
+        marginBottom: 40
+      }
     },
     stats: {
       pageFormulaMainIngredient: 'characters',
-      pageFormulaDivider: 1200,
+      pageFormulaDivider: 1200
     },
     statusBar: {
       isVisible: true,
@@ -24,25 +24,25 @@ export default {
         words: true,
         paragraphs: true,
         pages: true,
-        clock: true,
-      },
+        clock: true
+      }
     },
     misc: {
       spellChecker: true,
       language: 'pl',
-      version: 'beta',
-    },
+      version: 'beta'
+    }
   },
   stats: {
     characters: 884,
     charactersWithoutSpaces: 747,
     words: 133,
     paragraphs: 28,
-    pages: 1,
+    pages: 1
   },
   sizes: {
     statusBar: {
-      height: 0,
-    },
-  },
-};
+      height: 0
+    }
+  }
+}

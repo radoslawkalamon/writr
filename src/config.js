@@ -1,4 +1,4 @@
 export default {
   splitChar: '.',
-  animationTime: 500,
-};
+  animationTime: 500
+}

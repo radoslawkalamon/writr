@@ -1,23 +1,23 @@
 <template>
   <div
-    :class='mainElementClassNames'
+    :class="mainElementClassNames"
   >
     <span
-      class='base-section__label-wrapper base-input__title'
-      v-text='title'
+      class="base-section__label-wrapper base-input__title"
+      v-text="title"
     />
     <div
-      :class='inputWrapperClassNames'
-      :data-error='errorTip'
-      :data-unit='unit'
+      :class="inputWrapperClassNames"
+      :data-error="errorTip"
+      :data-unit="unit"
     >
       <!-- before with unit -->
       <input
-        @change='onChange()'
-        :class='inputClassNames'
-        type='text'
-        v-model.number='value'
-      />
+        v-model.number="value"
+        :class="inputClassNames"
+        type="text"
+        @change="onChange()"
+      >
       <!-- after with tooltip -->
     </div>
   </div>

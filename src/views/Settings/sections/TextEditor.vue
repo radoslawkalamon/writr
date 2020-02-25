@@ -1,31 +1,31 @@
 <template functional>
   <base-section
-    name='texteditor'
-    :title='parent.$t("settings.textEditor.title")'
+    :title="parent.$t('settings.textEditor.title')"
+    name="texteditor"
   >
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.textEditor.maxWidth.errorTip")'
-      item='settings.editor.window.maxWidth'
-      name='texteditor-max-width'
-      :title='parent.$t("settings.textEditor.maxWidth.title")'
-      unit='px'
+      :error-tip="parent.$t('settings.textEditor.maxWidth.errorTip')"
+      :title="parent.$t('settings.textEditor.maxWidth.title')"
+      action="changeState"
+      item="settings.editor.window.maxWidth"
+      name="texteditor-max-width"
+      unit="px"
     />
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.textEditor.marginTop.errorTip")'
-      item='settings.editor.window.marginTop'
-      name='texteditor-margin-top'
-      :title='parent.$t("settings.textEditor.marginTop.title")'
-      unit='px'
+      :error-tip="parent.$t('settings.textEditor.marginTop.errorTip')"
+      :title="parent.$t('settings.textEditor.marginTop.title')"
+      action="changeState"
+      item="settings.editor.window.marginTop"
+      name="texteditor-margin-top"
+      unit="px"
     />
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.textEditor.marginBottom.errorTip")'
-      item='settings.editor.window.marginBottom'
-      name='texteditor-margin-bottom'
-      :title='parent.$t("settings.textEditor.marginBottom.title")'
-      unit='px'
+      :error-tip="parent.$t('settings.textEditor.marginBottom.errorTip')"
+      :title="parent.$t('settings.textEditor.marginBottom.title')"
+      action="changeState"
+      item="settings.editor.window.marginBottom"
+      name="texteditor-margin-bottom"
+      unit="px"
     />
   </base-section>
 </template>

@@ -2,11 +2,11 @@ export default {
   props: {
     header: {
       type: Boolean,
-      default: false,
+      default: false
     },
     title: {
       type: String,
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}

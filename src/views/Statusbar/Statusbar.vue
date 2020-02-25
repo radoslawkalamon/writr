@@ -1,31 +1,31 @@
 <template>
   <statusbar-base>
     <statusbar-item
-      :label='$t("stats.shortNames.words")'
-      name='words'
-      :value='$store.state.stats.words'
-      v-if='$store.state.settings.statusBar.showContent.words'
+      v-if="$store.state.settings.statusBar.showContent.words"
+      :label="$t('stats.shortNames.words')"
+      :value="$store.state.stats.words"
+      name="words"
     />
     <statusbar-item
-      :label='$t("stats.shortNames.pages")'
-      name='pages'
-      :value='$store.state.stats.pages'
-      v-if='$store.state.settings.statusBar.showContent.pages'
+      v-if="$store.state.settings.statusBar.showContent.pages"
+      :label="$t('stats.shortNames.pages')"
+      :value="$store.state.stats.pages"
+      name="pages"
     />
     <statusbar-item
-      :label='$t("stats.shortNames.paragraphs")'
-      name='paragraphs'
-      :value='$store.state.stats.paragraphs'
-      v-if='$store.state.settings.statusBar.showContent.paragraphs'
+      v-if="$store.state.settings.statusBar.showContent.paragraphs"
+      :label="$t('stats.shortNames.paragraphs')"
+      :value="$store.state.stats.paragraphs"
+      name="paragraphs"
     />
     <statusbar-item
-      :label='$t("stats.shortNames.characters")'
-      name='characters'
-      :value='itemCharactersValue'
-      v-if='$store.state.settings.statusBar.showContent.characters'
+      v-if="$store.state.settings.statusBar.showContent.characters"
+      :label="$t('stats.shortNames.characters')"
+      :value="itemCharactersValue"
+      name="characters"
     />
     <statusbar-clock
-      v-if='$store.state.settings.statusBar.showContent.clock'
+      v-if="$store.state.settings.statusBar.showContent.clock"
     />
   </statusbar-base>
 </template>

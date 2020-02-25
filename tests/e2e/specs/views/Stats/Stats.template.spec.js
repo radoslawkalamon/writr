@@ -11,18 +11,18 @@ describe('Stats#template', () => {
       '#app > div.sidebar-panel.sidebar-panel--stats:nth-child(2) > div.base-labeled-value.base-labeled-value--paragraphs:nth-child(5) > strong.base-labeled-value__value:nth-child(1)',
       '#app > div.sidebar-panel.sidebar-panel--stats:nth-child(2) > div.base-labeled-value.base-labeled-value--paragraphs:nth-child(5) > span.base-labeled-value__label:nth-child(2)',
       '#app > div.sidebar-panel.sidebar-panel--stats:nth-child(2) > div.base-labeled-value.base-labeled-value--pages:nth-child(6) > strong.base-labeled-value__value:nth-child(1)',
-      '#app > div.sidebar-panel.sidebar-panel--stats:nth-child(2) > div.base-labeled-value.base-labeled-value--pages:nth-child(6) > span.base-labeled-value__label:nth-child(2)',
-    ];
+      '#app > div.sidebar-panel.sidebar-panel--stats:nth-child(2) > div.base-labeled-value.base-labeled-value--pages:nth-child(6) > span.base-labeled-value__label:nth-child(2)'
+    ]
 
-    cy.clearLocalStorage();
-    cy.visit('/');
+    cy.clearLocalStorage()
+    cy.visit('/')
 
     cy.get('.sidebar-button--stats')
-      .click();
+      .click()
 
     selectors.forEach((selector) => {
       cy.get(`${selector}`)
-        .should('exist');
-    });
-  });
-});
+        .should('exist')
+    })
+  })
+})

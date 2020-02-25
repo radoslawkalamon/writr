@@ -1,13 +1,13 @@
 <template functional>
   <section
-    :class='["base-section", `base-section--${props.name}`]'
+    :class="['base-section', `base-section--${props.name}`]"
   >
     <h2
-      class='base-section__title'
-      v-text='props.title'
+      class="base-section__title"
+      v-text="props.title"
     />
     <div
-      class='base-section__content'
+      class="base-section__content"
     >
       <slot />
     </div>

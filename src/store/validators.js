@@ -1,48 +1,48 @@
 export default {
   settings: {
     editor: {
-      theme: "isEqualTo|'light'|'dark'",
+      theme: ['equalTo', ['light', 'dark']],
       text: {
-        paragraphIndent: 'Number|>=0',
-        fontSize: 'Number|>=4',
-        lineHeight: 'Number|>=0',
+        paragraphIndent: ['number', [['>=', 0]]],
+        fontSize: ['number', [['>=', 4]]],
+        lineHeight: ['number', [['>=', 0]]]
       },
       window: {
-        maxWidth: 'Number|>=320',
-        marginTop: 'Number|>=0',
-        marginBottom: 'Number|>=0',
-      },
+        maxWidth: ['number', [['>=', 320]]],
+        marginTop: ['number', [['>=', 0]]],
+        marginBottom: ['number', [['>=', 0]]]
+      }
     },
     stats: {
-      pageFormulaMainIngredient: "isEqualTo|'characters'|'charactersWithoutSpaces'|'words'|'paragraphs'",
-      pageFormulaDivider: 'Number|>=1',
+      pageFormulaMainIngredient: ['equalTo', ['characters', 'charactersWithoutSpaces', 'words', 'paragraphs']],
+      pageFormulaDivider: ['number', [['>=', 1]]]
     },
     statusBar: {
-      isVisible: 'Boolean',
+      isVisible: ['boolean'],
       showContent: {
-        characters: 'Boolean',
-        charactersWithoutSpaces: 'Boolean',
-        words: 'Boolean',
-        paragraphs: 'Boolean',
-        pages: 'Boolean',
-        clock: 'Boolean',
-      },
+        characters: ['boolean'],
+        charactersWithoutSpaces: ['boolean'],
+        words: ['boolean'],
+        paragraphs: ['boolean'],
+        pages: ['boolean'],
+        clock: ['boolean']
+      }
     },
     misc: {
-      spellChecker: 'Boolean',
-      language: "isEqualTo|'en'|'pl'",
-    },
+      spellChecker: ['boolean'],
+      language: ['equalTo', ['en', 'pl']]
+    }
   },
   stats: {
-    characters: 'Number|>=0',
-    charactersWithoutSpaces: 'Number|>=0',
-    words: 'Number|>=0',
-    paragraphs: 'Number|>=0',
-    pages: 'Number|>=0',
+    characters: ['number', [['>=', 0]]],
+    charactersWithoutSpaces: ['number', [['>=', 0]]],
+    words: ['number', [['>=', 0]]],
+    paragraphs: ['number', [['>=', 0]]],
+    pages: ['number', [['>=', 0]]]
   },
   sizes: {
     statusBar: {
-      height: 'Number|>=0',
-    },
-  },
-};
+      height: ['number', [['>=', 0]]]
+    }
+  }
+}

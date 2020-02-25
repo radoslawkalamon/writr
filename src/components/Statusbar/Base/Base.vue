@@ -1,6 +1,6 @@
 <template>
   <div
-    class='statusbar'
+    class="statusbar"
   >
     <slot />
   </div>

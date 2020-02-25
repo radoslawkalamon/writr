@@ -1,38 +1,38 @@
 export default {
   computed: {
-    spellcheckValue() {
-      return this.$store.state.settings.misc.spellChecker;
+    spellcheckValue () {
+      return this.$store.state.settings.misc.spellChecker
     },
-    mainStyle() {
-      const store = this.$store.state;
+    mainStyle () {
+      const store = this.$store.state
       return {
-        height: `calc(100vh - ${store.sizes.statusBar.height}px)`,
-      };
+        height: `calc(100vh - ${store.sizes.statusBar.height}px)`
+      }
     },
-    textEditorStyle() {
-      const store = this.$store.state.settings.editor;
+    textEditorStyle () {
+      const store = this.$store.state.settings.editor
       return {
         fontSize: `${store.text.fontSize}px`,
         lineHeight: `${store.text.lineHeight}em`,
         textIndent: `${store.text.paragraphIndent}px`,
         maxWidth: `${store.window.maxWidth}px`,
         paddingTop: `${store.window.marginTop}px`,
-        paddingBottom: `${store.window.marginBottom}px`,
-      };
-    },
+        paddingBottom: `${store.window.marginBottom}px`
+      }
+    }
   },
   methods: {
-    onChange(_e) {
-      const textEditor = _e.target;
+    onChange (_e) {
+      const textEditor = _e.target
       if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
-        textEditor.innerHTML = `<div>${textEditor.innerHTML}</div>`;
-        window.getSelection().collapse(textEditor.firstChild, 1);
+        textEditor.innerHTML = `<div>${textEditor.innerHTML}</div>`
+        window.getSelection().collapse(textEditor.firstChild, 1)
       }
 
       // Calculate stats
-      this.$store.dispatch('calculateStats', textEditor.innerText);
+      this.$store.dispatch('calculateStats', textEditor.innerText)
     },
-    onPaste(_e) {
+    onPaste (_e) {
       // How to insert text without losing formatting?
       // 1. Get selection position
       // 2. Get selection parent
@@ -43,14 +43,14 @@ export default {
       // 7. Get second #Text and change it into <div>#Text</div>
       // 8. PROFIT!!!
 
-      const clipboardText = _e.clipboardData.getData('text');
-      document.execCommand('insertText', false, clipboardText);
-      return true;
-    },
+      const clipboardText = _e.clipboardData.getData('text')
+      document.execCommand('insertText', false, clipboardText)
+      return true
+    }
   },
-  data() {
+  data () {
     return {
-      welcomeText: this.$t('components.TextEditor.welcomeText'),
-    };
-  },
-};
+      welcomeText: this.$t('components.TextEditor.welcomeText')
+    }
+  }
+}

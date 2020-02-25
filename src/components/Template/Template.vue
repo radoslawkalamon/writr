@@ -1,7 +1,5 @@
 <template>
-  <div>
-
-  </div>
+  <div />
 </template>
 
 <script src='./Template.js'></script>

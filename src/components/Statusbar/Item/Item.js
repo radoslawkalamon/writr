@@ -1,15 +1,15 @@
 export default {
   props: {
     value: {
-      required: true,
+      required: true
     },
     label: {
       type: String,
-      default: 'Please provide label!',
+      default: 'Please provide label!'
     },
     name: {
       type: String,
-      default: 'generic',
-    },
-  },
-};
+      default: 'generic'
+    }
+  }
+}

@@ -1,31 +1,31 @@
 <template functional>
   <base-section
-    name='text'
-    :title='parent.$t("settings.text.title")'
+    :title="parent.$t('settings.text.title')"
+    name="text"
   >
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.text.fontSize.errorTip")'
-      item='settings.editor.text.fontSize'
-      name='text-font-size'
-      :title='parent.$t("settings.text.fontSize.title")'
-      unit='px'
+      :error-tip="parent.$t('settings.text.fontSize.errorTip')"
+      :title="parent.$t('settings.text.fontSize.title')"
+      action="changeState"
+      item="settings.editor.text.fontSize"
+      name="text-font-size"
+      unit="px"
     />
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.text.paragraphIndent.errorTip")'
-      item='settings.editor.text.paragraphIndent'
-      name='text-paragraph-indent'
-      :title='parent.$t("settings.text.paragraphIndent.title")'
-      unit='px'
+      :error-tip="parent.$t('settings.text.paragraphIndent.errorTip')"
+      :title="parent.$t('settings.text.paragraphIndent.title')"
+      action="changeState"
+      item="settings.editor.text.paragraphIndent"
+      name="text-paragraph-indent"
+      unit="px"
     />
     <base-input
-      action='changeState'
-      :errorTip='parent.$t("settings.text.lineHeight.errorTip")'
-      item='settings.editor.text.lineHeight'
-      name='text-line-height'
-      :title='parent.$t("settings.text.lineHeight.title")'
-      unit='em'
+      :error-tip="parent.$t('settings.text.lineHeight.errorTip')"
+      :title="parent.$t('settings.text.lineHeight.title')"
+      action="changeState"
+      item="settings.editor.text.lineHeight"
+      name="text-line-height"
+      unit="em"
     />
   </base-section>
 </template>
