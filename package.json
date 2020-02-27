@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
+    "cypress": "vue-cli-service test:e2e",
+    "test:e2e": "vue-cli-service test:e2e --headless",
     "lint": "vue-cli-service lint",
     "test": "npm run test:unit && npm run test:e2e"
   },
