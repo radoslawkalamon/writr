@@ -9,14 +9,4 @@ module.exports = {
   rules: {
     strict: 'off',
   },
-  overrides: [
-    {
-      files: [
-        '**/utils/handyValidator3/**/*.{j,t}s?(x)',
-      ],
-      rules: {
-        'no-console': 'off',
-      },
-    },
-  ]
 }

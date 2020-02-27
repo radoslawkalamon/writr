@@ -24,8 +24,8 @@ export default (value, validatorArrayGroup = [], validateSome = false) => {
       return true
     })
   } catch (e) {
-    // eslint-disable-next-line no-console
     if (e.message !== '') {
+      // eslint-disable-next-line no-console
       console.error(e)
     }
     return false
