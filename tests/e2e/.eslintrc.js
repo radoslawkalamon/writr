@@ -8,7 +8,15 @@ module.exports = {
   },
   rules: {
     strict: 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
+  },
+  overrides: [
+    {
+      files: [
+        '**/utils/handyValidator3/**/*.{j,t}s?(x)',
+      ],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+  ]
 }
