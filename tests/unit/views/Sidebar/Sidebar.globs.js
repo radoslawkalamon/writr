@@ -1,5 +1,5 @@
 const TIMESTAMP = 1542836053153
-const TIME_HOURS = 22
+const TIME_HOURS = 21
 const TIME_MINUTES = 34
 const TIME_SECONDS = 13
 const TIME_MILLISECONDS = 153
@@ -9,7 +9,7 @@ const PANEL_NAME = 'test-panel'
 
 const TRANSLATE_TEXT = 'translate-text'
 const FAKE_TEXT = 'Fake text'
-const FILENAME = 'writr_2018_11_21_22_34_13.txt'
+const FILENAME = 'writr_2018_11_21_21_34_13.txt'
 const FILETYPE = 'text/plain'
 
 const THEME_NAME = 'dark'

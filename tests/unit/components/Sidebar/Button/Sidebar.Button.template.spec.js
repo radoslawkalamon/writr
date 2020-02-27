@@ -5,6 +5,7 @@ describe('@Components/Sidebar/Button#template', () => {
     let w
     beforeAll(() => {
       w = GLOBS.wrapperFactory()
+
       w.trigger('click')
     })
 

@@ -15,7 +15,7 @@ describe('@Components/Statusbar/Clock#methods', () => {
     updateTimeMock = jest.spyOn(StatusbarClock.methods, 'updateTime')
     setupNextUpdateMock = jest.spyOn(StatusbarClock.methods, 'setupNextUpdate')
     // Mock date
-    mockdate.set(new Date(GLOBS.test.timestamp))
+    mockdate.set(GLOBS.test.timestamp)
   })
 
   describe('intervalCallback', () => {

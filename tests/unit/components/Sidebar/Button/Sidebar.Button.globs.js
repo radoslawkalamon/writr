@@ -33,8 +33,10 @@ export default {
           ...props
         }
       },
-      methods: {
-        resolveIcon: TEST_PARENT_RESOLVE_ICON
+      parentComponent: {
+        methods: {
+          resolveIcon: TEST_PARENT_RESOLVE_ICON
+        }
       }
     })
   }

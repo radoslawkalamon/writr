@@ -9,7 +9,7 @@ describe('@views/Sidebar#computed', () => {
     downloadFileMock = jest.fn(() => {})
     Sidebar.methods.downloadFile = downloadFileMock
     // Mock date
-    mockdate.set(new Date(GLOBS.test.timestamp))
+    mockdate.set(GLOBS.test.timestamp)
     // Mock getElementById innerText;
     global.document.getElementById = () => ({
       innerText: GLOBS.test.fakeText

@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import UIToggle from '@/components/UI/Toggle/Toggle.vue'
 import GLOBS from './UI.Toggle.globs'
@@ -25,10 +26,10 @@ describe('@Components/UI/Toggle#created', () => {
     })
   })
 
-  it(`should change value after changing $store.state.${GLOBS.test.item}`, () => {
+  it(`should change value after changing $store.state.${GLOBS.test.item}`, async () => {
     const a = !testValue
     w.vm.$store.state[GLOBS.test.item] = a
-
+    await Vue.nextTick()
     expect(w.vm.value).toEqual(a)
   })
 })
