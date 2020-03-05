@@ -1,6 +1,8 @@
 # Writr VueJS 2
 
-Powerful Text Editor <small>| _need to come up with better lineup ;)_</small>
+Powerful Text Editor
+
+See demo [HERE](https://169cm.pl/writr)
 
 ## Writr Roadmap
 

@@ -24,7 +24,7 @@ export default {
   methods: {
     onChange (_e) {
       const textEditor = _e.target
-      if (textEditor.firstChild.nodeType === Node.TEXT_NODE) {
+      if (textEditor.firstChild && textEditor.firstChild.nodeType === Node.TEXT_NODE) {
         textEditor.innerHTML = `<div>${textEditor.innerHTML}</div>`
         window.getSelection().collapse(textEditor.firstChild, 1)
       }
@@ -33,18 +33,17 @@ export default {
       this.$store.dispatch('calculateStats', textEditor.innerText)
     },
     onPaste (_e) {
-      // How to insert text without losing formatting?
-      // 1. Get selection position
-      // 2. Get selection parent
-      // 3. Change parent <div> to #Text
-      // 4. Split #Text on selection position
-      // 5. Between add formated clipboardText
-      // 6. Get first #Text and change it into <div>#Text</div>
-      // 7. Get second #Text and change it into <div>#Text</div>
-      // 8. PROFIT!!!
+      const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+      const clipboardText = _e.clipboardData.getData('text/plain')
 
-      const clipboardText = _e.clipboardData.getData('text')
-      document.execCommand('insertText', false, clipboardText)
+      if (isFirefox) {
+        // TODO: Implement like Chrome / Safari pasting - \n creates new <div>
+        alert('Pasting not supported on Firefox yet!')
+        return false
+      }
+
+      // Works on Chrome & Safari
+      document.execCommand('inserttext', false, clipboardText)
       return true
     }
   },
