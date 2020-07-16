@@ -49,7 +49,7 @@ describe('@Components/TextEditor#template', () => {
     it('should wrapper child be <div>', () => {
       const a = 'div'
 
-      expect(w.find('.text-editor__wrapper').contains(a)).toBeTruthy()
+      expect(w.find('.text-editor__wrapper').find(a)).toBeTruthy()
     })
   })
 
