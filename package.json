@@ -1,6 +1,6 @@
 {
   "name": "writr",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -28,7 +28,7 @@
     "@vue/cli-plugin-eslint": "^4.5.9",
     "@vue/cli-plugin-unit-jest": "^4.5.9",
     "@vue/cli-service": "^4.5.9",
-    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-standard": "^6.0.0",
     "@vue/test-utils": "^1.1.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
@@ -36,8 +36,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.1.2",
+    "eslint-plugin-vue": "^7.2.0",
     "mockdate": "^3.0.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
