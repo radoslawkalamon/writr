@@ -1,6 +1,6 @@
 {
   "name": "writr",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,34 +12,34 @@
     "test": "npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
-    "core-js": "^3.8.1",
+    "core-js": "^3.16.0",
     "downloadjs": "^1.4.7",
     "throttle-debounce": "^3.0.1",
-    "vue": "^2.6.12",
-    "vue-i18n": "^8.22.2",
-    "vuex": "^3.6.0",
-    "vuex-persistedstate": "^3.1.0"
+    "vue": "^2.6.14",
+    "vue-i18n": "^8.25.0",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@cypress/webpack-preprocessor": "^5.5.0",
-    "@vue/cli-plugin-babel": "^4.5.9",
-    "@vue/cli-plugin-e2e-cypress": "^4.5.9",
-    "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-plugin-unit-jest": "^4.5.9",
-    "@vue/cli-service": "^4.5.9",
-    "@vue/eslint-config-standard": "^6.0.0",
-    "@vue/test-utils": "^1.1.1",
+    "@babel/core": "^7.15.0",
+    "@cypress/webpack-preprocessor": "^5.9.1",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-e2e-cypress": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-plugin-unit-jest": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "^1.2.2",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
-    "eslint": "^7.5.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-vue": "^7.2.0",
-    "mockdate": "^3.0.2",
+    "babel-jest": "^27.0.6",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-vue": "^7.15.1",
+    "mockdate": "^3.0.5",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   }
 }
